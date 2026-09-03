@@ -80,7 +80,48 @@ flowchart TD
     I --> J[Live Telemetry & Multi-Objective Reward]
 ```
 
----
+### Detailed Step-by-Step Execution Pipeline
+
+1. **Step 1: Multi-Source State Ingestion Layer**
+   - **SUMO / TraCI Traffic State**: Continuously queries microscopic road network conditions (vehicle speeds, edge densities, travel times) across the Bengaluru SUMO network.
+   - **EV State (Agent State)**: Tracks active EV telematics including State of Charge (SOC %), current GPS coordinates, battery capacity (kWh), remaining range (km), and destination intent.
+   - **Station State (Environment State)**: Real-time monitoring of registered station port availability, active charging sessions, line queue lengths, estimated wait times, and grid power loads.
+
+2. **Step 2: Heterogeneous Graph Construction Layer (`src/rl/hgat/graph_builder.py`)**
+   - Dynamically constructs a spatial-temporal heterogeneous graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$ with distinct node types:
+     - **EV Nodes** ($\mathcal{V}_{EV}$): Feature vectors encoding battery level, location, and urgency.
+     - **Station Nodes** ($\mathcal{V}_{ST}$): Feature vectors encoding total ports, occupied ports, queue length, and pricing.
+     - **Road Link Nodes** ($\mathcal{V}_{RD}$): Feature vectors encoding length, free-flow speed, and congestion ratio.
+   - Establishes directional relational edges weighted by network shortest-path distances, travel times, and spatial proximity.
+
+3. **Step 3: Spatial-Temporal HGAT Encoder Module (`src/rl/hgat/hgat_encoder.py`)**
+   - Applies multi-head Heterogeneous Graph Attention (HGAT) mechanisms over the graph embeddings.
+   - Computes relational attention weights to dynamically capture spatial traffic bottlenecks and queue spillback effects across neighboring stations.
+   - Produces context-aware spatial-temporal node representations for each EV agent.
+
+4. **Step 4: MAPPO Actor-Critic Policy Network (`src/rl/mappo/actor_critic.py`)**
+   - **Centralized Critic**: Evaluates global state values using joint graph embeddings to guide multi-agent queue balancing.
+   - **Decentralized Actor**: Receives individual agent embeddings and outputs action probability distributions over candidate target charging stations ($A_i \in \{1, \dots, K\}$).
+   - **Action Masking**: Filters out unreachable stations or stations exceeding battery range limits prior to decision sampling.
+
+5. **Step 5: Adaptive Lagrangian Constraint Guard (`src/rl/constraints/lagrangian.py`)**
+   - Evaluates policy candidate actions against real-time physical system constraints:
+     - **Queue Capacity Bound**: Maximum allowed waiting vehicles per station.
+     - **Transformer Grid Load Bound**: Maximum station power output bounds (kW).
+   - Dynamically updates dual Lagrangian multipliers ($\lambda_k$) to penalize constraint-violating choices, overriding unsafe routing commands before dispatch.
+
+6. **Step 6: Station Routing Recommendation (`src/recommendation/`)**
+   - Dispatches the validated optimal station target to the target EV agent.
+   - Triggers SUMO route recalculation (`traci.vehicle.changeTarget()`) to re-route the vehicle via Dijkstra/A* network shortest paths toward the recommended station.
+
+7. **Step 7: SUMO Microscopic Execution (`src/simulation/controller.py`)**
+   - SUMO advances vehicle movements step-by-step ($0 \rightarrow 7200$ steps) under real microscopic car-following and lane-changing physics.
+   - Handles station arrival events, queue join/leave triggers, port plug-in connections, battery recharge progression, and un-plug departures.
+
+8. **Step 8: Live Telemetry & Multi-Objective Reward Feedback**
+   - **Live Telemetry Server**: Streams real-time step state (waiting times, congestion %, cumulative energy delivered, port utilization) to `dashboard_state.json` for the EV Digital Twin Dashboard.
+   - **Multi-Objective Reward Calculation**: Computes joint reward feedback balancing detour minimization ($r_{detour}$), waiting time reduction ($r_{wait}$), constraint violation penalties ($r_{viol}$), and station fairness ($r_{fairness}$).
+
 
 ## Research Environment & Benchmark Parameters
 
