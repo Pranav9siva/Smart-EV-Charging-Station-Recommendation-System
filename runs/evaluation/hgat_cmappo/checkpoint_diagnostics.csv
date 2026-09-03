@@ -1,0 +1,7 @@
+checkpoint,parameter_count,parameter_hash,mean_abs_parameter_change
+stage_01,184514,75c15443d2,0.000000
+stage_02,184514,e465784b34,0.000374
+stage_03,184514,ec1cfa4b70,0.000156
+stage_04,184514,3e46cbce99,0.000103
+stage_05,184514,16a9c7020b,0.000057
+stage_06,184514,dcb4c3204a,0.000059

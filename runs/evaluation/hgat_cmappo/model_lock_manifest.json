@@ -1,0 +1,23 @@
+{
+  "seed_42": {
+    "checkpoint_path": "runs\\training\\hgat_cmappo\\seed_42\\stage_06\\model.pt",
+    "parameter_count": 184514,
+    "md5_checksum": "c0d101dc7176bef45f1a1c7b166900b7",
+    "sha256_checksum": "ce80f23436ec0004b32f41b9c9e411cbac25e709d2dcc2151d244f08745e1f22",
+    "status": "LOCKED_IMMUTABLE"
+  },
+  "seed_123": {
+    "checkpoint_path": "runs\\training\\hgat_cmappo\\seed_123\\stage_06\\model.pt",
+    "parameter_count": 184514,
+    "md5_checksum": "cabb4d206918946189ca51619b48f6a8",
+    "sha256_checksum": "c3ef710c0c9d5db19741b02d49b55b542b460cf4e6260df0cc635e3f0b525f8a",
+    "status": "LOCKED_IMMUTABLE"
+  },
+  "seed_2024": {
+    "checkpoint_path": "runs\\training\\hgat_cmappo\\seed_2024\\stage_06\\model.pt",
+    "parameter_count": 184514,
+    "md5_checksum": "b927b0bb232d2edc6d1104885c886345",
+    "sha256_checksum": "73eb0bb447089c52cccef535c774a252fb477c1a28902ee6263c895a93442610",
+    "status": "LOCKED_IMMUTABLE"
+  }
+}

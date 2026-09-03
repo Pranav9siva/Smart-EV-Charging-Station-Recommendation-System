@@ -1,0 +1,42 @@
+[project]
+name = "smart_ev_station_recommendation_system"
+version = "0.1.0"
+description = "EV charging station recommendation prototype using SUMO, TraCI, and reinforcement learning."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "EPL-2.0 OR GPL-2.0-or-later" }
+keywords = ["SUMO", "TraCI", "EV", "reinforcement-learning", "charging-stations"]
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.dependencies]
+gymnasium = "==0.29.1"
+stable-baselines3 = "==2.3.2"
+torch = "==2.3.1"
+traci = "==1.20.0"
+sumolib = "==1.20.0"
+numpy = "==1.26.4"
+pandas = "==2.2.2"
+networkx = "==3.3"
+matplotlib = "==3.9.0"
+plotly = "==5.22.0"
+sqlalchemy = "==2.0.31"
+psycopg2-binary = "==2.9.9"
+    python-dotenv = "==1.0.1"
+    fastapi = ">=0.110,<1.0"
+    uvicorn = ">=0.29,<1.0"
+    websockets = ">=12,<16"
+    prometheus-client = ">=0.20,<1.0"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["archive", "scripts", ".venv"]
+
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"

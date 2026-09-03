@@ -1,0 +1,5 @@
+component,grad_norm
+actor_grad_norm,0.070332
+critic_grad_norm,1.199593
+hgat_grad_norm,0.146294
+lagrangian_update_norm,0.010000

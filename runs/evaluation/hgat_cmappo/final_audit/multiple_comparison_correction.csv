@@ -1,0 +1,13 @@
+test_family,comparison,metric,raw_p_value,adjusted_p_value_holm,significant_after_correction
+Architectural Component Comparisons,HGAT-CMAPPO vs PPO,additional_detour,0.0001,0.0012,YES
+Architectural Component Comparisons,HGAT-CMAPPO vs PPO,waiting_time,0.0001,0.0012,YES
+Architectural Component Comparisons,HGAT-CMAPPO vs PPO,constraint_violations,0.0001,0.0012,YES
+Architectural Component Comparisons,HGAT-CMAPPO vs MAPPO,additional_detour,0.5278,1.0000,NO
+Architectural Component Comparisons,HGAT-CMAPPO vs MAPPO,waiting_time,0.0017,0.0156,YES
+Architectural Component Comparisons,HGAT-CMAPPO vs MAPPO,constraint_violations,0.0191,0.1528,NO
+Architectural Component Comparisons,HGAT-CMAPPO vs MAPPO + HGAT,additional_detour,0.7020,1.0000,NO
+Architectural Component Comparisons,HGAT-CMAPPO vs MAPPO + HGAT,waiting_time,0.2067,1.0000,NO
+Architectural Component Comparisons,HGAT-CMAPPO vs MAPPO + HGAT,constraint_violations,0.4657,1.0000,NO
+Architectural Component Comparisons,HGAT-CMAPPO vs MAPPO + Constraints,additional_detour,0.9827,1.0000,NO
+Architectural Component Comparisons,HGAT-CMAPPO vs MAPPO + Constraints,waiting_time,0.6939,1.0000,NO
+Architectural Component Comparisons,HGAT-CMAPPO vs MAPPO + Constraints,constraint_violations,0.5896,1.0000,NO

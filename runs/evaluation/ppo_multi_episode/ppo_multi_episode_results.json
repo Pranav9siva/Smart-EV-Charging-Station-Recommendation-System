@@ -1,0 +1,57 @@
+{
+  "evaluation": "ppo_multi_episode",
+  "schema_version": 2,
+  "policy": "PPO recommendation path",
+  "episodes_requested": 1,
+  "episodes_completed": 1,
+  "steps_per_episode": 30,
+  "fleet_size": 10,
+  "tracked": 10,
+  "aggregates": {
+    "reward": {
+      "average": -1122.59,
+      "minimum": -1122.59,
+      "maximum": -1122.59
+    },
+    "charging_cost": {
+      "average": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0
+    },
+    "waiting_time_min": {
+      "average": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0
+    },
+    "travel_distance_km": {
+      "average": 14.0683,
+      "minimum": 14.0683,
+      "maximum": 14.0683
+    },
+    "successful_charging": {
+      "average": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0
+    }
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "seed": 4200,
+      "steps_requested": 30,
+      "steps_completed": 30,
+      "recommendations": 10,
+      "reward": -1122.5899999999997,
+      "charging_cost": 0,
+      "estimated_charging_cost": 3591.9235935617316,
+      "waiting_time_min": 0.0,
+      "travel_distance_km": 14.068271476827475,
+      "successful_charging": 0,
+      "charging_started": 0,
+      "charging_completed": 0,
+      "queue_events": 0,
+      "runtime_seconds": 78.8651,
+      "status": "PASS"
+    }
+  ]
+}

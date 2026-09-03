@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software or HGAT-CMAPPO architecture in your research, please cite it as below."
+authors:
+  - family-names: "EV Recommendation Systems Group"
+title: "Smart EV Charging Station Recommendation System: Heterogeneous Graph Attention Constraint-Aware Multi-Agent Reinforcement Learning"
+version: "1.0.0"
+date-released: "2026-09-03"
+license: "MIT"
+repository-code: "https://github.com/example/smart-ev-station-recommendation-system"
+keywords:
+  - "Electric Vehicles"
+  - "Multi-Agent Reinforcement Learning"
+  - "Graph Neural Networks"
+  - "SUMO Traffic Simulation"
+  - "Constraint-Aware Optimization"

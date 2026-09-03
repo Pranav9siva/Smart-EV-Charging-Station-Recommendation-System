@@ -1,0 +1,46 @@
+{
+  "original": {
+    "model": "original",
+    "status": "FAILED",
+    "errors": [
+      "model_load_error:[Errno 2] No such file or directory: 'D:\\\\Smart_EV_Station_Recommandadtion_System\\\\scripts\\\\runs\\\\ppo_ckpt\\\\ppo_ev_final.zip.zip'"
+    ],
+    "rows": [],
+    "scenario_rows": [],
+    "placeholder_candidates_found": 0,
+    "metrics": {
+      "count": 0,
+      "mean_reward": null,
+      "std_reward": null,
+      "mean_soc_improvement": null,
+      "mean_range_improvement": null,
+      "charging_decision_success_rate": null,
+      "charging_event_rate": null,
+      "charging_completion_rate": null,
+      "invalid_action_rate": null,
+      "safety_violation_rate": null
+    }
+  },
+  "fine_tuned": {
+    "model": "fine_tuned",
+    "status": "FAILED",
+    "errors": [
+      "model_load_error:[Errno 2] No such file or directory: 'D:\\\\Smart_EV_Station_Recommandadtion_System\\\\scripts\\\\runs\\\\ppo_ckpt\\\\ppo_ev_finetuned_50k.zip.zip'"
+    ],
+    "rows": [],
+    "scenario_rows": [],
+    "placeholder_candidates_found": 0,
+    "metrics": {
+      "count": 0,
+      "mean_reward": null,
+      "std_reward": null,
+      "mean_soc_improvement": null,
+      "mean_range_improvement": null,
+      "charging_decision_success_rate": null,
+      "charging_event_rate": null,
+      "charging_completion_rate": null,
+      "invalid_action_rate": null,
+      "safety_violation_rate": null
+    }
+  }
+}

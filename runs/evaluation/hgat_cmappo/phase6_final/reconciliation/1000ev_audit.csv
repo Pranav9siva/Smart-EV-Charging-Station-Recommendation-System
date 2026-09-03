@@ -1,0 +1,6 @@
+model,1000ev_episodes,unique_seeds,unique_scenarios,mean_success_rate,mean_waiting_time,mean_charging_cost,mean_additional_detour,mean_violations,mean_fairness
+PPO,15,5,15,90.0%,300.0 s,Rs. 620.2,1.22 km,6666.7,0.9539
+MAPPO,15,5,15,90.0%,300.0 s,Rs. 620.2,2.03 km,4163.3,0.9729
+MAPPO + HGAT,15,5,15,90.0%,300.0 s,Rs. 620.2,2.03 km,4183.9,0.9699
+MAPPO + Constraints,15,5,15,90.0%,300.0 s,Rs. 620.2,2.03 km,4175.1,0.9709
+HGAT-CMAPPO,15,5,15,90.0%,300.0 s,Rs. 620.2,2.03 km,4179.9,0.9705

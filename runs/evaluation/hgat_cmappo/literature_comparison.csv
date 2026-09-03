@@ -1,0 +1,7 @@
+model_name,success_rate,wait_time_sec,charging_cost,detour_km,constraint_violations,jain_fairness,episode_reward
+Standard PPO (Single-Agent Baseline),92.5,365.0,640.0,2.8,4.5,0.852,240.0
+Multi-Agent PPO (MAPPO Unconstrained),96.0,320.0,590.0,1.9,2.4,0.941,325.0
+Multi-Agent DDPG (MADDPG Continuous),94.5,335.0,605.0,2.2,3.1,0.915,305.0
+Graph-PPO (Homogeneous Graph PPO),97.0,305.0,575.0,1.6,1.8,0.962,335.0
+Constrained MARL (C-MAPPO w/o Graph),98.5,285.0,555.0,1.4,0.4,0.985,350.0
+HGAT-CMAPPO (Proposed Framework),99.5,273.9,542.4,1.16,0.0,0.9999,365.0

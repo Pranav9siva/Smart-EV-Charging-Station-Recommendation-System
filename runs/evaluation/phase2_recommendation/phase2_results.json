@@ -1,0 +1,85 @@
+{
+  "PHASE2_STATUS": "PASS",
+  "REAL_STATION_COUNT": 505,
+  "PLACEHOLDER_COUNT": 0,
+  "SINGLE_EV_RECOMMENDATION": "PASS",
+  "RECOMMENDATION_SCORING": "PASS",
+  "MULTI_EV_TEST": "PASS",
+  "CHARGING_SUCCESS_RATE": 75.0,
+  "cost_sensitivity": "PASS",
+  "distance_sensitivity": "PASS",
+  "availability_sensitivity": "PASS",
+  "waiting_time_sensitivity": "PASS",
+  "station_contention": "PASS",
+  "queue_behavior": "PASS",
+  "charging_start": "PASS",
+  "charging_completion": "PASS",
+  "port_release": "PASS",
+  "ev_resume": "PASS",
+  "db_counts": {
+    "stations": 506,
+    "stations_with_coords": 506,
+    "ports": 1543,
+    "ports_with_connector": 1543,
+    "ports_with_power": 1543,
+    "price_history_rows": 15686,
+    "occupancy_log_rows": 17443
+  },
+  "phase2c": {
+    "name": "phase2c_recommendation_scoring",
+    "status": "PASS",
+    "runtime_seconds": 0.0046,
+    "details": {
+      "scenario_a_distance_prefers_closer": true,
+      "scenario_b_cost_prefers_cheaper": true,
+      "scenario_c_ports_prefers_more_free_ports": true,
+      "scenario_d_wait_prefers_lower_wait": true,
+      "selected": {
+        "A": "A",
+        "B": "B",
+        "C": "B",
+        "D": "B"
+      },
+      "formula_notes": [
+        "Active path in src/recommendation_engine/engine.py: PPO action over GymEVChargingEnv candidates when model loads.",
+        "Fallback heuristic sort key: (waiting_time, distance_km, -available_ports).",
+        "Fallback currently does not explicitly optimize charging cost or queue_length when waiting_time ties.",
+        "Gym reward in src/rl_env/gym_ev_charging_env.py: reward -= 0.5*wait - 0.2*distance - 0.1*(energy_need*price) + 0.5*free_ports -1.0*queue_len -0.01*grid_load, plus low-range penalty."
+      ]
+    },
+    "notes": []
+  },
+  "phase2d": {
+    "name": "phase2d_multi_ev_contention",
+    "status": "PASS",
+    "runtime_seconds": 2.4074,
+    "details": {
+      "recommendation_count": 8,
+      "real_recommendation_count": 8,
+      "placeholder_recommendation_count": 0,
+      "unique_selected_station_count": 1,
+      "shared_station_selected": true,
+      "charging_started_count": 6,
+      "charging_completed_count": 4,
+      "queue_joined_count": 2,
+      "queue_length_max": 0,
+      "queue_length_mean": 0.0,
+      "station_utilization_mean": 0.007425742574257425,
+      "state_persistence_checks": {
+        "station_state_persistent": true,
+        "ev_state_persistent": true,
+        "charging_state_persistent": true
+      },
+      "last_successful_step": 0
+    },
+    "checks": {
+      "different_evs_receive_recommendations": true,
+      "multiple_evs_can_select_same_station": true,
+      "charging_events_occur": true,
+      "station_state_persistent": true,
+      "ev_state_persistent": true,
+      "no_placeholder_selection": true
+    },
+    "notes": []
+  }
+}

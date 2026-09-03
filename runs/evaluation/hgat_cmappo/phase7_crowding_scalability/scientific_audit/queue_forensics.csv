@@ -1,0 +1,6 @@
+model,total_episodes,mean_queue_violations,queue_event_derived
+PPO,100,4450.0,YES
+MAPPO,100,1107.9,YES
+MAPPO + HGAT,100,1049.3,YES
+MAPPO + Constraints,100,1045.4,YES
+HGAT-CMAPPO,100,1046.5,YES

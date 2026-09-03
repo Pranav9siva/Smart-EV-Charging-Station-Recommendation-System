@@ -1,0 +1,72 @@
+{
+  "audit_timestamp": "2026-09-02T13:50:31+05:30",
+  "overall_validation_result": "PASS",
+  "audit_summary": {
+    "training_depth": "PASS",
+    "action_influence": "PASS",
+    "policy_diversity": "PASS",
+    "success_rate": "PASS",
+    "queue_wait": "PASS",
+    "cost": "PASS",
+    "fairness": "PASS",
+    "constraint": "PASS",
+    "hgat": "PASS",
+    "mappo": "PASS",
+    "gradient": "PASS",
+    "reward": "PASS",
+    "checkpoint": "PASS",
+    "randomness": "PASS"
+  },
+  "training_depth": {
+    "env_timesteps": 1600,
+    "episodes": 80,
+    "agent_steps": 304000,
+    "gradient_updates": 1600,
+    "ppo_rollout_size": 20,
+    "ppo_epochs": 1,
+    "batch_size": 64,
+    "optimizer_updates": 1600
+  },
+  "cost_distribution": {
+    "mean": 16.0,
+    "std": 0.0,
+    "min": 16.0,
+    "max": 16.0,
+    "p25": 16.0,
+    "p75": 16.0
+  },
+  "policy_diversity": {
+    "unique_stations": 10,
+    "entropy": 2.0793566703796387
+  },
+  "stress_scenarios": {
+    "A_low_soc": {
+      "success_rate": 94.0,
+      "completion_rate": 100.0
+    },
+    "B_high_traffic": {
+      "success_rate": 100.0,
+      "completion_rate": 100.0
+    },
+    "C_high_demand": {
+      "success_rate": 100.0,
+      "completion_rate": 100.0
+    },
+    "D_reduced_ports": {
+      "success_rate": 100.0,
+      "completion_rate": 100.0
+    },
+    "E_station_failures": {
+      "success_rate": 100.0,
+      "completion_rate": 100.0
+    },
+    "F_long_queues": {
+      "success_rate": 100.0,
+      "completion_rate": 100.0
+    },
+    "G_combined_stress": {
+      "success_rate": 92.0,
+      "completion_rate": 100.0
+    }
+  }
+}

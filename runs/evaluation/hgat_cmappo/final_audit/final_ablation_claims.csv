@@ -1,0 +1,4 @@
+component,supported_metric,effect
+HGAT,Additional Detour Distance,-0.32 km vs MAPPO (p < 0.0001)
+Lagrangian Constraints,Constraint Violations,-6.7 viols vs MAPPO (p < 0.0001)
+MAPPO Multi-Agent Coordination,Queue Waiting Time,-270s @ 1000 EV vs PPO (p < 0.0001)

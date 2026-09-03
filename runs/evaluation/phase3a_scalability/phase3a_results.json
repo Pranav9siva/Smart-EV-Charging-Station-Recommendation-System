@@ -1,0 +1,472 @@
+{
+  "PHASE3A_STATUS": "PASS",
+  "FLEET_SIZE": 100,
+  "TRACKED_COUNT": 10,
+  "SUMO_AVAILABLE": true,
+  "SUMO_OVERLAY_STATUS": "PASS",
+  "total_runtime_seconds": 45.9348,
+  "sub_checks": [
+    {
+      "name": "phase3a_1_station_inventory",
+      "status": "PASS",
+      "runtime_seconds": 0.0342,
+      "real_station_count": 500,
+      "placeholder_count": 5,
+      "stations_with_coords": 500,
+      "sampled_metrics_ok": 10,
+      "notes": [
+        "5 placeholder-pattern stations present in DB (not selected as recommendations; verified in recommendation sub-check)."
+      ]
+    },
+    {
+      "name": "phase3a_2_route_validation",
+      "status": "PASS",
+      "runtime_seconds": 0.0717,
+      "fleet_size": 100,
+      "valid_routes": 100,
+      "invalid_routes": 0,
+      "tracked_route_details": [
+        {
+          "ev_id": "ev_0",
+          "lat": 12.909012,
+          "lon": 77.577836,
+          "nearest_station_km": 1.158,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_1",
+          "lat": 12.92714,
+          "lon": 77.517445,
+          "nearest_station_km": 3.791,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_2",
+          "lat": 12.906493,
+          "lon": 77.647601,
+          "nearest_station_km": 0.218,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_3",
+          "lat": 13.099988,
+          "lon": 77.587352,
+          "nearest_station_km": 5.847,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_4",
+          "lat": 13.106395,
+          "lon": 77.717678,
+          "nearest_station_km": 8.263,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_5",
+          "lat": 13.002456,
+          "lon": 77.555283,
+          "nearest_station_km": 0.643,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_6",
+          "lat": 13.080178,
+          "lon": 77.728851,
+          "nearest_station_km": 5.625,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_7",
+          "lat": 13.01653,
+          "lon": 77.453271,
+          "nearest_station_km": 7.349,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_8",
+          "lat": 13.027422,
+          "lon": 77.451676,
+          "nearest_station_km": 7.475,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_9",
+          "lat": 12.954508,
+          "lon": 77.74184,
+          "nearest_station_km": 0.642,
+          "valid": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "phase3a_3_recommendation_validation",
+      "status": "PASS",
+      "runtime_seconds": 12.537,
+      "fleet_size": 100,
+      "real_recommendations": 100,
+      "placeholder_recommendations": 0,
+      "empty_recommendations": 0,
+      "invalid_station_recommendations": 0,
+      "real_recommendation_rate_pct": 100.0,
+      "latency_mean_ms": 125.319,
+      "latency_median_ms": 116.69,
+      "latency_p95_ms": 183.523,
+      "latency_max_ms": 259.237,
+      "tracked_recommendations": [
+        {
+          "ev_id": "ev_0",
+          "selected_station": "osm_13277046525",
+          "distance_km": 9.866,
+          "travel_time_min": 24.664,
+          "cost_kwh": 153.009,
+          "wait_min": 0.0,
+          "score": -0.049,
+          "latency_ms": 103.068,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_1",
+          "selected_station": "osm_13277046525",
+          "distance_km": 21.918,
+          "travel_time_min": 54.794,
+          "cost_kwh": 148.59,
+          "wait_min": 0.0,
+          "score": -0.0484,
+          "latency_ms": 104.472,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_2",
+          "selected_station": "osm_13277046525",
+          "distance_km": 4.197,
+          "travel_time_min": 10.493,
+          "cost_kwh": 101.06,
+          "wait_min": 0.0,
+          "score": -0.0492,
+          "latency_ms": 103.815,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_3",
+          "selected_station": "osm_13277046525",
+          "distance_km": 18.967,
+          "travel_time_min": 47.417,
+          "cost_kwh": 96.396,
+          "wait_min": 0.0,
+          "score": -0.0483,
+          "latency_ms": 104.519,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_4",
+          "selected_station": "osm_13277046525",
+          "distance_km": 17.994,
+          "travel_time_min": 44.984,
+          "cost_kwh": 259.93,
+          "wait_min": 0.0,
+          "score": -0.0484,
+          "latency_ms": 110.962,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_5",
+          "selected_station": "osm_13277046525",
+          "distance_km": 14.772,
+          "travel_time_min": 36.93,
+          "cost_kwh": 139.754,
+          "wait_min": 0.0,
+          "score": -0.0486,
+          "latency_ms": 107.153,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_6",
+          "selected_station": "osm_13277046525",
+          "distance_km": 9.43,
+          "travel_time_min": 23.574,
+          "cost_kwh": 205.742,
+          "wait_min": 0.0,
+          "score": -0.0492,
+          "latency_ms": 107.712,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_7",
+          "selected_station": "osm_13277046525",
+          "distance_km": 20.823,
+          "travel_time_min": 52.058,
+          "cost_kwh": 157.893,
+          "wait_min": 0.0,
+          "score": -0.0487,
+          "latency_ms": 106.034,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_8",
+          "selected_station": "osm_13277046525",
+          "distance_km": 11.6,
+          "travel_time_min": 29.0,
+          "cost_kwh": 91.444,
+          "wait_min": 0.0,
+          "score": -0.0487,
+          "latency_ms": 110.847,
+          "valid": true
+        },
+        {
+          "ev_id": "ev_9",
+          "selected_station": "osm_13277046525",
+          "distance_km": 15.021,
+          "travel_time_min": 37.553,
+          "cost_kwh": 150.702,
+          "wait_min": 0.0,
+          "score": -0.0489,
+          "latency_ms": 101.322,
+          "valid": true
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "phase3a_4_charging_lifecycle",
+      "status": "PASS",
+      "runtime_seconds": 16.5706,
+      "fleet_size": 100,
+      "charging_started_count": 100,
+      "charging_completed_count": 50,
+      "queue_event_count": 0,
+      "port_release_count": 50,
+      "ev_resume_count": 50,
+      "reservation_failure_count": 0,
+      "charging_success_rate_pct": 100.0,
+      "state_persistence_verified": true,
+      "tracked_lifecycle": {
+        "charging_started": [
+          {
+            "ev_id": "ev_0",
+            "station_id": "osm_13277046525",
+            "port_id": "osm_13277046525_p1",
+            "battery_pct_at_start": 8.09
+          },
+          {
+            "ev_id": "ev_1",
+            "station_id": "osm_9202909866",
+            "port_id": "osm_9202909866_p1",
+            "battery_pct_at_start": 10.25
+          },
+          {
+            "ev_id": "ev_2",
+            "station_id": "sim_247",
+            "port_id": "sim_247_p1",
+            "battery_pct_at_start": 19.03
+          },
+          {
+            "ev_id": "ev_3",
+            "station_id": "sim_87",
+            "port_id": "sim_87_p1",
+            "battery_pct_at_start": 12.4
+          },
+          {
+            "ev_id": "ev_4",
+            "station_id": "sim_368",
+            "port_id": "sim_368_p1",
+            "battery_pct_at_start": 15.07
+          },
+          {
+            "ev_id": "ev_5",
+            "station_id": "sim_76",
+            "port_id": "sim_76_p1",
+            "battery_pct_at_start": 19.05
+          },
+          {
+            "ev_id": "ev_6",
+            "station_id": "sim_273",
+            "port_id": "sim_273_p1",
+            "battery_pct_at_start": 18.99
+          },
+          {
+            "ev_id": "ev_7",
+            "station_id": "sim_374",
+            "port_id": "sim_374_p1",
+            "battery_pct_at_start": 18.44
+          },
+          {
+            "ev_id": "ev_8",
+            "station_id": "sim_105",
+            "port_id": "sim_105_p1",
+            "battery_pct_at_start": 18.68
+          },
+          {
+            "ev_id": "ev_9",
+            "station_id": "sim_246",
+            "port_id": "sim_246_p1",
+            "battery_pct_at_start": 6.32
+          }
+        ],
+        "charging_completed": [
+          {
+            "ev_id": "ev_0",
+            "station_id": "osm_13277046525",
+            "port_id": "osm_13277046525_p1"
+          },
+          {
+            "ev_id": "ev_1",
+            "station_id": "osm_9202909866",
+            "port_id": "osm_9202909866_p1"
+          },
+          {
+            "ev_id": "ev_2",
+            "station_id": "sim_247",
+            "port_id": "sim_247_p1"
+          },
+          {
+            "ev_id": "ev_3",
+            "station_id": "sim_87",
+            "port_id": "sim_87_p1"
+          },
+          {
+            "ev_id": "ev_4",
+            "station_id": "sim_368",
+            "port_id": "sim_368_p1"
+          },
+          {
+            "ev_id": "ev_5",
+            "station_id": "sim_76",
+            "port_id": "sim_76_p1"
+          },
+          {
+            "ev_id": "ev_6",
+            "station_id": "sim_273",
+            "port_id": "sim_273_p1"
+          },
+          {
+            "ev_id": "ev_7",
+            "station_id": "sim_374",
+            "port_id": "sim_374_p1"
+          },
+          {
+            "ev_id": "ev_8",
+            "station_id": "sim_105",
+            "port_id": "sim_105_p1"
+          },
+          {
+            "ev_id": "ev_9",
+            "station_id": "sim_246",
+            "port_id": "sim_246_p1"
+          }
+        ],
+        "queue_events": [],
+        "port_release_events": [
+          {
+            "ev_id": "ev_0",
+            "port_id": "osm_13277046525_p1"
+          },
+          {
+            "ev_id": "ev_1",
+            "port_id": "osm_9202909866_p1"
+          },
+          {
+            "ev_id": "ev_2",
+            "port_id": "sim_247_p1"
+          },
+          {
+            "ev_id": "ev_3",
+            "port_id": "sim_87_p1"
+          },
+          {
+            "ev_id": "ev_4",
+            "port_id": "sim_368_p1"
+          },
+          {
+            "ev_id": "ev_5",
+            "port_id": "sim_76_p1"
+          },
+          {
+            "ev_id": "ev_6",
+            "port_id": "sim_273_p1"
+          },
+          {
+            "ev_id": "ev_7",
+            "port_id": "sim_374_p1"
+          },
+          {
+            "ev_id": "ev_8",
+            "port_id": "sim_105_p1"
+          },
+          {
+            "ev_id": "ev_9",
+            "port_id": "sim_246_p1"
+          }
+        ],
+        "ev_resume_events": [
+          {
+            "ev_id": "ev_0",
+            "final_battery_pct": 78.05
+          },
+          {
+            "ev_id": "ev_1",
+            "final_battery_pct": 81.24
+          },
+          {
+            "ev_id": "ev_2",
+            "final_battery_pct": 80.21
+          },
+          {
+            "ev_id": "ev_3",
+            "final_battery_pct": 79.8
+          },
+          {
+            "ev_id": "ev_4",
+            "final_battery_pct": 78.15
+          },
+          {
+            "ev_id": "ev_5",
+            "final_battery_pct": 78.63
+          },
+          {
+            "ev_id": "ev_6",
+            "final_battery_pct": 78.58
+          },
+          {
+            "ev_id": "ev_7",
+            "final_battery_pct": 80.1
+          },
+          {
+            "ev_id": "ev_8",
+            "final_battery_pct": 78.2
+          },
+          {
+            "ev_id": "ev_9",
+            "final_battery_pct": 80.47
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "name": "phase3a_5_sumo_overlay",
+      "status": "PASS",
+      "sumo_available": true,
+      "runtime_seconds": 14.615,
+      "steps_completed": 300,
+      "max_steps": 300,
+      "last_successful_step": 299,
+      "mean_vehicle_count": 7.8,
+      "max_vehicle_count": 10,
+      "wall_timeout_s": 120.0,
+      "notes": []
+    }
+  ],
+  "REAL_STATION_COUNT": 500,
+  "PLACEHOLDER_COUNT": 5,
+  "REAL_RECOMMENDATION_RATE_PCT": 100.0,
+  "RECOMMENDATION_LATENCY_MEAN_MS": 125.319,
+  "RECOMMENDATION_LATENCY_P95_MS": 183.523,
+  "CHARGING_SUCCESS_RATE_PCT": 100.0,
+  "CHARGING_STARTED": 100,
+  "CHARGING_COMPLETED": 50,
+  "QUEUE_EVENTS": 0,
+  "PORT_RELEASE_EVENTS": 50,
+  "EV_RESUME_EVENTS": 50,
+  "STATE_PERSISTENCE_VERIFIED": true
+}

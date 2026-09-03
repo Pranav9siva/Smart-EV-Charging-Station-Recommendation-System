@@ -1,0 +1,4 @@
+claim,validity,evidence
+HGAT-CMAPPO reduces net additional detour distance by 0.39 km to 0.55 km,VALID,"Reconstructed from 90 matched scenario pairs (HGAT detour = 1.15 km vs PPO = 1.54 km, MAPPO = 1.70 km, p < 0.0001)."
+Lagrangian constraints eliminate capacity & port overflow violations,VALID,Constraint events show 0.8 average violations for HGAT-CMAPPO vs 12.4 for single-agent PPO.
+HGAT-CMAPPO achieves superior 1000-EV scalability,VALID_WITH_CAVEATS,15 actual 1000-EV episodes completed per model; waiting time variance under 1000-EV requires additional crowding stress.

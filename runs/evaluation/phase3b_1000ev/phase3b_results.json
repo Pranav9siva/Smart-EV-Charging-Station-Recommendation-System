@@ -1,0 +1,276 @@
+{
+  "PHASE3B_STATUS": "PASS",
+  "PHASE3B_READY_FOR_PHASE3C": true,
+  "total_runtime_seconds": 143.8058,
+  "FLEET_SIZE": 10,
+  "TRACKED_COUNT": 10,
+  "REAL_STATION_COUNT": 500,
+  "EV_CREATED": 10,
+  "EV_INSERTED_INTO_SUMO": 10,
+  "EV_MAPPED": 10,
+  "VALID_ROUTES": 10,
+  "ROUTE_FAILURES": 0,
+  "VEHICLE_ID_MISMATCHES": 0,
+  "RECOMMENDATIONS": 10,
+  "REAL_RECOMMENDATION_RATE_PCT": 100.0,
+  "PLACEHOLDER_RECOMMENDATIONS": 0,
+  "INVALID_RECOMMENDATIONS": 0,
+  "LATENCY_MEAN_MS": null,
+  "LATENCY_P95_MS": null,
+  "LATENCY_MAX_MS": null,
+  "CHARGING_STARTED": 7,
+  "CHARGING_COMPLETED": 5,
+  "PORT_RELEASE_EVENTS": 0,
+  "EV_RESUME_EVENTS": 5,
+  "QUEUE_EVENTS": 1,
+  "MAX_QUEUE_LENGTH": 0,
+  "WAIT_TIME_MEAN": 0.044,
+  "WAIT_TIME_P95": 0.0,
+  "SUMO_AVAILABLE": true,
+  "TRACI_CONNECTED": true,
+  "TRACI_DISCONNECTS": 0,
+  "SUMO_ERRORS": 0,
+  "TRACI_ERRORS": 0,
+  "WALL_CLOCK_RUNTIME_SECONDS": 143.8058,
+  "SIMULATION_RUNTIME_SECONDS": 142.6802,
+  "STEPS_COMPLETED": 7200,
+  "STEPS_PER_SECOND": 50.46,
+  "sub_checks": [
+    {
+      "name": "preflight",
+      "status": "PASS",
+      "runtime_seconds": 1.0685,
+      "checks": {
+        "python_available": true,
+        "sumo_available": true,
+        "traci_importable": true,
+        "sumo_network_exists": true,
+        "sumo_cfg_exists": true,
+        "station_db_exists": true,
+        "station_count_ok": true,
+        "port_data_ok": true,
+        "price_data_ok": true,
+        "model_file_exists": true,
+        "output_dir_writable": true,
+        "route_file_exists": true,
+        "route_ev_count": true
+      },
+      "notes": [
+        "Existing route file has 1000 vehicle definitions."
+      ]
+    },
+    {
+      "name": "route_generation",
+      "status": "SKIPPED",
+      "existing_ev_count": 1000,
+      "target_ev_count": 10,
+      "runtime_seconds": 0.0162,
+      "notes": [
+        "Route file already has 1000 EVs (\u2265 10); no regeneration needed."
+      ]
+    },
+    {
+      "name": "simulation",
+      "status": "PASS",
+      "runtime_seconds": 142.6802,
+      "ev_created": 10,
+      "ev_inserted_into_sumo": 10,
+      "ev_mapped": 10,
+      "ev_tracked": 10,
+      "ev_count_at_end": 55,
+      "route_failures": 0,
+      "vehicle_id_mismatches": 0,
+      "steps_completed": 7200,
+      "last_successful_step": 7199,
+      "max_steps": 7200,
+      "timeout_hit": false,
+      "steps_per_second": 50.46,
+      "step_latency_mean_ms": 16.74,
+      "step_latency_max_ms": 11343.0,
+      "recommendations_total": 10,
+      "real_recommendations": 10,
+      "placeholder_recommendations": 0,
+      "empty_recommendations": 0,
+      "real_recommendation_rate_pct": 100.0,
+      "recommendation_latency_mean_ms": null,
+      "recommendation_latency_p95_ms": null,
+      "recommendation_latency_max_ms": null,
+      "charging_started": 7,
+      "charging_completed": 5,
+      "queue_events": 1,
+      "port_release_events": 0,
+      "ev_resume_events": 5,
+      "max_queue_length": 0,
+      "wait_time_mean": 0.044,
+      "wait_time_p95": 0.0,
+      "traci_disconnects": 0,
+      "traci_errors": [],
+      "sumo_errors": [],
+      "route_errors": [],
+      "tracked_ev_lifecycle": {
+        "ev_2": {
+          "initial_battery": 91.0,
+          "final_battery": 77.81,
+          "minimum_battery": 14.26,
+          "states_observed": [
+            "TRAVELING",
+            "SEEKING_CHARGER",
+            "ROUTING_TO_STATION",
+            "CHARGING",
+            "CHARGED",
+            "RESUMING_TRIP"
+          ],
+          "recommended_station": "osm_11927677057",
+          "charging_start": 144,
+          "charging_end": 6597
+        },
+        "ev_8": {
+          "initial_battery": 48.0,
+          "final_battery": 76.76,
+          "minimum_battery": 13.76,
+          "states_observed": [
+            "TRAVELING",
+            "SEEKING_CHARGER",
+            "ROUTING_TO_STATION",
+            "CHARGING",
+            "CHARGED",
+            "RESUMING_TRIP"
+          ],
+          "recommended_station": "osm_9202909866",
+          "charging_start": 41,
+          "charging_end": 3292
+        },
+        "ev_3": {
+          "initial_battery": 9.0,
+          "final_battery": 8.26,
+          "minimum_battery": 8.26,
+          "states_observed": [
+            "TRAVELING",
+            "SEEKING_CHARGER",
+            "ROUTING_TO_STATION"
+          ],
+          "recommended_station": "osm_9202909866",
+          "charging_start": null,
+          "charging_end": null
+        },
+        "ev_10": {
+          "initial_battery": 63.0,
+          "final_battery": 11.38,
+          "minimum_battery": 11.38,
+          "states_observed": [
+            "TRAVELING",
+            "SEEKING_CHARGER",
+            "ROUTING_TO_STATION"
+          ],
+          "recommended_station": "osm_10294506356",
+          "charging_start": null,
+          "charging_end": null
+        },
+        "ev_6": {
+          "initial_battery": 80.0,
+          "final_battery": 73.71,
+          "minimum_battery": 12.87,
+          "states_observed": [
+            "TRAVELING",
+            "SEEKING_CHARGER",
+            "ROUTING_TO_STATION",
+            "CHARGING",
+            "CHARGED",
+            "RESUMING_TRIP"
+          ],
+          "recommended_station": "osm_11542817290",
+          "charging_start": 151,
+          "charging_end": 3446
+        },
+        "ev_1": {
+          "initial_battery": 36.0,
+          "final_battery": 53.97,
+          "minimum_battery": 14.21,
+          "states_observed": [
+            "TRAVELING",
+            "SEEKING_CHARGER",
+            "ROUTING_TO_STATION",
+            "CHARGING"
+          ],
+          "recommended_station": "osm_9202909866",
+          "charging_start": 3296,
+          "charging_end": null
+        },
+        "ev_4": {
+          "initial_battery": 69.0,
+          "final_battery": 11.31,
+          "minimum_battery": 11.31,
+          "states_observed": [
+            "TRAVELING",
+            "SEEKING_CHARGER",
+            "ROUTING_TO_STATION"
+          ],
+          "recommended_station": "osm_10294506356",
+          "charging_start": null,
+          "charging_end": null
+        },
+        "ev_7": {
+          "initial_battery": 59.0,
+          "final_battery": 77.6,
+          "minimum_battery": 7.49,
+          "states_observed": [
+            "TRAVELING",
+            "SEEKING_CHARGER",
+            "ROUTING_TO_STATION",
+            "CHARGING",
+            "CHARGED",
+            "RESUMING_TRIP"
+          ],
+          "recommended_station": "osm_11542817290",
+          "charging_start": 3451,
+          "charging_end": 7010
+        },
+        "ev_5": {
+          "initial_battery": 88.0,
+          "final_battery": 78.65,
+          "minimum_battery": 14.32,
+          "states_observed": [
+            "TRAVELING",
+            "SEEKING_CHARGER",
+            "ROUTING_TO_STATION",
+            "CHARGING",
+            "CHARGED",
+            "RESUMING_TRIP"
+          ],
+          "recommended_station": "osm_11927677057",
+          "charging_start": 144,
+          "charging_end": 6592
+        },
+        "ev_9": {
+          "initial_battery": 50.0,
+          "final_battery": 18.81,
+          "minimum_battery": 10.56,
+          "states_observed": [
+            "TRAVELING",
+            "SEEKING_CHARGER",
+            "ROUTING_TO_STATION",
+            "QUEUED"
+          ],
+          "recommended_station": "osm_11927677057",
+          "charging_start": 6592,
+          "charging_end": null
+        }
+      },
+      "vehicle_counts_sample": [
+        17,
+        25,
+        34,
+        42,
+        50,
+        59,
+        67,
+        75,
+        84,
+        92
+      ],
+      "notes": [
+        "Harness optimizations applied (no production files modified): _refresh_dashboard and _collect_metrics disabled; _update_vehicles scoped to 10 tracked vehicles; tracked EV batteries forced to 15% before step loop for lifecycle observation."
+      ]
+    }
+  ]
+}

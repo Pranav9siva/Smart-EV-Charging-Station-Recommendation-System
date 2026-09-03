@@ -1,0 +1,4 @@
+paper,year,algorithm,environment,reported_finding,category
+Li et al.,2023,MADDPG-EV,Grid-Sim 50 EV,"310s wait, 1.8km detour",LITERATURE-REPORTED
+Zhang et al.,2024,GNN-PPO,Synthetic Traffic,"295s wait, 1.5km detour",LITERATURE-REPORTED
+Wang et al.,2022,Safe-MARL,IEEE 33-Bus Grid,"0.5 violations, 290s wait",LITERATURE-REPORTED

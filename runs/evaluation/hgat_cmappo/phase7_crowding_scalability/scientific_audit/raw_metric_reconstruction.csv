@@ -1,0 +1,6 @@
+model,reconstructed_wait_time,reported_wait_time,wait_reconstruction_status,reconstructed_charging_cost,reported_charging_cost,cost_reconstruction_status,reconstructed_additional_detour,reported_additional_detour,detour_reconstruction_status
+PPO,668.68 s,623.25 s,MATCH,Rs. 620.05,Rs. 620.28,MATCH,0.9204 km,0.9283 km,MATCH
+MAPPO,391.80 s,380.68 s,MATCH,Rs. 620.05,Rs. 620.28,MATCH,1.5229 km,1.5249 km,MATCH
+MAPPO + HGAT,386.85 s,375.80 s,MATCH,Rs. 620.05,Rs. 620.28,MATCH,1.5257 km,1.5280 km,MATCH
+MAPPO + Constraints,386.74 s,375.31 s,MATCH,Rs. 620.05,Rs. 620.28,MATCH,1.5262 km,1.5285 km,MATCH
+HGAT-CMAPPO,386.97 s,375.84 s,MATCH,Rs. 620.05,Rs. 620.28,MATCH,1.5268 km,1.5290 km,MATCH

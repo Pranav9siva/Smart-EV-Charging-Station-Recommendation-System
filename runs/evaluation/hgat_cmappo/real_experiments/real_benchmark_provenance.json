@@ -1,0 +1,20 @@
+{
+  "total_episodes": 750,
+  "episodes_per_model": {
+    "PPO": 150,
+    "MAPPO": 150,
+    "MAPPO + HGAT": 150,
+    "MAPPO + Constraints": 150,
+    "HGAT-CMAPPO": 150
+  },
+  "seeds": [
+    42,
+    123,
+    2024,
+    31415,
+    54321
+  ],
+  "synthetic_data": false,
+  "trajectory_reuse": false,
+  "provenance_status": "REAL_SIMULATION_DATA"
+}

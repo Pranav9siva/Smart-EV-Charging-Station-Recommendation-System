@@ -1,0 +1,40 @@
+station_id,name,lat,lon,num_ports,power_kw,operator,address,source
+osm_9202909866,Ather Charging Grid,12.975668,77.6413089,8,22.0,Ather Energy,,real
+osm_9527967749,OSM Charging Station,13.0415766,77.6204588,1,22.0,Unknown,,real
+osm_9796873472,OSM Charging Station,12.9947371,77.6993007,2,22.0,BESCOM,,real
+osm_9811396097,OSM Charging Station,12.9775829,77.6389895,1,22.0,Unknown,,real
+osm_9917415768,OSM Charging Station,12.9733967,77.6357561,1,22.0,Unknown,,real
+osm_9917415769,OSM Charging Station,12.9733738,77.6357554,1,22.0,Unknown,,real
+osm_10177662896,OSM Charging Station,12.9137732,77.6441735,1,22.0,Unknown,,real
+osm_10293872605,inGO,12.9712776,77.6078832,1,22.0,Unknown,,real
+osm_10294506356,OSM Charging Station,12.9764825,77.6268299,1,22.0,Unknown,,real
+osm_10763275239,Magenta ChargeGrid Charging Station,12.9154635,77.6158909,1,22.0,Magenta Group,,real
+osm_11178123519,OSM Charging Station,12.9576825,77.5684466,1,22.0,Ather,,real
+osm_11214889013,Pulse,12.9805484,77.5978893,1,22.0,Unknown,,real
+osm_11283405698,Ola Hypercharger,12.9322172,77.6142725,4,22.0,Unknown,,real
+osm_11286212936,OSM Charging Station,12.916907,77.6102709,2,22.0,BESCOM,,real
+osm_11297781805,OSM Charging Station,12.9710109,77.597788,1,22.0,Unknown,,real
+osm_11408768738,OSM Charging Station,12.9736666,77.5830855,1,22.0,Unknown,,real
+osm_11463172582,OSM Charging Station,12.9301946,77.6148303,1,22.0,Unknown,,real
+osm_11542817290,OSM Charging Station,12.9362684,77.6076884,1,22.0,Unknown,,real
+osm_11927677057,Ola Hyper Charger,12.9337755,77.6236693,2,22.0,ChargePoint,,real
+osm_11927677058,Battery Swap,12.9285835,77.6241904,1,22.0,ChargePoint,,real
+osm_11936564076,Ather Charging Station,12.9311453,77.6238461,1,22.0,ChargePoint,,real
+osm_12002046035,OSM Charging Station,12.977855,77.5812757,1,22.0,Unknown,,real
+osm_12016136802,OSM Charging Station,13.027001,77.5425776,1,22.0,Unknown,,real
+osm_12078138004,OSM Charging Station,12.9810756,77.5966804,1,22.0,Unknown,,real
+osm_12100028686,Honda e:swap,13.0000143,77.5499059,1,22.0,Honda e:swap,,real
+osm_12101733050,OSM Charging Station,12.965406,77.6002473,1,22.0,Unknown,,real
+osm_12125802596,Honda e:swap,12.9781045,77.6389105,1,22.0,Honda e:swap,,real
+osm_12169023077,Battery Swapping Station,12.8894274,77.5563647,1,22.0,Unknown,,real
+osm_12492566397,Honda e:swap,12.9383537,77.5802162,1,22.0,Honda e:swap,,real
+osm_12492581619,Honda e:swap,12.9217078,77.5805052,1,22.0,Honda e:swap,,real
+osm_12519643346,Honda e:swap,13.0330528,77.533757,1,22.0,Honda e:swap,,real
+osm_12534145133,Honda e:swap,12.993427,77.7043141,1,22.0,Unknown,,real
+osm_12534184756,Honda e:swap,12.993427,77.7043141,1,22.0,Unknown,,real
+osm_12788139581,Honda e:swap,12.9861844,77.6156891,1,22.0,Honda e:swap,,real
+osm_12968864355,OSM Charging Station,13.020096,77.6929133,1,22.0,Unknown,,real
+osm_12982255490,OSM Charging Station,12.9421168,77.7471967,1,22.0,êpump,,real
+osm_13277046524,Honda e:swap,13.0235213,77.5497316,12,22.0,Honda e:swap,,real
+osm_13277046525,Honda e:swap,13.0235317,77.5497115,12,22.0,Honda e:swap,,real
+osm_13566426890,OSM Charging Station,13.0001758,77.6869647,1,22.0,Sun Mobility,,real

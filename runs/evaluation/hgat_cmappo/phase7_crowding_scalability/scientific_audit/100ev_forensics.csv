@@ -1,0 +1,6 @@
+model,episodes_at_100ev,unique_wait_times,min_wait,max_wait,explanation
+PPO,25,3,300.0 s,900.0 s,300.0 s corresponds to candidate average wait time (30.0 s/step x 10 steps = 300.0 s) under baseline uncrowded 100 EV demand.
+MAPPO,25,11,300.0 s,454.2 s,300.0 s corresponds to candidate average wait time (30.0 s/step x 10 steps = 300.0 s) under baseline uncrowded 100 EV demand.
+MAPPO + HGAT,25,15,300.0 s,444.6 s,300.0 s corresponds to candidate average wait time (30.0 s/step x 10 steps = 300.0 s) under baseline uncrowded 100 EV demand.
+MAPPO + Constraints,25,15,300.0 s,437.4 s,300.0 s corresponds to candidate average wait time (30.0 s/step x 10 steps = 300.0 s) under baseline uncrowded 100 EV demand.
+HGAT-CMAPPO,25,14,300.0 s,445.2 s,300.0 s corresponds to candidate average wait time (30.0 s/step x 10 steps = 300.0 s) under baseline uncrowded 100 EV demand.

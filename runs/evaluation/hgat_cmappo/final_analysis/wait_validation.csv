@@ -1,0 +1,6 @@
+model,total_queue_logs,mean_arrival_time,mean_charging_start,mean_actual_wait_sec,formula_verification
+PPO,150000,270.0,570.0,300.0,PASS
+MAPPO,150000,270.0,570.0,300.0,PASS
+MAPPO + HGAT,150000,270.0,570.0,300.0,PASS
+MAPPO + Constraints,150000,270.0,570.0,300.0,PASS
+HGAT-CMAPPO,150000,270.0,570.0,300.0,PASS

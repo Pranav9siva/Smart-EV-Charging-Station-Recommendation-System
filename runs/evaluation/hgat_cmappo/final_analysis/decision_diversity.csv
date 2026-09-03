@@ -1,0 +1,6 @@
+model,total_recommendations,unique_stations_selected,station_entropy,unique_action_sequences,top1_station_share
+PPO,150000,198,6.9839,1,5.2%
+MAPPO,150000,435,8.1682,5,1.0%
+MAPPO + HGAT,150000,445,8.2207,150,1.1%
+MAPPO + Constraints,150000,445,8.2208,150,1.1%
+HGAT-CMAPPO,150000,445,8.2221,150,1.1%

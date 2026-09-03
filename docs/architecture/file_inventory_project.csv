@@ -1,0 +1,441 @@
+file_folder,purpose,used_by,important_yes_no,generated_yes_no,duplicate_yes_no,safe_to_delete_yes_no,recommended_location,classification
+.env,,,yes,no,no,no,.env,E. DATA
+.github/workflows/ci.yml,Configuration,Runtime/tooling,yes,no,no,no,.github/workflows/ci.yml,B. CONFIGURATION
+.github/workflows/python-app.yml,Configuration,Runtime/tooling,yes,no,no,no,.github/workflows/python-app.yml,B. CONFIGURATION
+.gitignore,,,yes,no,no,no,.gitignore,E. DATA
+.venv_check.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+.venv_pkgfreeze.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+AGENTS.md,Documentation,Developers,yes,no,no,no,AGENTS.md,G. DOCUMENTATION
+BASELINE_REPORT.md,Historical report,Research,yes,no,no,no,docs/research/archive/,L. OLD VERSION
+Dockerfile,,,yes,no,no,no,Dockerfile,E. DATA
+Documentation/Task_tracking_Doc.docx,,,yes,no,no,no,Documentation/Task_tracking_Doc.docx,E. DATA
+MONITORING.md,Documentation,Developers,yes,no,no,no,MONITORING.md,G. DOCUMENTATION
+PHASE1_STATION_SNAPSHOT_REPORT.md,Historical report,Research,yes,no,no,no,docs/research/archive/,L. OLD VERSION
+README.md,Documentation,Developers,yes,no,no,no,README.md,G. DOCUMENTATION
+README_SIMULATION.md,Documentation,Developers,yes,no,no,no,README_SIMULATION.md,G. DOCUMENTATION
+SUMO_ENV_SETUP.md,Documentation,Developers,yes,no,no,no,SUMO_ENV_SETUP.md,G. DOCUMENTATION
+choco_search.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+choco_version.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+choco_where.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+cmd_test_output.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+command_out.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+data/fleet/fleet_manifest.json,Input/reference data,Simulation/training,yes,no,no,no,data/fleet/fleet_manifest.json,E. DATA
+data/osm/EV_Station_Loc.geojson,Input/reference data,Simulation/training,yes,no,no,no,data/osm/EV_Station_Loc.geojson,E. DATA
+data/osm/Interconnted_Route.geojson,Input/reference data,Simulation/training,yes,no,no,no,data/osm/Interconnted_Route.geojson,E. DATA
+data/osm/bangalore_subarea.osm,Input/reference data,Simulation/training,yes,no,no,no,data/osm/bangalore_subarea.osm,E. DATA
+data/raw/bengaluru_charging_stations.csv,Input/reference data,Simulation/training,yes,no,no,no,data/raw/bengaluru_charging_stations.csv,E. DATA
+data/stations/stations.sqlite,Input/reference data,Simulation/training,yes,no,no,no,data/stations/stations.sqlite,E. DATA
+data/stations/stations_lookup.json,Input/reference data,Simulation/training,yes,no,no,no,data/stations/stations_lookup.json,E. DATA
+demo_recommendations.sqlite,,,yes,no,no,no,demo_recommendations.sqlite,E. DATA
+diagnostics_done.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+disk_check.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+disk_files.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+disk_report.ps1,,,yes,no,no,no,disk_report.ps1,E. DATA
+disk_report.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+disk_report_utf8.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+docker-compose.monitoring.yml,Configuration,Runtime/tooling,yes,no,no,no,docker-compose.monitoring.yml,B. CONFIGURATION
+docker-compose.yml,Configuration,Runtime/tooling,yes,no,no,no,docker-compose.yml,B. CONFIGURATION
+docs/API.md,Documentation,Developers,yes,no,no,no,docs/API.md,G. DOCUMENTATION
+docs/DEPLOYMENT.md,Documentation,Developers,yes,no,no,no,docs/DEPLOYMENT.md,G. DOCUMENTATION
+docs/Documentation/Project_proposal_Doc.pdf,Documentation,Developers,yes,no,no,no,docs/Documentation/Project_proposal_Doc.pdf,G. DOCUMENTATION
+docs/Documentation/Task_tracking_Doc.docx,Documentation,Developers,yes,no,no,no,docs/Documentation/Task_tracking_Doc.docx,G. DOCUMENTATION
+docs/Documentation/~$sk_tracking_Doc.docx,Documentation,Developers,yes,no,no,no,docs/Documentation/~$sk_tracking_Doc.docx,G. DOCUMENTATION
+docs/PERFORMANCE_BENCHMARK.md,Documentation,Developers,yes,no,no,no,docs/PERFORMANCE_BENCHMARK.md,G. DOCUMENTATION
+docs/RESEARCH_METHODOLOGY.md,Documentation,Developers,yes,no,no,no,docs/RESEARCH_METHODOLOGY.md,G. DOCUMENTATION
+docs/RESEARCH_PLATFORM.md,Documentation,Developers,yes,no,no,no,docs/RESEARCH_PLATFORM.md,G. DOCUMENTATION
+docs/THREE_TWIN_VISUALIZATION.md,Documentation,Developers,yes,no,no,no,docs/THREE_TWIN_VISUALIZATION.md,G. DOCUMENTATION
+docs/USER_MANUAL.md,Documentation,Developers,yes,no,no,no,docs/USER_MANUAL.md,G. DOCUMENTATION
+docs/XAI_DASHBOARD.md,Documentation,Developers,yes,no,no,no,docs/XAI_DASHBOARD.md,G. DOCUMENTATION
+docs/architecture/file_inventory.csv,Documentation,Developers,yes,no,no,no,docs/architecture/file_inventory.csv,G. DOCUMENTATION
+docs/architecture/file_inventory_summary.json,Documentation,Developers,yes,no,no,no,docs/architecture/file_inventory_summary.json,G. DOCUMENTATION
+examples/demo.py,,,yes,no,no,no,examples/demo.py,E. DATA
+filetest.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+grafana/dashboard.json,,,yes,no,no,no,grafana/dashboard.json,E. DATA
+k8s/deployment.yaml,Configuration,Runtime/tooling,yes,no,no,no,k8s/deployment.yaml,B. CONFIGURATION
+outputs/charging_events.csv,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/charging_events.csv,H. GENERATED OUTPUT
+outputs/controller_lifecycle_100step_diag.txt,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/controller_lifecycle_100step_diag.txt,H. GENERATED OUTPUT
+outputs/dashboard.html,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/dashboard.html,H. GENERATED OUTPUT
+outputs/dashboard_state.json,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/dashboard_state.json,H. GENERATED OUTPUT
+outputs/dashboard_summary.json,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/dashboard_summary.json,H. GENERATED OUTPUT
+outputs/diag_20step_trace.txt,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/diag_20step_trace.txt,H. GENERATED OUTPUT
+outputs/diag_process_check.txt,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/diag_process_check.txt,H. GENERATED OUTPUT
+outputs/diag_timeout_trace.txt,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/diag_timeout_trace.txt,H. GENERATED OUTPUT
+outputs/evaluation_summary.csv,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/evaluation_summary.csv,H. GENERATED OUTPUT
+outputs/final_preflight_report.json,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/final_preflight_report.json,H. GENERATED OUTPUT
+outputs/grid_load_distribution.png,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/grid_load_distribution.png,H. GENERATED OUTPUT
+outputs/latest_explanation.json,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/latest_explanation.json,H. GENERATED OUTPUT
+outputs/lime_reports/lime_report.json,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/lime_reports/lime_report.json,H. GENERATED OUTPUT
+outputs/live_visualization_state.json,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/live_visualization_state.json,H. GENERATED OUTPUT
+outputs/phase15_minimal_traci_diag.log,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/phase15_minimal_traci_diag.log,H. GENERATED OUTPUT
+outputs/phase15_minimal_traci_diag_v2.log,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/phase15_minimal_traci_diag_v2.log,H. GENERATED OUTPUT
+outputs/phase3_benchmark_1/dashboard.html,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_1/dashboard_state.json,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_1/dashboard_summary.json,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_1/research_dashboard.html,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_10/dashboard.html,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_10/dashboard_state.json,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_10/research_dashboard.html,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_10_10/dashboard.html,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_10_10/dashboard_state.json,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_10_10/dashboard_summary.json,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_10_10/research_dashboard.html,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_1_10/dashboard.html,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_1_10/dashboard_state.json,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_1_10/dashboard_summary.json,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase3_benchmark_1_10/research_dashboard.html,Historical benchmark outputs,Research,yes,yes,no,no,outputs/archive/phase3/,L. OLD VERSION
+outputs/phase4_dummy_ppo.zip,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/phase4_dummy_ppo.zip,H. GENERATED OUTPUT
+outputs/phase5_route_validation_errors.log,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/phase5_route_validation_errors.log,H. GENERATED OUTPUT
+outputs/phase6_departure_smoke_errors.log,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/phase6_departure_smoke_errors.log,H. GENERATED OUTPUT
+outputs/recommendation_log.csv,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/recommendation_log.csv,H. GENERATED OUTPUT
+outputs/recommendation_map.html,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/recommendation_map.html,H. GENERATED OUTPUT
+outputs/recommendation_times.png,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/recommendation_times.png,H. GENERATED OUTPUT
+outputs/refresh_dashboard_profile.json,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/refresh_dashboard_profile.json,H. GENERATED OUTPUT
+outputs/research_dashboard.html,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/research_dashboard.html,H. GENERATED OUTPUT
+outputs/research_platform.db,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/research_platform.db,H. GENERATED OUTPUT
+outputs/reward_curve.png,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/reward_curve.png,H. GENERATED OUTPUT
+outputs/shap_values/shap_summary.json,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/shap_values/shap_summary.json,H. GENERATED OUTPUT
+outputs/short_1000_minimal_sumo_errors.log,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/short_1000_minimal_sumo_errors.log,H. GENERATED OUTPUT
+outputs/short_1000_profile.json,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/short_1000_profile.json,H. GENERATED OUTPUT
+outputs/simulation_control.json,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/simulation_control.json,H. GENERATED OUTPUT
+outputs/simulation_metrics.csv,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/simulation_metrics.csv,H. GENERATED OUTPUT
+outputs/station_utilization.png,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/station_utilization.png,H. GENERATED OUTPUT
+outputs/sumo_gui_diag_stderr.log,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/sumo_gui_diag_stderr.log,H. GENERATED OUTPUT
+outputs/sumo_smoke_stderr.log,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/sumo_smoke_stderr.log,H. GENERATED OUTPUT
+outputs/sumo_startup_stderr.log,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/sumo_startup_stderr.log,H. GENERATED OUTPUT
+outputs/waiting_time_comparison.png,Generated output,Dashboard/evaluation,yes,yes,no,no,outputs/waiting_time_comparison.png,H. GENERATED OUTPUT
+package_manager_check.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+package_manager_diag.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+prometheus.yml,Configuration,Runtime/tooling,yes,no,no,no,prometheus.yml,B. CONFIGURATION
+prometheus_alerts.yml,Configuration,Runtime/tooling,yes,no,no,no,prometheus_alerts.yml,B. CONFIGURATION
+py312.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+py_list.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+py_list2.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+pyproject.toml,Configuration,Runtime/tooling,yes,no,no,no,pyproject.toml,B. CONFIGURATION
+python-3.12.18-amd64.exe,Installer binary,Manual setup,no,no,no,no,archive/review/installers/,I. TEMPORARY
+python_installer_help.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+recommendations.sqlite,,,yes,no,no,no,recommendations.sqlite,E. DATA
+requirements.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+requirements_runtime.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+runs/ppo_ckpt/checkpoints/ppo_ev_1000_steps.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/checkpoints/ppo_ev_1000_steps.zip,D. TRAINED MODEL
+runs/ppo_ckpt/checkpoints/ppo_ev_1200_steps.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/checkpoints/ppo_ev_1200_steps.zip,D. TRAINED MODEL
+runs/ppo_ckpt/checkpoints/ppo_ev_1400_steps.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/checkpoints/ppo_ev_1400_steps.zip,D. TRAINED MODEL
+runs/ppo_ckpt/checkpoints/ppo_ev_1600_steps.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/checkpoints/ppo_ev_1600_steps.zip,D. TRAINED MODEL
+runs/ppo_ckpt/checkpoints/ppo_ev_1800_steps.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/checkpoints/ppo_ev_1800_steps.zip,D. TRAINED MODEL
+runs/ppo_ckpt/checkpoints/ppo_ev_2000_steps.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/checkpoints/ppo_ev_2000_steps.zip,D. TRAINED MODEL
+runs/ppo_ckpt/checkpoints/ppo_ev_200_steps.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/checkpoints/ppo_ev_200_steps.zip,D. TRAINED MODEL
+runs/ppo_ckpt/checkpoints/ppo_ev_400_steps.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/checkpoints/ppo_ev_400_steps.zip,D. TRAINED MODEL
+runs/ppo_ckpt/checkpoints/ppo_ev_600_steps.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/checkpoints/ppo_ev_600_steps.zip,D. TRAINED MODEL
+runs/ppo_ckpt/checkpoints/ppo_ev_800_steps.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/checkpoints/ppo_ev_800_steps.zip,D. TRAINED MODEL
+runs/ppo_ckpt/ppo_ev_1/events.out.tfevents.1786088128.kunchalakrishna.48028.0,,,yes,no,no,no,runs/ppo_ckpt/ppo_ev_1/events.out.tfevents.1786088128.kunchalakrishna.48028.0,E. DATA
+runs/ppo_ckpt/ppo_ev_final.zip,PPO model checkpoint,PPO inference/training,yes,no,no,no,runs/ppo_ckpt/ppo_ev_final.zip,D. TRAINED MODEL
+runs/ppo_mcp/PPO_1/events.out.tfevents.1786088109.kunchalakrishna.66428.0,,,yes,no,no,no,runs/ppo_mcp/PPO_1/events.out.tfevents.1786088109.kunchalakrishna.66428.0,E. DATA
+runs/tmp_stations.db,Temporary diagnostic,Ad-hoc,no,no,no,no,archive/review/,I. TEMPORARY
+scripts/__pycache__/build_bengaluru_network.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+scripts/__pycache__/fetch_bengaluru_stations.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+scripts/__pycache__/fetch_osm_network.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+scripts/__pycache__/generate_ev_fleet.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+scripts/__pycache__/profile_refresh_dashboard_only.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+scripts/__pycache__/profile_simulation_fast.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+scripts/__pycache__/run_simulation.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+scripts/__pycache__/run_traci_recommend.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+scripts/__pycache__/seed_stations.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+scripts/build_bengaluru_network.py,CLI utility script,User/CI,yes,no,no,no,scripts/build_bengaluru_network.py,A. CORE SOURCE
+scripts/build_sumo_network.ps1,CLI utility script,User/CI,yes,no,no,no,scripts/build_sumo_network.ps1,A. CORE SOURCE
+scripts/convert_report.py,CLI utility script,User/CI,yes,no,no,no,scripts/convert_report.py,A. CORE SOURCE
+scripts/demo_recommendation.py,CLI utility script,User/CI,yes,no,no,no,scripts/demo_recommendation.py,A. CORE SOURCE
+scripts/demo_station_manager.py,CLI utility script,User/CI,yes,no,no,no,scripts/demo_station_manager.py,A. CORE SOURCE
+scripts/fetch_bengaluru_stations.py,CLI utility script,User/CI,yes,no,no,no,scripts/fetch_bengaluru_stations.py,A. CORE SOURCE
+scripts/fetch_charging_stations.py,CLI utility script,User/CI,yes,no,no,no,scripts/fetch_charging_stations.py,A. CORE SOURCE
+scripts/fetch_osm_network.py,CLI utility script,User/CI,yes,no,no,no,scripts/fetch_osm_network.py,A. CORE SOURCE
+scripts/generate_ev_fleet.py,CLI utility script,User/CI,yes,no,no,no,scripts/generate_ev_fleet.py,A. CORE SOURCE
+scripts/load_and_sync_stations.py,CLI utility script,User/CI,yes,no,no,no,scripts/load_and_sync_stations.py,A. CORE SOURCE
+scripts/place_stations_on_network.py,CLI utility script,User/CI,yes,no,no,no,scripts/place_stations_on_network.py,A. CORE SOURCE
+scripts/profile_1000_short.py,CLI utility script,User/CI,yes,no,no,no,scripts/profile_1000_short.py,A. CORE SOURCE
+scripts/profile_refresh_dashboard_only.py,CLI utility script,User/CI,yes,no,no,no,scripts/profile_refresh_dashboard_only.py,A. CORE SOURCE
+scripts/profile_simulation_fast.py,CLI utility script,User/CI,yes,no,no,no,scripts/profile_simulation_fast.py,A. CORE SOURCE
+scripts/report_phase2.py,CLI utility script,User/CI,yes,no,no,no,scripts/report_phase2.py,A. CORE SOURCE
+scripts/run_dashboard.py,CLI utility script,User/CI,yes,no,no,no,scripts/run_dashboard.py,A. CORE SOURCE
+scripts/run_phase2_demo.py,CLI utility script,User/CI,yes,no,no,no,scripts/run_phase2_demo.py,A. CORE SOURCE
+scripts/run_simulation.py,CLI utility script,User/CI,yes,no,no,no,scripts/run_simulation.py,A. CORE SOURCE
+scripts/run_traci.py,CLI utility script,User/CI,yes,no,no,no,scripts/run_traci.py,A. CORE SOURCE
+scripts/run_traci_bangalore.py,CLI utility script,User/CI,yes,no,no,no,scripts/run_traci_bangalore.py,A. CORE SOURCE
+scripts/run_traci_recommend.py,CLI utility script,User/CI,yes,no,no,no,scripts/run_traci_recommend.py,A. CORE SOURCE
+scripts/run_traci_rl.py,CLI utility script,User/CI,yes,no,no,no,scripts/run_traci_rl.py,A. CORE SOURCE
+scripts/seed_stations.py,CLI utility script,User/CI,yes,no,no,no,scripts/seed_stations.py,A. CORE SOURCE
+scripts/setup_env.ps1,CLI utility script,User/CI,yes,no,no,no,scripts/setup_env.ps1,A. CORE SOURCE
+scripts/setup_sumo.ps1,CLI utility script,User/CI,yes,no,no,no,scripts/setup_sumo.ps1,A. CORE SOURCE
+scripts/spawn_evs.py,CLI utility script,User/CI,yes,no,no,no,scripts/spawn_evs.py,A. CORE SOURCE
+scripts/test_traci_env.py,CLI utility script,User/CI,yes,no,no,no,scripts/test_traci_env.py,A. CORE SOURCE
+scripts/tmp_read_task_doc.py,Temporary diagnostic,Ad-hoc,no,no,no,no,archive/review/,I. TEMPORARY
+scripts/train_ppo.py,CLI utility script,User/CI,yes,no,no,no,scripts/train_ppo.py,A. CORE SOURCE
+simulations/bangalore/edges_temp.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/edges_temp.xml,C. SIMULATION ASSET
+simulations/bangalore/evs.rou.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/evs.rou.xml,C. SIMULATION ASSET
+simulations/bangalore/gui_settings.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/gui_settings.xml,C. SIMULATION ASSET
+simulations/bangalore/gui_template.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/gui_template.xml,C. SIMULATION ASSET
+simulations/bangalore/network.net.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/network.net.xml,C. SIMULATION ASSET
+simulations/bangalore/network_temp.net.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/network_temp.net.xml,C. SIMULATION ASSET
+simulations/bangalore/nodes_temp.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/nodes_temp.xml,C. SIMULATION ASSET
+simulations/bangalore/sim.sumocfg,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/sim.sumocfg,C. SIMULATION ASSET
+simulations/bangalore/sim_temp.sumocfg,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/sim_temp.sumocfg,C. SIMULATION ASSET
+simulations/bangalore/stations.add.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/stations.add.xml,C. SIMULATION ASSET
+simulations/bangalore/stations.sqlite,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/stations.sqlite,C. SIMULATION ASSET
+simulations/bangalore/sumo_stderr.log,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/sumo_stderr.log,C. SIMULATION ASSET
+simulations/bangalore/traffic.add.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/bangalore/traffic.add.xml,C. SIMULATION ASSET
+simulations/example/edges.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/example/edges.xml,C. SIMULATION ASSET
+simulations/example/nodes.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/example/nodes.xml,C. SIMULATION ASSET
+simulations/example/routes.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/example/routes.xml,C. SIMULATION ASSET
+simulations/example/sim.net.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/example/sim.net.xml,C. SIMULATION ASSET
+simulations/example/sim.sumocfg,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/example/sim.sumocfg,C. SIMULATION ASSET
+simulations/expanded/edges.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/expanded/edges.xml,C. SIMULATION ASSET
+simulations/expanded/nodes.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/expanded/nodes.xml,C. SIMULATION ASSET
+simulations/expanded/routes.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/expanded/routes.xml,C. SIMULATION ASSET
+simulations/expanded/sim.net.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/expanded/sim.net.xml,C. SIMULATION ASSET
+simulations/expanded/sim.sumocfg,SUMO asset,SUMO/Simulation,yes,no,no,no,simulations/expanded/sim.sumocfg,C. SIMULATION ASSET
+src/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/__init__.py,A. CORE SOURCE
+src/__main__.py,Application source,Runtime/tests,yes,no,no,no,src/__main__.py,A. CORE SOURCE
+src/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/__pycache__/__init__.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/__pycache__/__main__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/__pycache__/main.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/analytics/__pycache__/reporting.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/analytics/reporting.py,Application source,Runtime/tests,yes,no,no,no,src/analytics/reporting.py,A. CORE SOURCE
+src/api/__pycache__/router.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/api/main.py,Application source,Runtime/tests,yes,no,no,no,src/api/main.py,A. CORE SOURCE
+src/api/router.py,Application source,Runtime/tests,yes,no,no,no,src/api/router.py,A. CORE SOURCE
+src/dashboard/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/dashboard/__init__.py,A. CORE SOURCE
+src/dashboard/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/dashboard/__pycache__/__init__.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/dashboard/__pycache__/dashboard.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/dashboard/__pycache__/dashboard.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/dashboard/dashboard.py,Application source,Runtime/tests,yes,no,no,no,src/dashboard/dashboard.py,A. CORE SOURCE
+src/ev_management/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/ev_management/__init__.py,A. CORE SOURCE
+src/ev_management/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/ev_management/__pycache__/__init__.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/ev_management/__pycache__/ev_state.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/ev_management/__pycache__/ev_state.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/ev_management/__pycache__/vehicle_manager.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/ev_management/__pycache__/vehicle_manager.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/ev_management/ev_state.py,Application source,Runtime/tests,yes,no,no,no,src/ev_management/ev_state.py,A. CORE SOURCE
+src/ev_management/vehicle_manager.py,Application source,Runtime/tests,yes,no,no,no,src/ev_management/vehicle_manager.py,A. CORE SOURCE
+src/ev_model/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/ev_model/__init__.py,A. CORE SOURCE
+src/ev_model/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/ev_model/__pycache__/__init__.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/ev_model/__pycache__/battery.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/ev_model/__pycache__/battery.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/ev_model/battery.py,Application source,Runtime/tests,yes,no,no,no,src/ev_model/battery.py,A. CORE SOURCE
+src/evaluation/__pycache__/benchmark.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/evaluation/__pycache__/evaluator.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/evaluation/benchmark.py,Application source,Runtime/tests,yes,no,no,no,src/evaluation/benchmark.py,A. CORE SOURCE
+src/evaluation/evaluator.py,Application source,Runtime/tests,yes,no,no,no,src/evaluation/evaluator.py,A. CORE SOURCE
+src/main.py,Application source,Runtime/tests,yes,no,no,no,src/main.py,A. CORE SOURCE
+src/mlops/__pycache__/registry.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/mlops/registry.py,Application source,Runtime/tests,yes,no,no,no,src/mlops/registry.py,A. CORE SOURCE
+src/monitoring/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/monitoring/__init__.py,A. CORE SOURCE
+src/monitoring/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/monitoring/__pycache__/collectors.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/monitoring/__pycache__/health.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/monitoring/__pycache__/metrics.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/monitoring/__pycache__/middleware.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/monitoring/collectors.py,Application source,Runtime/tests,yes,no,no,no,src/monitoring/collectors.py,A. CORE SOURCE
+src/monitoring/health.py,Application source,Runtime/tests,yes,no,no,no,src/monitoring/health.py,A. CORE SOURCE
+src/monitoring/metrics.py,Application source,Runtime/tests,yes,no,no,no,src/monitoring/metrics.py,A. CORE SOURCE
+src/monitoring/middleware.py,Application source,Runtime/tests,yes,no,no,no,src/monitoring/middleware.py,A. CORE SOURCE
+src/persistence/__pycache__/repository.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/persistence/__pycache__/sqlalchemy_models.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/persistence/__pycache__/sqlalchemy_repository.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/persistence/repository.py,Application source,Runtime/tests,yes,no,no,no,src/persistence/repository.py,A. CORE SOURCE
+src/persistence/sqlalchemy_models.py,Application source,Runtime/tests,yes,no,no,no,src/persistence/sqlalchemy_models.py,A. CORE SOURCE
+src/persistence/sqlalchemy_repository.py,Application source,Runtime/tests,yes,no,no,no,src/persistence/sqlalchemy_repository.py,A. CORE SOURCE
+src/recommendation/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/recommendation/__init__.py,A. CORE SOURCE
+src/recommendation/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/recommendation/__pycache__/candidate_builder.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/recommendation/__pycache__/engine.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/recommendation/candidate_builder.py,Application source,Runtime/tests,yes,no,no,no,src/recommendation/candidate_builder.py,A. CORE SOURCE
+src/recommendation/engine.py,Application source,Runtime/tests,yes,no,no,no,src/recommendation/engine.py,A. CORE SOURCE
+src/recommendation_engine/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/recommendation_engine/__init__.py,A. CORE SOURCE
+src/recommendation_engine/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/recommendation_engine/__pycache__/__init__.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/recommendation_engine/__pycache__/engine.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/recommendation_engine/__pycache__/engine.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/recommendation_engine/engine.py,Application source,Runtime/tests,yes,no,no,no,src/recommendation_engine/engine.py,A. CORE SOURCE
+src/research_platform/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/research_platform/__init__.py,A. CORE SOURCE
+src/research_platform/__main__.py,Application source,Runtime/tests,yes,no,no,no,src/research_platform/__main__.py,A. CORE SOURCE
+src/research_platform/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/research_platform/__pycache__/mlflow_adapter.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/research_platform/__pycache__/router.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/research_platform/__pycache__/service.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/research_platform/mlflow_adapter.py,Application source,Runtime/tests,yes,no,no,no,src/research_platform/mlflow_adapter.py,A. CORE SOURCE
+src/research_platform/router.py,Application source,Runtime/tests,yes,no,no,no,src/research_platform/router.py,A. CORE SOURCE
+src/research_platform/service.py,Application source,Runtime/tests,yes,no,no,no,src/research_platform/service.py,A. CORE SOURCE
+src/rl_env/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/rl_env/__init__.py,A. CORE SOURCE
+src/rl_env/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/rl_env/__pycache__/__init__.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/rl_env/__pycache__/ev_charging_env.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/rl_env/__pycache__/ev_charging_env.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/rl_env/__pycache__/gym_ev_charging_env.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/rl_env/__pycache__/ppo_training.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/rl_env/__pycache__/traci_ev_charging_env.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/rl_env/__pycache__/training.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/rl_env/__pycache__/training.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/rl_env/ev_charging_env.py,Application source,Runtime/tests,yes,no,no,no,src/rl_env/ev_charging_env.py,A. CORE SOURCE
+src/rl_env/gym_ev_charging_env.py,Application source,Runtime/tests,yes,no,no,no,src/rl_env/gym_ev_charging_env.py,A. CORE SOURCE
+src/rl_env/ppo_training.py,Application source,Runtime/tests,yes,no,no,no,src/rl_env/ppo_training.py,A. CORE SOURCE
+src/rl_env/traci_ev_charging_env.py,Application source,Runtime/tests,yes,no,no,no,src/rl_env/traci_ev_charging_env.py,A. CORE SOURCE
+src/rl_env/training.py,Application source,Runtime/tests,yes,no,no,no,src/rl_env/training.py,A. CORE SOURCE
+src/route_planning/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/route_planning/__init__.py,A. CORE SOURCE
+src/route_planning/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/route_planning/__pycache__/__init__.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/route_planning/__pycache__/network_graph.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/route_planning/__pycache__/network_graph.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/route_planning/network_graph.py,Application source,Runtime/tests,yes,no,no,no,src/route_planning/network_graph.py,A. CORE SOURCE
+src/security/auth.py,Application source,Runtime/tests,yes,no,no,no,src/security/auth.py,A. CORE SOURCE
+src/simulation/__pycache__/bangalore_scenario.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/simulation/__pycache__/bangalore_scenario.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/simulation/__pycache__/controller.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/simulation/__pycache__/controller.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/simulation/__pycache__/runtime_control.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/simulation/bangalore_scenario.py,Application source,Runtime/tests,yes,no,no,no,src/simulation/bangalore_scenario.py,A. CORE SOURCE
+src/simulation/controller.py,Application source,Runtime/tests,yes,no,no,no,src/simulation/controller.py,A. CORE SOURCE
+src/simulation/runtime_control.py,Application source,Runtime/tests,yes,no,no,no,src/simulation/runtime_control.py,A. CORE SOURCE
+src/simulation/traci_interface.py,Application source,Runtime/tests,yes,no,no,no,src/simulation/traci_interface.py,A. CORE SOURCE
+src/station_management/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/station_management/__init__.py,A. CORE SOURCE
+src/station_management/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/__init__.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/generate_stations.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/manager.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/manager.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/occupancy_simulator.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/occupancy_simulator.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/pricing.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/pricing.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/station_repository.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/station_repository.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/station_state.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/__pycache__/station_state.cpython-314.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/station_management/generate_stations.py,Application source,Runtime/tests,yes,no,no,no,src/station_management/generate_stations.py,A. CORE SOURCE
+src/station_management/manager.py,Application source,Runtime/tests,yes,no,no,no,src/station_management/manager.py,A. CORE SOURCE
+src/station_management/occupancy_simulator.py,Application source,Runtime/tests,yes,no,no,no,src/station_management/occupancy_simulator.py,A. CORE SOURCE
+src/station_management/pricing.py,Application source,Runtime/tests,yes,no,no,no,src/station_management/pricing.py,A. CORE SOURCE
+src/station_management/station_repository.py,Application source,Runtime/tests,yes,no,no,no,src/station_management/station_repository.py,A. CORE SOURCE
+src/station_management/station_state.py,Application source,Runtime/tests,yes,no,no,no,src/station_management/station_state.py,A. CORE SOURCE
+src/storage/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/storage/__init__.py,A. CORE SOURCE
+src/storage/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/storage/__pycache__/sqlite_store.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/storage/sqlite_store.py,Application source,Runtime/tests,yes,no,no,no,src/storage/sqlite_store.py,A. CORE SOURCE
+src/visualization/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/__init__.py,A. CORE SOURCE
+src/visualization/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/frontend/__pycache__/app.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/frontend/app.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/frontend/app.py,A. CORE SOURCE
+src/visualization/frontend/assets/README.txt,Application source,Runtime/tests,yes,no,no,no,src/visualization/frontend/assets/README.txt,A. CORE SOURCE
+src/visualization/frontend/assets/js/three-twin/camera-controller.js,Application source,Runtime/tests,yes,no,no,no,src/visualization/frontend/assets/js/three-twin/camera-controller.js,A. CORE SOURCE
+src/visualization/frontend/assets/js/three-twin/renderer.js,Application source,Runtime/tests,yes,no,no,no,src/visualization/frontend/assets/js/three-twin/renderer.js,A. CORE SOURCE
+src/visualization/frontend/assets/js/three-twin/scene.js,Application source,Runtime/tests,yes,no,no,no,src/visualization/frontend/assets/js/three-twin/scene.js,A. CORE SOURCE
+src/visualization/frontend/index.html,Application source,Runtime/tests,yes,no,no,no,src/visualization/frontend/index.html,A. CORE SOURCE
+src/visualization/frontend/live_dashboard.html,Application source,Runtime/tests,yes,no,no,no,src/visualization/frontend/live_dashboard.html,A. CORE SOURCE
+src/visualization/frontend/three_twin_dashboard.html,Application source,Runtime/tests,yes,no,no,no,src/visualization/frontend/three_twin_dashboard.html,A. CORE SOURCE
+src/visualization/map/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/map/__init__.py,A. CORE SOURCE
+src/visualization/map/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/map/__pycache__/renderer.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/map/renderer.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/map/renderer.py,A. CORE SOURCE
+src/visualization/services/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/services/__init__.py,A. CORE SOURCE
+src/visualization/services/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/services/__pycache__/integration.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/services/__pycache__/road_network_service.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/services/__pycache__/streaming_service.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/services/__pycache__/visualization_builder.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/services/integration.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/services/integration.py,A. CORE SOURCE
+src/visualization/services/road_network_service.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/services/road_network_service.py,A. CORE SOURCE
+src/visualization/services/streaming_service.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/services/streaming_service.py,A. CORE SOURCE
+src/visualization/services/visualization_builder.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/services/visualization_builder.py,A. CORE SOURCE
+src/visualization/websocket/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/websocket/__init__.py,A. CORE SOURCE
+src/visualization/websocket/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/websocket/__pycache__/server.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/visualization/websocket/server.py,Application source,Runtime/tests,yes,no,no,no,src/visualization/websocket/server.py,A. CORE SOURCE
+src/xai/__init__.py,Application source,Runtime/tests,yes,no,no,no,src/xai/__init__.py,A. CORE SOURCE
+src/xai/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/xai/__pycache__/counterfactual.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/xai/__pycache__/decision_trace.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/xai/__pycache__/explainer.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/xai/__pycache__/lime_explainer.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/xai/__pycache__/shap_explainer.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+src/xai/counterfactual.py,Application source,Runtime/tests,yes,no,no,no,src/xai/counterfactual.py,A. CORE SOURCE
+src/xai/decision_trace.py,Application source,Runtime/tests,yes,no,no,no,src/xai/decision_trace.py,A. CORE SOURCE
+src/xai/explainer.py,Application source,Runtime/tests,yes,no,no,no,src/xai/explainer.py,A. CORE SOURCE
+src/xai/lime_explainer.py,Application source,Runtime/tests,yes,no,no,no,src/xai/lime_explainer.py,A. CORE SOURCE
+src/xai/shap_explainer.py,Application source,Runtime/tests,yes,no,no,no,src/xai/shap_explainer.py,A. CORE SOURCE
+sumo/network/bangalore_subarea.osm,SUMO asset,SUMO/Simulation,yes,no,no,no,sumo/network/bangalore_subarea.osm,C. SIMULATION ASSET
+sumo/network/bengaluru.net.xml,SUMO asset,SUMO/Simulation,yes,no,no,no,sumo/network/bengaluru.net.xml,C. SIMULATION ASSET
+test_venv_check.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+tests/__init__.py,Automated tests,pytest,yes,no,no,no,tests/__init__.py,F. TEST
+tests/__pycache__/__init__.cpython-312.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_bangalore_scenario.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_bangalore_scenario.cpython-312-pytest-9.1.1.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_battery.cpython-312-pytest-9.1.1.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_dashboard.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_extended_xai_and_persistence.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_main.cpython-312-pytest-9.1.1.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_monitoring.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_monitoring_runtime.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_prototype.cpython-312-pytest-9.1.1.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_recommendation.cpython-312-pytest-9.1.1.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_recommendation_engine.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_recommendation_engine.cpython-312-pytest-9.1.1.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_recommendation_engine_compat.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_research_features.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_research_platform.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_runtime_integration.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_station_management.cpython-312-pytest-9.1.1.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_station_manager_integration.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_station_manager_integration.cpython-312-pytest-9.1.1.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_three_twin_renderer.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_three_twin_visualization.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_training.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_training.cpython-312-pytest-9.1.1.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_visualization.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/__pycache__/test_xai.cpython-312-pytest-8.4.2.pyc,Cache artifact,None,no,yes,no,yes,(delete),J. CACHE
+tests/test_bangalore_scenario.py,Automated tests,pytest,yes,no,no,no,tests/test_bangalore_scenario.py,F. TEST
+tests/test_battery.py,Automated tests,pytest,yes,no,no,no,tests/test_battery.py,F. TEST
+tests/test_charging_lifecycle_validation.py,Automated tests,pytest,yes,no,no,no,tests/test_charging_lifecycle_validation.py,F. TEST
+tests/test_dashboard.py,Automated tests,pytest,yes,no,no,no,tests/test_dashboard.py,F. TEST
+tests/test_dashboard_throttle.py,Automated tests,pytest,yes,no,no,no,tests/test_dashboard_throttle.py,F. TEST
+tests/test_extended_xai_and_persistence.py,Automated tests,pytest,yes,no,no,no,tests/test_extended_xai_and_persistence.py,F. TEST
+tests/test_generate_ev_fleet_departures.py,Automated tests,pytest,yes,no,no,no,tests/test_generate_ev_fleet_departures.py,F. TEST
+tests/test_gym_ev_charging_env.py,Automated tests,pytest,yes,no,no,no,tests/test_gym_ev_charging_env.py,F. TEST
+tests/test_main.py,Automated tests,pytest,yes,no,no,no,tests/test_main.py,F. TEST
+tests/test_monitoring.py,Automated tests,pytest,yes,no,no,no,tests/test_monitoring.py,F. TEST
+tests/test_monitoring_runtime.py,Automated tests,pytest,yes,no,no,no,tests/test_monitoring_runtime.py,F. TEST
+tests/test_prototype.py,Automated tests,pytest,yes,no,no,no,tests/test_prototype.py,F. TEST
+tests/test_recommendation.py,Automated tests,pytest,yes,no,no,no,tests/test_recommendation.py,F. TEST
+tests/test_recommendation_engine.py,Automated tests,pytest,yes,no,no,no,tests/test_recommendation_engine.py,F. TEST
+tests/test_recommendation_engine_compat.py,Automated tests,pytest,yes,no,no,no,tests/test_recommendation_engine_compat.py,F. TEST
+tests/test_research_features.py,Automated tests,pytest,yes,no,no,no,tests/test_research_features.py,F. TEST
+tests/test_research_platform.py,Automated tests,pytest,yes,no,no,no,tests/test_research_platform.py,F. TEST
+tests/test_runtime_integration.py,Automated tests,pytest,yes,no,no,no,tests/test_runtime_integration.py,F. TEST
+tests/test_station_management.py,Automated tests,pytest,yes,no,no,no,tests/test_station_management.py,F. TEST
+tests/test_station_manager_integration.py,Automated tests,pytest,yes,no,no,no,tests/test_station_manager_integration.py,F. TEST
+tests/test_station_snapshot_performance.py,Automated tests,pytest,yes,no,no,no,tests/test_station_snapshot_performance.py,F. TEST
+tests/test_three_twin_renderer.py,Automated tests,pytest,yes,no,no,no,tests/test_three_twin_renderer.py,F. TEST
+tests/test_three_twin_visualization.py,Automated tests,pytest,yes,no,no,no,tests/test_three_twin_visualization.py,F. TEST
+tests/test_tracked_ev_lifecycle_integration.py,Automated tests,pytest,yes,no,no,no,tests/test_tracked_ev_lifecycle_integration.py,F. TEST
+tests/test_training.py,Automated tests,pytest,yes,no,no,no,tests/test_training.py,F. TEST
+tests/test_visualization.py,Automated tests,pytest,yes,no,no,no,tests/test_visualization.py,F. TEST
+tests/test_xai.py,Automated tests,pytest,yes,no,no,no,tests/test_xai.py,F. TEST
+tmp_bengaluru_verify.py,Temporary diagnostic,Ad-hoc,no,no,no,no,archive/review/,I. TEMPORARY
+tmp_inspect_traci.py,Temporary diagnostic,Ad-hoc,no,no,no,no,archive/review/,I. TEMPORARY
+tmp_recommendation_check.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+tmp_run_check.py,Temporary diagnostic,Ad-hoc,no,no,no,no,archive/review/,I. TEMPORARY
+tools/inspect_db.py,,,yes,no,no,no,tools/inspect_db.py,E. DATA
+venv_install.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+venv_pip.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+venv_pip_check.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+venv_pkglist.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+venv_py.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+venv_py_check.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+venv_status.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+where_py.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+where_python.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+where_sumo.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+where_sumogui.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+winget_search.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+winget_version.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY
+winget_where.txt,Root diagnostic output,None,no,no,no,yes,archive/review/ or delete,I. TEMPORARY

@@ -1,0 +1,17 @@
+gymnasium==0.29.1
+stable-baselines3==2.3.2
+torch==2.3.1
+traci==1.20.0
+sumolib==1.20.0
+numpy==1.26.4
+pandas==2.2.2
+networkx==3.3
+matplotlib==3.9.0
+plotly==5.22.0
+sqlalchemy==2.0.31        # optional: gives you an ORM that works with SQLite now and Postgres later
+psycopg2-binary==2.9.9    # only needed once you migrate to PostgreSQL
+python-dotenv==1.0.1
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29,<1.0
+websockets>=12,<16
+prometheus-client>=0.20,<1.0

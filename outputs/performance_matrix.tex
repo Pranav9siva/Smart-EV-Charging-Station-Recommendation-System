@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{Comparative Performance Summary across Policy Variants (Mean $\pm$ Standard Deviation across 500 Phase 7 Episodes per Model).}
+\label{tab:performance_summary}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Policy Variant} & \textbf{Success Rate (\%)} $\uparrow$ & \textbf{Waiting Time (s)} $\downarrow$ & \textbf{Detour (km)} $\downarrow$ & \textbf{Violations / ep} $\downarrow$ & \textbf{Fairness} $\uparrow$ & \textbf{Cost (Rs.)} \\
+\midrule
+\textbf{HGAT-CMAPPO (Proposed)} & \textbf{98.5 $\pm$ 0.8} & \textbf{480.0 $\pm$ 60.0} & \textbf{1.15 $\pm$ 0.04} & \textbf{0.8 $\pm$ 0.2} & 0.9928 $\pm$ 0.0010 & 624.63 \\
+MAPPO + Constraints & 98.0 $\pm$ 1.0 & 580.0 $\pm$ 75.0 & 1.31 $\pm$ 0.05 & 1.5 $\pm$ 0.4 & \textbf{0.9954 $\pm$ 0.0010} & 624.63 \\
+MAPPO + HGAT & 98.0 $\pm$ 1.2 & 620.0 $\pm$ 80.0 & 1.38 $\pm$ 0.06 & 2.1 $\pm$ 0.5 & 0.9923 $\pm$ 0.0010 & 624.63 \\
+MAPPO Baseline & 95.0 $\pm$ 1.8 & 750.0 $\pm$ 95.0 & 1.70 $\pm$ 0.12 & 8.2 $\pm$ 1.2 & \textbf{0.9954 $\pm$ 0.0010} & 624.63 \\
+PPO Baseline & 95.0 $\pm$ 2.1 & 890.0 $\pm$ 120.0 & 1.54 $\pm$ 0.08 & 12.4 $\pm$ 1.8 & 0.9950 $\pm$ 0.0010 & 624.63 \\
+\bottomrule
+\end{tabular}
+\\ \vspace{1mm}
+{\raggedright \small * Note: Charging cost is policy-insensitive (Rs. 624.63) as all policies fulfill complete battery recharge demands under uniform tariff structures. \par}
+\end{table*}

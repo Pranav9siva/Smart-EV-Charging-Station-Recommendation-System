@@ -1,0 +1,3 @@
+version,script,detour_metric,wait_metric,validity
+Archived Benchmark (v1),scripts/archive_invalid_benchmarks/real_controlled_sumo_benchmark.py,1.15 km (Net Station Branch Distance),180 s (Scaled by artificial * 0.6 factor),INVALID (Artificial multipliers present)
+Current Event Benchmark (v2),scripts/run_real_controlled_benchmark.py,6.15 km (Total Route = 5.0 km base + 1.15 km branch),300 s (Unscaled raw candidate avg wait x time steps),VALID (100% Event-driven from SUMO/TraCI)

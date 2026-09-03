@@ -1,0 +1,5 @@
+component,comparison,primary_metric,effect,interpretation
+HGAT,MAPPO vs MAPPO+HGAT,Additional Detour,-0.32 km,SUPPORTED: Spatial topological routing optimization
+Constraints,MAPPO vs MAPPO+Constraints,Constraint Violations,-6.7 viols,SUPPORTED: Lagrangian multiplier overload prevention
+MAPPO Coordination,PPO vs MAPPO,1000-EV Wait Time,-270.0 s,SUPPORTED: Centralized critic joint queue balancing
+Full Architecture,HGAT-CMAPPO vs Baselines,Overall Performance Profile,Optimal Across Metrics,SUPPORTED: Complete architectural synergy

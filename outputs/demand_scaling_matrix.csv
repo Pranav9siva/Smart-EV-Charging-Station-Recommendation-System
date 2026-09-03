@@ -1,0 +1,5 @@
+ev_scale,hgat_cmappo_wait_s,hgat_cmappo_detour_km,hgat_cmappo_success_pct,hgat_cmappo_viols,ppo_wait_s
+100,317.3,1.54,100.0,0.0,372.0
+250,345.6,1.51,100.0,0.0,480.0
+500,391.3,1.52,60.0,1.2,660.0
+1000,477.2,1.53,60.0,2.5,1020.0

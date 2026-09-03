@@ -1,0 +1,3 @@
+model_comparison,observed_difference,causal_classification,explanation
+MAPPO vs MAPPO + HGAT,Net detour reduced from 1.70 km to 1.38 km; waiting time under 1000-EV reduced from 1150s to 890s,OBSERVATIONAL_SUPPORTED,"Heterogeneous graph attention layers structure spatial topology, yielding empirical spatial load spreading."
+MAPPO + HGAT vs HGAT-CMAPPO,Constraint violations reduced from 2.1 to 0.8; waiting time under 1000-EV reduced to 650s,OBSERVATIONAL_SUPPORTED,Lagrangian constraint multipliers prevent EV assignment to overloaded queues.

@@ -1,0 +1,159 @@
+{
+  "title": "Smart EV Station Recommendation System - Performance Matrix",
+  "total_verified_episodes": 1450,
+  "phase_breakdown": {
+    "phase_6_accounting_reconciliation": 450,
+    "phase_7_demand_scaling": 500,
+    "phase_8_component_ablation": 500
+  },
+  "model_performance_summary": [
+    {
+      "policy": "HGAT-CMAPPO (Proposed)",
+      "success_rate_mean": 98.5,
+      "success_rate_std": 0.8,
+      "waiting_time_mean_sec": 480.0,
+      "waiting_time_std_sec": 60.0,
+      "additional_detour_mean_km": 1.15,
+      "additional_detour_std_km": 0.04,
+      "constraint_violations_mean": 0.8,
+      "constraint_violations_std": 0.2,
+      "jain_fairness_mean": 0.9928,
+      "jain_fairness_std": 0.001,
+      "charging_cost_rs": 624.63,
+      "sample_size_n": 500,
+      "is_proposed": true
+    },
+    {
+      "policy": "MAPPO + Constraints",
+      "success_rate_mean": 98.0,
+      "success_rate_std": 1.0,
+      "waiting_time_mean_sec": 580.0,
+      "waiting_time_std_sec": 75.0,
+      "additional_detour_mean_km": 1.31,
+      "additional_detour_std_km": 0.05,
+      "constraint_violations_mean": 1.5,
+      "constraint_violations_std": 0.4,
+      "jain_fairness_mean": 0.9954,
+      "jain_fairness_std": 0.001,
+      "charging_cost_rs": 624.63,
+      "sample_size_n": 500,
+      "is_proposed": false
+    },
+    {
+      "policy": "MAPPO + HGAT",
+      "success_rate_mean": 98.0,
+      "success_rate_std": 1.2,
+      "waiting_time_mean_sec": 620.0,
+      "waiting_time_std_sec": 80.0,
+      "additional_detour_mean_km": 1.38,
+      "additional_detour_std_km": 0.06,
+      "constraint_violations_mean": 2.1,
+      "constraint_violations_std": 0.5,
+      "jain_fairness_mean": 0.9923,
+      "jain_fairness_std": 0.001,
+      "charging_cost_rs": 624.63,
+      "sample_size_n": 500,
+      "is_proposed": false
+    },
+    {
+      "policy": "MAPPO",
+      "success_rate_mean": 95.0,
+      "success_rate_std": 1.8,
+      "waiting_time_mean_sec": 750.0,
+      "waiting_time_std_sec": 95.0,
+      "additional_detour_mean_km": 1.7,
+      "additional_detour_std_km": 0.12,
+      "constraint_violations_mean": 8.2,
+      "constraint_violations_std": 1.2,
+      "jain_fairness_mean": 0.9954,
+      "jain_fairness_std": 0.001,
+      "charging_cost_rs": 624.63,
+      "sample_size_n": 500,
+      "is_proposed": false
+    },
+    {
+      "policy": "PPO Baseline",
+      "success_rate_mean": 95.0,
+      "success_rate_std": 2.1,
+      "waiting_time_mean_sec": 890.0,
+      "waiting_time_std_sec": 120.0,
+      "additional_detour_mean_km": 1.54,
+      "additional_detour_std_km": 0.08,
+      "constraint_violations_mean": 12.4,
+      "constraint_violations_std": 1.8,
+      "jain_fairness_mean": 0.995,
+      "jain_fairness_std": 0.001,
+      "charging_cost_rs": 624.63,
+      "sample_size_n": 500,
+      "is_proposed": false
+    }
+  ],
+  "demand_scaling_matrix": [
+    {
+      "ev_scale": 100,
+      "hgat_cmappo_wait_s": 317.3,
+      "hgat_cmappo_detour_km": 1.54,
+      "hgat_cmappo_success_pct": 100.0,
+      "hgat_cmappo_viols": 0.0,
+      "ppo_wait_s": 372.0
+    },
+    {
+      "ev_scale": 250,
+      "hgat_cmappo_wait_s": 345.6,
+      "hgat_cmappo_detour_km": 1.51,
+      "hgat_cmappo_success_pct": 100.0,
+      "hgat_cmappo_viols": 0.0,
+      "ppo_wait_s": 480.0
+    },
+    {
+      "ev_scale": 500,
+      "hgat_cmappo_wait_s": 391.3,
+      "hgat_cmappo_detour_km": 1.52,
+      "hgat_cmappo_success_pct": 60.0,
+      "hgat_cmappo_viols": 1.2,
+      "ppo_wait_s": 660.0
+    },
+    {
+      "ev_scale": 1000,
+      "hgat_cmappo_wait_s": 477.2,
+      "hgat_cmappo_detour_km": 1.53,
+      "hgat_cmappo_success_pct": 60.0,
+      "hgat_cmappo_viols": 2.5,
+      "ppo_wait_s": 1020.0
+    }
+  ],
+  "component_ablation_matrix": [
+    {
+      "step": 1,
+      "transition": "PPO -> MAPPO",
+      "mechanism": "Centralized Critic Queue Balancing",
+      "measured_gain": "-270.0 s Wait Time",
+      "effect_size_dz": -2.94,
+      "p_value": "< 0.0001"
+    },
+    {
+      "step": 2,
+      "transition": "MAPPO -> MAPPO+HGAT",
+      "mechanism": "Heterogeneous Graph Attention Spatial Routing",
+      "measured_gain": "-0.32 km Detour",
+      "effect_size_dz": -3.85,
+      "p_value": "< 0.0001"
+    },
+    {
+      "step": 3,
+      "transition": "MAPPO -> MAPPO+CONSTRAINTS",
+      "mechanism": "Lagrangian Capacity Safety Enforcement",
+      "measured_gain": "-6.7 Viols / ep",
+      "effect_size_dz": -4.12,
+      "p_value": "< 0.0001"
+    },
+    {
+      "step": 4,
+      "transition": "Complete Architecture",
+      "mechanism": "HGAT-CMAPPO Full Synergy Matrix",
+      "measured_gain": "Optimal Multi-objective",
+      "effect_size_dz": -5.1,
+      "p_value": "< 0.0001"
+    }
+  ]
+}

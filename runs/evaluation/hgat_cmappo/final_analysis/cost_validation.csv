@@ -1,0 +1,6 @@
+model,total_charging_sessions,mean_tariff,mean_energy_delivered_kwh,mean_session_cost,formula_verification
+PPO,150000,16.00,38.84,621.45,PASS
+MAPPO,150000,16.00,38.84,621.45,PASS
+MAPPO + HGAT,150000,16.00,38.84,621.45,PASS
+MAPPO + Constraints,150000,16.00,38.84,621.45,PASS
+HGAT-CMAPPO,150000,16.00,38.84,621.45,PASS

@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.venv/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# GitHub Workflows (Requires GitHub Token 'workflow' scope to push)
+.github/
+
+# Testing & Linting
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Node / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE & Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment & Secrets
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+
+# Temporary Debug Files & Logs
+*.log
+tmp/
+temp/
+scratch/
+outputs/reports/dashboard_history.json
+
+# Large raw simulation event logs (preserved locally / LFS ready)
+runs/evaluation/hgat_cmappo/phase6_final/*.csv
+runs/evaluation/hgat_cmappo/phase7_crowding_scalability/*.csv
+runs/evaluation/hgat_cmappo/phase8_ablation/*.csv
+
+# DO NOT IGNORE FINAL RESEARCH AUDIT EVIDENCE & PAPER OUTPUTS
+!runs/evaluation/hgat_cmappo/final_audit/
+!runs/evaluation/hgat_cmappo/final_audit/*.csv
+!runs/evaluation/hgat_cmappo/final_audit/*.md
+!outputs/performance_matrix.*
+!outputs/demand_scaling_matrix.csv
+!outputs/component_ablation_matrix.csv
+!runs/models/hgat_cmappo/stage_06/model.pt

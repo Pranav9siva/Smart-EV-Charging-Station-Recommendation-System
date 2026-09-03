@@ -1,0 +1,4 @@
+claim,status,evidence
+Successfully evaluated at 1000 EVs,SUPPORTED,All 1000-EV SUMO runs completed with 100% event logs.
+Lower degradation with increasing demand,SUPPORTED,Linear slope of 0.388 s/EV for HGAT-CMAPPO vs 1.244 s/EV for PPO.
+Computational scalability (memory/CPU runtime),NOT_SUPPORTED,Hardware profiling logs were not collected during evaluation.

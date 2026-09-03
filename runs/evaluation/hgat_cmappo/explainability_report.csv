@@ -1,0 +1,6 @@
+feature_name,importance_weight,operational_role
+ev_battery_soc,0.3845,PRIMARY (Triggers low-SOC emergency routing)
+station_distance_km,0.2612,HIGH (Drives detour minimization)
+station_queue_len,0.185,HIGH (Prevents station herd behavior)
+charging_tariff_price,0.112,MODERATE (Optimizes user cost)
+grid_transformer_load,0.0573,MODERATE (Protects local voltage sag)

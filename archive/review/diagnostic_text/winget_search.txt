@@ -1,0 +1,172 @@
+Name                               Id                                     Version           Match                           Source
+-----------------------------------------------------------------------------------------------------------------------------------
+Anaconda3                          Anaconda.Anaconda3                     2025.12-2         Command: python                 winget
+Miniconda3                         Anaconda.Miniconda3                    py314_26.5.3-2    Command: python                 winget
+Mambaforge                         CondaForge.Mambaforge                  24.11.0-1         Command: python                 winget
+Mambaforge-pypy3                   CondaForge.Mambaforge.PyPy3            24.11.0-1         Command: python                 winget
+Miniforge3                         CondaForge.Miniforge3                  26.3.2-3          Command: python                 winget
+Miniforge-pypy3                    CondaForge.Miniforge3.PyPy3            24.11.0-1         Command: python                 winget
+Python Launcher                    Python.Launcher                        3.13.5            Command: python                 winget
+Python 2                           Python.Python.2                        2.7.18150         Command: python                 winget
+Python 3.0                         Python.Python.3.0                      3.0.1             Command: python                 winget
+Python 3.1                         Python.Python.3.1                      3.1.4             Command: python                 winget
+Python 3.10                        Python.Python.3.10                     3.10.11           Command: python                 winget
+Python 3.11                        Python.Python.3.11                     3.11.9            Command: python                 winget
+Python 3.12                        Python.Python.3.12                     3.12.10           Command: python                 winget
+Python 3.13                        Python.Python.3.13                     3.13.14           Command: python                 winget
+Python 3.14                        Python.Python.3.14                     3.14.6            Command: python                 winget
+Python 3.2                         Python.Python.3.2                      3.2.5             Command: python                 winget
+Python 3.3                         Python.Python.3.3                      3.3.5             Command: python                 winget
+Python 3.4                         Python.Python.3.4                      3.4.4             Command: python                 winget
+Python 3.5                         Python.Python.3.5                      3.5.4             Command: python                 winget
+Python 3.6                         Python.Python.3.6                      3.6.8             Command: python                 winget
+Python 3.7                         Python.Python.3.7                      3.7.9             Command: python                 winget
+Python 3.8                         Python.Python.3.8                      3.8.10            Command: python                 winget
+Python 3.9                         Python.Python.3.9                      3.9.13            Command: python                 winget
+Python Install Manager             Python.PythonInstallManager            26.3.240.0        Command: python                 winget
+BPMN-RPA Studio                    1IC.BPMN-RPAStudio                     28.0.0            Tag: python                     winget
+MessyFileOrganizer                 4ngel2769.MessyOrganizer               1.0.0             Tag: python                     winget
+WingetCreate GUI                   7gxycn08.WinGetCreateGui               1.1               Tag: python                     winget
+VideoKidnapper                     AES256Afro.VideoKidnapper              1.7.4             Tag: python                     winget
+Thonny                             AivarAnnamaa.Thonny                    5.0.0             Tag: python                     winget
+NPTE                               Anakin-bb8.NPTE                        1.0.6.0           Tag: python                     winget
+TikArcade Studio                   AppSolves.TikArcade-Studio             3.0.14            Tag: python                     winget
+News CLI                           Atticus64.news                         1.3.0             Tag: python                     winget
+Bookworm                           BlindPandasTeam.Bookworm               2026.2            Tag: python                     winget
+Braillify                          Braillify.Braillify                    2.0.1             Tag: python                     winget
+CP Editor                          CPEditor.CPEditor                      7.0.2             Tag: python                     winget
+Trust My Msix!                     Chill-Astro.TMM                        3.14.1.5          Tag: python                     winget
+pympress                           Cimbali.pympress                       1.8.6             Tag: python                     winget
+Sourcetrail 64-bit                 CoatiSoftware.Sourcetrail              2021.4.19         Tag: python                     winget
+海龟编辑器                         Codemao.TurtleEditor.1                 1.8.7             Tag: python                     winget
+海龟编辑器 2.0                     Codemao.TurtleEditor.2                 2.7.6             Tag: python                     winget
+dda                                Datadog.dda                            0.38.0            Tag: python                     winget
+Certbot                            EFF.Certbot                            2.9.0             Tag: python                     winget
+EditPlus                           ES-Computing.EditPlus                  6.1.780.0         Tag: python                     winget
+SUMO                               EclipseFoundation.SUMO                 1.27.1            Tag: python                     winget
+SUMO Extra                         EclipseFoundation.SUMO.Extra           1.27.1            Tag: python                     winget
+Premiere Companion                 Ephraem.PremiereCompanion              1.2.0             Tag: python                     winget
+Endgame: Singularity               EvilMrHenrySoftware.EndgameSingularity 1.1               Tag: python                     winget
+NWWS-RS                            FahrenheitResearch.NWWS-RS             0.1.1             Tag: python                     winget
+EyesAndEars                        FediMust.EyesAndEars                   2.7               Tag: python                     winget
+Got Your Back                      GAM-Team.GotYourBack                   1.90              Tag: python                     winget
+gam                                GAM-Team.gam                           7.47.02           Tag: python                     winget
+gam.portable                       GAM-Team.gam.Portable                  7.46.02           Tag: python                     winget
+Simple Annual Accounting           GaetanSencie.SimpleAnnualAccounting    2.1.0.0           Tag: python                     winget
+GhostTune Converter                Ghostshadowplays.GhostTuneConverter    1.0.1             Tag: python                     winget
+flatbuffers                        Google.flatbuffers                     25.12.19          Tag: python                     winget
+Melodfy                            HemantKArya.Melodfy                    1.0.0.24          Tag: python                     winget
+Conan Package Manager              JFrog.Conan                            2.31.2            Tag: python                     winget
+DataSpell                          JetBrains.DataSpell                    2026.1.3          Tag: python                     winget
+DataSpell (EAP)                    JetBrains.DataSpell.EAP                261.21849.35      Tag: python                     winget
+PyCharm                            JetBrains.PyCharm                      2026.2.0.1        Tag: python                     winget
+PyCharm Community Edition          JetBrains.PyCharm.Community            2025.2.6.1        Tag: python                     winget
+PyCharm Community Edition (EAP)    JetBrains.PyCharm.Community.EAP        252.23892.194     Tag: python                     winget
+PyCharm (EAP)                      JetBrains.PyCharm.EAP                  262.8665.97       Tag: python                     winget
+PyCharm Professional Edition       JetBrains.PyCharm.Professional         2024.3.5          Tag: python                     winget
+PyCharm Professional Edition (EAP) JetBrains.PyCharm.Professional.EAP     251.23774.354     Tag: python                     winget
+Universal Radio Hacker             JohannesPohl.UniversalRadioHacker      2.10.0            Tag: python                     winget
+Laragon                            LeNgocKhoa.Laragon                     8.6.1             Tag: python                     winget
+Lianja App Builder                 Lianja.LianjaAppBuilder                12.0.3            Tag: python                     winget
+Furious                            LorenEteval.Furious                    0.7.0             Tag: python                     winget
+MAMP & MAMP PRO                    MAMP.MAMP                              5.0.5             Tag: python                     winget
+Micromamba                         Mamba.Micromamba                       2.8.1-1           Tag: python                     winget
+PyPad                              MarkWesker.PyPad                       1.0.0.0           Tag: python                     winget
+SaveState                          Matteo842.SaveState                    3.0               Tag: python                     winget
+QSpectrumAnalyzer                  MichalKrenek.QSpectrumAnalyzer         2.2.0             Tag: python                     winget
+IronPython 2                       Microsoft.IronPython.2                 2.7.12.1000       Tag: python                     winget
+IronPython 3                       Microsoft.IronPython.3                 3.4.2.1000        Tag: python                     winget
+Mu Editor                          Mu.Mu                                  1.2.0             Tag: python                     winget
+Ultimate Launcher                  MukunthP.R.UltimateLauncher            1.0.0             Tag: python                     winget
+Nicotine+                          Nicotine+.Nicotine+                    3.3.10            Tag: python                     winget
+Blink Eye                          NomanDhoni.BlinkEye                    2.8.0             Tag: python                     winget
+LuminalShine                       NortheBridge.LuminalShine              26.07.0           Tag: python                     winget
+Open Shop Channel Downloader       OpenShopChannel.Downloader             1.4.0             Tag: python                     winget
+Austin                             P403n1x87.austin                       3.7.0             Tag: python                     winget
+PYPrime                            PYPrime.PYPrime                        2.2.211023        Tag: python                     winget
+Quarto                             Posit.Quarto                           1.10.18           Tag: python                     winget
+Pulumi                             Pulumi.Pulumi                          3.255.0           Tag: python                     winget
+Hatch                              PyPA.Hatch                             1.17.1            Tag: python                     winget
+QTodoTxt                           QTodoTxt.QTodoTxt                      1.7.0             Tag: python                     winget
+Rye                                Rye.Rye                                0.44.0            Tag: python                     winget
+SABnzbd                            SABnzbdTeam.SABnzbd                    5.0.4             Tag: python                     winget
+PictoBlox                          STEMpedia.PictoBlox                    9.0.1             Tag: python                     winget
+PyMOL                              Schrodinger.PyMOL                      3.1.8             Tag: python                     winget
+SHARPpy-Reimagined                 ShianMike.SHARPpy-Reimagined           0.7.0             Tag: python                     winget
+Spyder                             Spyder.Spyder                          6.1.5             Tag: python                     winget
+ImageMerge                         TamKungZ.ImageMerge                    1.0.2             Tag: python                     winget
+pyzo                               ThePyzoteam.pyzo                       4.22.0            Tag: python                     winget
+Orange                             UniversityOfLjubljana.Orange           3.40.0            Tag: python                     winget
+Unknown-Horizons                   Unknown-HorizonsTeam.Unknown-Horizons  2019.1            Tag: python                     winget
+Blender Launcher                   VictorIX.BlenderLauncher               2.7.6             Tag: python                     winget
+VisIt                              VisIt.VisIt                            3.4.2             Tag: python                     winget
+Wing                               Wingware.Wing                          12.0.1.0          Tag: python                     winget
+Wing 101                           Wingware.Wing.101                      12.0.1.0          Tag: python                     winget
+Wing Personal                      Wingware.Wing.Personal                 11.1.0.0          Tag: python                     winget
+Wing Pro                           Wingware.Wing.Pro                      11.1.0.0          Tag: python                     winget
+Ghost Downloader                   XiaoYouChR.GhostDownloader             4.2.5             Tag: python                     winget
+Vividly                            Z7LL.Vividly                           1.0               Tag: python                     winget
+ZeroNet                            ZeroNet.ZeroNet                        0.7.1             Tag: python                     winget
+doccmd                             adamtheturtle.doccmd                   2026.07.19        Tag: python                     winget
+literalizer-cli                    adamtheturtle.literalizer-cli          2026.04.30        Tag: python                     winget
+Dbmate                             amacneil.dbmate                        2.34.1            Tag: python                     winget
+Corkscrew Updater                  androidWG.Corkscrew                    1.1.0             Tag: python                     winget
+Ruff                               astral-sh.ruff                         0.16.0            Tag: python                     winget
+ty                                 astral-sh.ty                           0.0.64            Tag: python                     winget
+uv                                 astral-sh.uv                           0.12.0            Tag: python                     winget
+Comprobot                          badluma.Comprobot                      3.0.0             Tag: python                     winget
+chaiNNer                           chaiNNer-org.chaiNNer                  0.25.1            Tag: python                     winget
+QR Code Generator                  edpaz.QRCodeGenerator                  1.0.0             Tag: python                     winget
+Pyrefly                            facebook.pyrefly                       1.1.1             Tag: python                     winget
+Gaphor                             gaphor.gaphor                          3.3.2             Tag: python                     winget
+git-cola                           git-cola.git-cola                      4.19.0            Tag: python                     winget
+Zapret Hub                         goshkow.ZapretHub                      1.4.4.0           Tag: python                     winget
+PyAudio                            intxcc.pyaudio                         0.2.11            Tag: python                     winget
+RedNotebook                        jendrikseipp.RedNotebook               2.42              Tag: python                     winget
+Usage-Monitor-for-Claude           jens-duttke.usage-monitor-for-claude   1.16.0            Tag: python                     winget
+Cartridges                         kramo.Cartridges                       2.12.1            Tag: python                     winget
+lief-patchelf                      lief-project.lief-patchelf             1.0.0             Tag: python                     winget
+vx                                 loonghao.vx                            0.9.26            Tag: python                     winget
+magic-wormhole                     magic-wormhole.magic-wormhole          0.24.0            Tag: python                     winget
+Qtcord                             mak448a.Qtcord                         0.0.21            Tag: python                     winget
+Another Qt installer               miurahr.aqtinstall                     3.3.0             Tag: python                     winget
+nteract                            nteract.nteract                        0.28.0            Tag: python                     winget
+Black                              psf.black                              26.5.1            Tag: python                     winget
+qutebrowser                        qutebrowser.qutebrowser                3.7.0             Tag: python                     winget
+Stackless Python                   stackless.stackless                    3.7.9150.0        Tag: python                     winget
+CryptivisX                         tromoSM.CryptivisX                     1.1               Tag: python                     winget
+HostTalk                           tromoSM.HostTalk                       0.9               Tag: python                     winget
+winpython                          winpython.winpython                    7.0.20231126final Tag: python                     winget
+winpython-dot                      winpython.winpython-dot                6.4.20230625final Tag: python                     winget
+winpython-dot-pypy                 winpython.winpython-dot-pypy           3.8.12.3          Tag: python                     winget
+winpython-pypy                     winpython.winpython-pypy               7.0.20231126final Tag: python                     winget
+xonsh-winget                       xonsh.xonsh-winget                     0.23.8            Tag: python                     winget
+MoonViewer                         zsyg.MoonViewer                        1.2               Tag: python                     winget
+TigerJython                        TJGroup.TigerJython                    2.42              Tag: Python                     winget
+Python 3.12                        9NCVDN91XZQP                           Unknown                                           msstore
+Python 3.13                        9PNRBTZXMB4Z                           Unknown                                           msstore
+Python Install Manager             9NQ7512CXL7T                           Unknown                                           msstore
+Python Tk Gui Builder              CarlWenrich.PythonTkGuiBuilder         1.0.0                                             winget
+MrPython                           FredericPeschanski.MrPython            5.2.0beta                                         winget
+SimpleCalcWithPython               MukunthP.R.SimpleCalcWithPython        1.0.0                                             winget
+Python Launcher                    OleksisFraga.PythonLauncher            2.1.0.0                                           winget
+Python Embeddable Package 3.14     Python.PythonEmbeddablePackage.3.14    3.14.6                                            winget
+ElevenClock                        SomePythonThings.ElevenClock           4.4.1.1                                           winget
+SomePythonThings Zip Manager       SomePythonThings.ZipManager            4.3                                               winget
+vuforia-cloud-reco                 VWSPython.vuforia-cloud-reco           2026.02.22                                        winget
+vumark                             VWSPython.vumark                       2026.02.22                                        winget
+vws-cli                            VWSPython.vws-cli                      2026.02.22                                        winget
+Python Launcher                    VinaySajip.PythonLauncher              1.0.1.6                                           winget
+Learn Python - Python Tutorial     9MX1038V03NJ                           Unknown                                           msstore
+Interactive Python Course          9N9X6HL59P0G                           Unknown                                           msstore
+InstantPython                      9WZDNCRDC1W5                           Unknown                                           msstore
+CodeSnack Python                   9N1QZ93HGFL2                           Unknown                                           msstore
+Learn Python Interactive Course    9P1JF7XJLNBN                           Unknown                                           msstore
+beqdesigner                        3ll3d00d.beqdesigner                   2.1.0             Tag: python3                    winget
+pychess                            pychess.pychess                        1.0.5             Tag: python3                    winget
+GS-Calc                            Citadel5-JP.GS-Calc                    24.0.8.0          Tag: Python integration         winget
+ComicCatcher v0.7.2                ComicCatcher.ComicCatcher              0.7.5             Tag: python-pyqt6               winget
+gfgLock                            gfgRoyal.gfgLock                       3.0.1             Tag: python-gui                 winget
+instaloader                        instaloader.instaloader                4.15.2            Tag: osint-python               winget
+pixi                               prefix-dev.pixi                        0.76.1            Tag: python-virtual-environment winget
+qrrun                              sakurai-youhei.qrrun                   0.1.3             Tag: pythonista                 winget

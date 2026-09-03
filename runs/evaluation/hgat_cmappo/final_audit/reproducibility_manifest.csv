@@ -1,0 +1,9 @@
+key,value
+Python Version,3.12.10
+PyTorch Version,2.2.0 (CUDA Supported)
+NumPy Version,1.26.4
+Operating System,Windows
+Random Seeds,"42, 123, 2024, 31415, 54321"
+Locked Model Checkpoint,runs/training/hgat_cmappo/seed_42/stage_06/model.pt
+SUMO Interface,StandardizedEVEnv TraCI Event Pipeline
+Total Validated Episode Runs,"1450 (P6: 450, P7: 500, P8: 500)"

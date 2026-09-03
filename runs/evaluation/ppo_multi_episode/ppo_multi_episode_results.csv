@@ -1,0 +1,2 @@
+episode,seed,steps_requested,steps_completed,recommendations,reward,charging_cost,waiting_time_min,travel_distance_km,successful_charging,estimated_charging_cost,charging_started,charging_completed,queue_events,runtime_seconds,status
+1,4200,30,30,10,-1122.5899999999997,0,0.0,14.068271476827475,0,3591.9235935617316,0,0,0,78.8651,PASS

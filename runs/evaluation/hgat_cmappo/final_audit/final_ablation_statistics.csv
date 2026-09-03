@@ -1,0 +1,6 @@
+model,episodes,additional_detour,waiting_time,constraint_violations
+PPO,100,0.93 ± 0.05 km,606.6 ± 291.8 s,4450.00 ± 6304.36
+MAPPO,100,1.52 ± 0.06 km,376.5 ± 72.9 s,1107.93 ± 1568.66
+MAPPO + HGAT,100,1.52 ± 0.06 km,374.1 ± 70.4 s,1081.57 ± 1535.38
+MAPPO + Constraints,100,1.52 ± 0.06 km,374.5 ± 70.7 s,1082.17 ± 1532.70
+HGAT-CMAPPO,100,1.52 ± 0.06 km,374.7 ± 71.0 s,1085.59 ± 1532.44

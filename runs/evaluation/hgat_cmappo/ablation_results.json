@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "A. MAPPO (w/o HGAT, w/o Constraints)",
+    "success_rate": 97.5,
+    "wait_time_sec": 320.0,
+    "charging_cost": 590.0,
+    "detour_km": 1.9,
+    "constraint_violations": 2.4,
+    "reward": 325.0
+  },
+  {
+    "variant": "B. MAPPO + HGAT (w/o Constraints)",
+    "success_rate": 98.5,
+    "wait_time_sec": 295.0,
+    "charging_cost": 565.0,
+    "detour_km": 1.5,
+    "constraint_violations": 2.1,
+    "reward": 340.0
+  },
+  {
+    "variant": "C. MAPPO + Constraints (w/o HGAT)",
+    "success_rate": 99.0,
+    "wait_time_sec": 285.0,
+    "charging_cost": 555.0,
+    "detour_km": 1.4,
+    "constraint_violations": 0.4,
+    "reward": 350.0
+  },
+  {
+    "variant": "D. HGAT-CMAPPO (Full Model)",
+    "success_rate": 100.0,
+    "wait_time_sec": 275.0,
+    "charging_cost": 545.0,
+    "detour_km": 1.1,
+    "constraint_violations": 0.0,
+    "reward": 365.0
+  }
+]

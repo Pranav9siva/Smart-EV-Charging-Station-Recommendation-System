@@ -1,0 +1,6 @@
+model,mean_reference_dist_km,mean_actual_dist_km,mean_detour_km,formula_verification
+PPO,5.00,5.96,0.96,PASS
+MAPPO,5.00,6.54,1.54,PASS
+MAPPO + HGAT,5.00,6.53,1.53,PASS
+MAPPO + Constraints,5.00,6.53,1.53,PASS
+HGAT-CMAPPO,5.00,6.54,1.54,PASS

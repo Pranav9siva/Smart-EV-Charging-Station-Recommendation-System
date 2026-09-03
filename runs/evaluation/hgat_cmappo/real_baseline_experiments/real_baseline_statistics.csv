@@ -1,0 +1,21 @@
+metric,comparison,n,mean_diff,ci95,t_stat,p_raw,cohen_dz,conclusion,p_adj
+waiting_time,HGAT-CMAPPO vs PPO,150,-165.00,"[-165.00, -165.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+waiting_time,HGAT-CMAPPO vs MAPPO,150,-75.00,"[-75.00, -75.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+waiting_time,HGAT-CMAPPO vs MAPPO + HGAT,150,-45.00,"[-45.00, -45.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+waiting_time,HGAT-CMAPPO vs MAPPO + Constraints,150,-30.00,"[-30.00, -30.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+charging_cost,HGAT-CMAPPO vs PPO,150,0.00,"[0.00, 0.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+charging_cost,HGAT-CMAPPO vs MAPPO,150,0.00,"[0.00, 0.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+charging_cost,HGAT-CMAPPO vs MAPPO + HGAT,150,0.00,"[0.00, 0.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+charging_cost,HGAT-CMAPPO vs MAPPO + Constraints,150,0.00,"[0.00, 0.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+detour,HGAT-CMAPPO vs PPO,150,-0.39,"[-0.40, -0.37]",-69.20,0.0001,-5.65,STATISTICALLY SIGNIFICANT,0.0004
+detour,HGAT-CMAPPO vs MAPPO,150,-0.55,"[-0.55, -0.54]",-217.96,0.0001,-17.80,STATISTICALLY SIGNIFICANT,0.0004
+detour,HGAT-CMAPPO vs MAPPO + HGAT,150,-0.23,"[-0.24, -0.23]",-154.68,0.0001,-12.63,STATISTICALLY SIGNIFICANT,0.0004
+detour,HGAT-CMAPPO vs MAPPO + Constraints,150,-0.16,"[-0.16, -0.16]",-140.60,0.0001,-11.48,STATISTICALLY SIGNIFICANT,0.0004
+energy,HGAT-CMAPPO vs PPO,150,0.00,"[0.00, 0.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+energy,HGAT-CMAPPO vs MAPPO,150,0.00,"[0.00, 0.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+energy,HGAT-CMAPPO vs MAPPO + HGAT,150,0.00,"[0.00, 0.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+energy,HGAT-CMAPPO vs MAPPO + Constraints,150,0.00,"[0.00, 0.00]",NA,NA,NA,Test not estimable (zero variance in paired diffs),NA
+episode_reward,HGAT-CMAPPO vs PPO,150,-0.11,"[-0.12, -0.11]",-326.50,0.0001,-26.66,STATISTICALLY SIGNIFICANT,0.0004
+episode_reward,HGAT-CMAPPO vs MAPPO,150,0.00,"[0.00, 0.00]",8.52,0.0001,0.70,STATISTICALLY SIGNIFICANT,0.0004
+episode_reward,HGAT-CMAPPO vs MAPPO + HGAT,150,0.00,"[-0.00, 0.00]",1.70,0.0907,0.14,NOT STATISTICALLY SIGNIFICANT,0.0907
+episode_reward,HGAT-CMAPPO vs MAPPO + Constraints,150,0.00,"[0.00, 0.00]",8.52,0.0001,0.70,STATISTICALLY SIGNIFICANT,0.0004

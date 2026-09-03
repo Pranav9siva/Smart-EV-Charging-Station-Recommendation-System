@@ -1,0 +1,5 @@
+comparison,metric,n_matched_scenarios,mean_difference,ci95,t_stat,p_val,cohen_dz,verdict
+HGAT-CMAPPO vs PPO,additional_detour,90,0.7635 km,"[0.7020, 0.8249]",24.3438,0.0001,2.5661,STATISTICALLY SIGNIFICANT
+HGAT-CMAPPO vs MAPPO,additional_detour,90,-0.0104 km,"[-0.0143, -0.0066]",-5.3144,0.0001,-0.5602,STATISTICALLY SIGNIFICANT
+HGAT-CMAPPO vs MAPPO + HGAT,additional_detour,90,-0.0029 km,"[-0.0066, 0.0009]",-1.4912,0.1394,-0.1572,NOT SIGNIFICANT
+HGAT-CMAPPO vs MAPPO + Constraints,additional_detour,90,-0.0034 km,"[-0.0077, 0.0009]",-1.5383,0.1275,-0.1621,NOT SIGNIFICANT

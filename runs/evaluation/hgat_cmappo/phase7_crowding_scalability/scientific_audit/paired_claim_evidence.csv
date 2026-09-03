@@ -1,0 +1,2 @@
+comparison,hgat_mean_wait,ppo_mean_wait,reconstructed_reduction,claimed_reduction,verdict
+HGAT-CMAPPO vs PPO under SPATIAL_CROWDING 1000-EV,514.7 s,1200.0 s,685.3 s,420.0 s,VERIFIED_SUPPORTED

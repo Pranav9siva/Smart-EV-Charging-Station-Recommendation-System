@@ -1,0 +1,2 @@
+scenario_type,total_scenarios,ppo_success,mappo_success,hgat_cmappo_success,status
+STANDARDIZED_BANGALORE_EV,150,100.0%,100.0%,100.0%,COMPLETED

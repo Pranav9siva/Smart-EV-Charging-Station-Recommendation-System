@@ -1,0 +1,5 @@
+metric,pooling_recommendation,rationale
+additional_detour,REPORT_BY_SCENARIO,Detour varies by station topology and spatial crowding scenario; reporting by scenario preserves spatial variance.
+waiting_time,REPORT_BY_EV_SCALE_AND_SCENARIO,Waiting time scales from 300s (100 EV) to 1420s (1000 EV); pooling masks scaling dynamics.
+charging_cost,REPORT_AS_FIXED_SPECIFICATION,Charging cost is invariant across policies.
+constraint_violations,REPORT_BY_SCENARIO_AND_MODEL,Violations concentrate under STATION_OUTAGE and COMBINED_STRESS.

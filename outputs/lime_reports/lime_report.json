@@ -1,0 +1,9 @@
+{
+  "selected_station": "S2",
+  "local_explanation": {
+    "battery": 0.4,
+    "distance": 0.25,
+    "waiting_time": 0.4
+  },
+  "method": "lime-like-approximation"
+}

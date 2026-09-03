@@ -1,0 +1,18 @@
+{
+  "selected_station": "S2",
+  "feature_values": {
+    "battery": 0.4,
+    "distance": 0.25,
+    "waiting_time": 0.4,
+    "queue": 0.5,
+    "price": 0.16666666666666666
+  },
+  "summary": {
+    "battery": 0.4,
+    "distance": 0.25,
+    "waiting_time": 0.4,
+    "queue": 0.5,
+    "price": 0.167
+  },
+  "method": "shap-like-approximation"
+}

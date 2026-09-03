@@ -1,0 +1,43 @@
+{
+  "model": "stable_baselines3.PPO",
+  "checkpoint": "D:\\Smart_EV_Station_Recommandadtion_System\\runs\\ppo_ckpt\\ppo_ev_finetuned_50k.zip",
+  "environment_configuration": {
+    "class": "GymEVChargingEnv",
+    "tracked_vehicle_count": 10,
+    "candidate_count": 8,
+    "db_path": "D:\\Smart_EV_Station_Recommandadtion_System\\data\\stations\\stations.sqlite",
+    "station_count": 506,
+    "real_candidate_count": 8
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "steps": 10,
+      "reward": -1277.5105,
+      "cumulative_reward": -1277.5105,
+      "error": ""
+    },
+    {
+      "episode": 2,
+      "steps": 10,
+      "reward": -1277.5105,
+      "cumulative_reward": -1277.5105,
+      "error": ""
+    },
+    {
+      "episode": 3,
+      "steps": 10,
+      "reward": -1277.5105,
+      "cumulative_reward": -1277.5105,
+      "error": ""
+    }
+  ],
+  "errors": [],
+  "status": "FUNCTIONAL",
+  "markdown": "# Fine-Tuned PPO Quick Functional Test\n\n## Checkpoint\n- D:\\Smart_EV_Station_Recommandadtion_System\\runs\\ppo_ckpt\\ppo_ev_finetuned_50k.zip\n\n## Environment\n- class: GymEVChargingEnv\n- tracked_vehicle_count: 10\n- candidate_count: 8\n- db_path: D:\\Smart_EV_Station_Recommandadtion_System\\data\\stations\\stations.sqlite\n- station_count: 506\n- real_candidate_count: 8\n\n## Episode Results\n- Episode 1: steps=10, reward=-1277.5105, error=none\n- Episode 2: steps=10, reward=-1277.5105, error=none\n- Episode 3: steps=10, reward=-1277.5105, error=none\n\n## Runtime Validation\n- MODEL_LOAD: PASS\n- OBSERVATION_SPACE: YES\n- ACTION_SPACE: YES\n- ENV_RESET: PASS\n- PREDICTION: PASS\n- SIMULATION_STEP: PASS\n- REWARD: PASS\n- CHARGING: NOT_APPLICABLE\n- TRACI: NOT_APPLICABLE\n- ERRORS: none\n\n## Final Status\nFUNCTIONAL\n",
+  "total_steps": 30,
+  "average_reward": -1277.5105,
+  "charging_events": 0,
+  "invalid_actions": 0,
+  "traci_errors": 0
+}

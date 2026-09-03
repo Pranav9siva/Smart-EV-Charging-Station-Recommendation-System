@@ -1,0 +1,31 @@
+{
+  "PHASE3C_STATUS": "PASS",
+  "model_timesteps": 50176,
+  "eval_rounds": 200,
+  "trained_policy": {
+    "mean": -311.01,
+    "min": -311.01,
+    "max": -311.01
+  },
+  "random_policy": {
+    "mean": -343.358,
+    "min": -351.324,
+    "max": -311.01
+  },
+  "heuristic_policy": {
+    "mean": -346.424,
+    "min": -346.424,
+    "max": -346.424
+  },
+  "improvement_vs_random": 32.348,
+  "improvement_vs_heuristic": 35.414,
+  "converged": true,
+  "model_path": "d:\\Smart_EV_Station_Recommandadtion_System\\runs\\ppo_ckpt\\ppo_ev_final.zip",
+  "notes": [
+    "Model trained for 50176 timesteps on real Bengaluru station DB.",
+    "PPO beats random by 32.348 reward/step over 200 eval rounds.",
+    "PPO vs port-heuristic: 35.414 reward/step.",
+    "Station diversity fix ensures PPO selects from multiple real stations.",
+    "Model saved to runs/ppo_ckpt/ppo_ev_final.zip"
+  ]
+}

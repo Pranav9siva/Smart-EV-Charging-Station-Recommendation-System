@@ -1,0 +1,10 @@
+metric,direction,winner,margin
+Success Rate,Higher is Better,ALL MODELS TIED (100%),0.0%
+Completion Rate,Higher is Better,ALL MODELS TIED (100%),0.0%
+Waiting Time,Lower is Better,ALL MODELS TIED (300.0s),0.0s
+Charging Cost,Lower is Better,ALL MODELS TIED (Rs. 624.6),Rs. 0.0
+Detour Distance,Lower is Better,MAPPO + Constraints,0.00 km
+Energy Consumption,Lower is Better,ALL MODELS TIED (10.0 kWh),0.0 kWh
+Constraint Violations,Lower is Better,ALL MODELS TIED (0.0),0.0
+Jain Fairness,Higher is Better,MAPPO,0.0028
+Episode Reward,Higher is Better,HGAT-CMAPPO & MAPPO,0.00

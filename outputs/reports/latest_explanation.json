@@ -1,0 +1,388 @@
+{
+  "decision_explanation": "The PPO agent selected osm_11542817290 because the battery state (14.8%) and remaining range (9.1 km) strongly favored an urgent charging decision, while the station's waiting time, queue, price, and traffic profile remained competitive.",
+  "top_k_station_ranking": [
+    {
+      "station_id": "osm_11542817290",
+      "score": 0.567,
+      "metrics": {
+        "station_id": "osm_11542817290",
+        "available_ports": 1,
+        "occupied_ports": 0,
+        "total_ports": 1,
+        "charging_ports": 0,
+        "queue_length": 0,
+        "avg_wait_estimate": 0.0,
+        "price_per_kwh": 16.0,
+        "ports": [
+          {
+            "port_id": "osm_11542817290_p1",
+            "connector_type": "CCS",
+            "power_kw": 22.0,
+            "status": "Available",
+            "status_updated_at": "2026-08-09T06:38:35.544376+00:00"
+          }
+        ],
+        "power_kw": 0.0,
+        "occupancy_rate": 0.0,
+        "occupancy_percent": 0.0,
+        "charging_state": "idle"
+      }
+    },
+    {
+      "station_id": "osm_10293872605",
+      "score": 0.372,
+      "metrics": {
+        "station_id": "osm_10293872605",
+        "available_ports": 1,
+        "occupied_ports": 0,
+        "total_ports": 1,
+        "charging_ports": 0,
+        "queue_length": 0,
+        "avg_wait_estimate": 0.0,
+        "price_per_kwh": 14.0,
+        "ports": [
+          {
+            "port_id": "osm_10293872605_p1",
+            "connector_type": "CCS",
+            "power_kw": 22.0,
+            "status": "Available",
+            "status_updated_at": "2026-08-09T06:59:22.037161+00:00"
+          }
+        ],
+        "power_kw": 0.0,
+        "occupancy_rate": 0.0,
+        "occupancy_percent": 0.0,
+        "charging_state": "idle"
+      }
+    },
+    {
+      "station_id": "osm_10763275239",
+      "score": 0.372,
+      "metrics": {
+        "station_id": "osm_10763275239",
+        "available_ports": 1,
+        "occupied_ports": 0,
+        "total_ports": 1,
+        "charging_ports": 0,
+        "queue_length": 0,
+        "avg_wait_estimate": 0.0,
+        "price_per_kwh": 14.0,
+        "ports": [
+          {
+            "port_id": "osm_10763275239_p1",
+            "connector_type": "CCS",
+            "power_kw": 22.0,
+            "status": "Available",
+            "status_updated_at": "2026-08-09T06:38:35.544376+00:00"
+          }
+        ],
+        "power_kw": 0.0,
+        "occupancy_rate": 0.0,
+        "occupancy_percent": 0.0,
+        "charging_state": "idle"
+      }
+    },
+    {
+      "station_id": "osm_9527967749",
+      "score": 0.371,
+      "metrics": {
+        "station_id": "osm_9527967749",
+        "available_ports": 1,
+        "occupied_ports": 0,
+        "total_ports": 1,
+        "charging_ports": 0,
+        "queue_length": 0,
+        "avg_wait_estimate": 0.0,
+        "price_per_kwh": 16.0,
+        "ports": [
+          {
+            "port_id": "osm_9527967749_p1",
+            "connector_type": "CCS",
+            "power_kw": 22.0,
+            "status": "Available",
+            "status_updated_at": "2026-08-09T09:39:46.010871+00:00"
+          }
+        ],
+        "power_kw": 0.0,
+        "occupancy_rate": 0.0,
+        "occupancy_percent": 0.0,
+        "charging_state": "idle"
+      }
+    },
+    {
+      "station_id": "osm_9811396097",
+      "score": 0.371,
+      "metrics": {
+        "station_id": "osm_9811396097",
+        "available_ports": 1,
+        "occupied_ports": 0,
+        "total_ports": 1,
+        "charging_ports": 0,
+        "queue_length": 0,
+        "avg_wait_estimate": 0.0,
+        "price_per_kwh": 16.0,
+        "ports": [
+          {
+            "port_id": "osm_9811396097_p1",
+            "connector_type": "CCS",
+            "power_kw": 22.0,
+            "status": "Available",
+            "status_updated_at": "2026-08-09T06:46:07.302755+00:00"
+          }
+        ],
+        "power_kw": 0.0,
+        "occupancy_rate": 0.0,
+        "occupancy_percent": 0.0,
+        "charging_state": "idle"
+      }
+    },
+    {
+      "station_id": "osm_9917415768",
+      "score": 0.371,
+      "metrics": {
+        "station_id": "osm_9917415768",
+        "available_ports": 1,
+        "occupied_ports": 0,
+        "total_ports": 1,
+        "charging_ports": 0,
+        "queue_length": 0,
+        "avg_wait_estimate": 0.0,
+        "price_per_kwh": 16.0,
+        "ports": [
+          {
+            "port_id": "osm_9917415768_p1",
+            "connector_type": "CCS",
+            "power_kw": 22.0,
+            "status": "Available",
+            "status_updated_at": "2026-08-09T08:13:39.584544+00:00"
+          }
+        ],
+        "power_kw": 0.0,
+        "occupancy_rate": 0.0,
+        "occupancy_percent": 0.0,
+        "charging_state": "idle"
+      }
+    }
+  ],
+  "feature_importance": {
+    "battery": 0.3,
+    "distance": 0.189,
+    "waiting_time": 0.182,
+    "queue": 0.147,
+    "electricity_price": 0.087,
+    "traffic": 0.095
+  },
+  "reward_decomposition": {
+    "battery_contribution": 0.067,
+    "distance_contribution": 0.099,
+    "waiting_time_contribution": 0.12,
+    "queue_contribution": 0.1,
+    "electricity_price_contribution": 0.0,
+    "traffic_contribution": 0.1,
+    "total_reward": 0.486
+  },
+  "battery_contribution": 0.067,
+  "distance_contribution": 0.099,
+  "waiting_time_contribution": 0.12,
+  "queue_contribution": 0.1,
+  "electricity_price_contribution": 0.0,
+  "traffic_contribution": 0.1,
+  "confidence_score": 0.567,
+  "policy_probability_visualization": {
+    "selected_station_id": "osm_11542817290",
+    "selected_station_probability": 0.567,
+    "distribution": [
+      {
+        "station_id": "osm_11542817290",
+        "probability": 0.567,
+        "rank": 1
+      },
+      {
+        "station_id": "osm_10293872605",
+        "probability": 0.507,
+        "rank": 2
+      },
+      {
+        "station_id": "osm_10763275239",
+        "probability": 0.447,
+        "rank": 3
+      },
+      {
+        "station_id": "osm_9527967749",
+        "probability": 0.387,
+        "rank": 4
+      },
+      {
+        "station_id": "osm_9811396097",
+        "probability": 0.327,
+        "rank": 5
+      },
+      {
+        "station_id": "osm_9917415768",
+        "probability": 0.267,
+        "rank": 6
+      }
+    ]
+  },
+  "action_probability_chart": [
+    {
+      "station_id": "osm_11542817290",
+      "probability": 0.567,
+      "rank": 1
+    },
+    {
+      "station_id": "osm_10293872605",
+      "probability": 0.507,
+      "rank": 2
+    },
+    {
+      "station_id": "osm_10763275239",
+      "probability": 0.447,
+      "rank": 3
+    },
+    {
+      "station_id": "osm_9527967749",
+      "probability": 0.387,
+      "rank": 4
+    },
+    {
+      "station_id": "osm_9811396097",
+      "probability": 0.327,
+      "rank": 5
+    },
+    {
+      "station_id": "osm_9917415768",
+      "probability": 0.267,
+      "rank": 6
+    }
+  ],
+  "observation_visualization": {
+    "battery_pct": 14.79,
+    "remaining_range_km": 9.06,
+    "battery_capacity_kwh": 30.0,
+    "station_selected": "osm_11542817290",
+    "station_metrics": {
+      "station_id": "osm_11542817290",
+      "available_ports": 1,
+      "occupied_ports": 0,
+      "total_ports": 1,
+      "charging_ports": 0,
+      "queue_length": 0,
+      "avg_wait_estimate": 0.0,
+      "price_per_kwh": 16.0,
+      "ports": [
+        {
+          "port_id": "osm_11542817290_p1",
+          "connector_type": "CCS",
+          "power_kw": 22.0,
+          "status": "Available",
+          "status_updated_at": "2026-08-09T06:38:35.544376+00:00"
+        }
+      ],
+      "power_kw": 0.0,
+      "occupancy_rate": 0.0,
+      "occupancy_percent": 0.0,
+      "charging_state": "idle"
+    }
+  },
+  "decision_timeline": [
+    {
+      "step": 1,
+      "event": "Observation captured"
+    },
+    {
+      "step": 2,
+      "event": "PPO policy evaluated 6 candidate stations"
+    },
+    {
+      "step": 3,
+      "event": "Selected osm_11542817290"
+    }
+  ],
+  "episode_playback": [
+    {
+      "step": 0,
+      "state": "low battery detected"
+    },
+    {
+      "step": 1,
+      "state": "candidate stations ranked"
+    },
+    {
+      "step": 2,
+      "state": "charging action selected"
+    }
+  ],
+  "historical_decision_comparison": [
+    {
+      "station_id": "osm_11542817290",
+      "confidence_score": 0.567
+    }
+  ],
+  "shap_explanation": {
+    "selected_station": "osm_11542817290",
+    "feature_values": {
+      "battery": 0.1478551154155947,
+      "distance": 0.22750580819912383,
+      "waiting_time": 1.0,
+      "queue": 1.0,
+      "price": 0.002438848646807353
+    },
+    "summary": {
+      "battery": 0.148,
+      "distance": 0.228,
+      "waiting_time": 1.0,
+      "queue": 1.0,
+      "price": 0.002
+    },
+    "method": "shap-like-approximation"
+  },
+  "lime_explanation": {
+    "selected_station": "osm_11542817290",
+    "local_explanation": {
+      "battery": 0.148,
+      "distance": 0.228,
+      "waiting_time": 1.0
+    },
+    "method": "lime-like-approximation"
+  },
+  "counterfactual_explanation": {
+    "selected_station": "osm_11542817290",
+    "counterfactuals": [
+      {
+        "station_id": "S2",
+        "reason": "lower queue"
+      },
+      {
+        "station_id": "S3",
+        "reason": "lower price"
+      }
+    ]
+  },
+  "decision_trace": {
+    "selected_station": "osm_11542817290",
+    "confidence": 0.567,
+    "policy_probability": 0.567,
+    "steps": [
+      {
+        "step": 1,
+        "event": "observation captured"
+      },
+      {
+        "step": 2,
+        "event": "policy evaluated candidate stations"
+      },
+      {
+        "step": 3,
+        "event": "station selected"
+      }
+    ]
+  },
+  "explainability_api": {
+    "supports_shap": true,
+    "supports_lime": true,
+    "method": "feature-attribution"
+  },
+  "shap_support": true,
+  "lime_support": true
+}

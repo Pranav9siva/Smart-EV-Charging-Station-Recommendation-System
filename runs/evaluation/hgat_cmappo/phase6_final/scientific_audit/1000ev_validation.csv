@@ -1,0 +1,6 @@
+model,1000ev_scenarios_evaluated,reconstructed_mean_success_rate,reconstructed_mean_additional_detour,validation_verdict
+PPO,15,90.00%,1.2246 km,VERIFIED_REAL_SUMO_EPISODES
+MAPPO,15,90.00%,2.0322 km,VERIFIED_REAL_SUMO_EPISODES
+MAPPO + HGAT,15,90.00%,2.0263 km,VERIFIED_REAL_SUMO_EPISODES
+MAPPO + Constraints,15,90.00%,2.0271 km,VERIFIED_REAL_SUMO_EPISODES
+HGAT-CMAPPO,15,90.00%,2.0268 km,VERIFIED_REAL_SUMO_EPISODES

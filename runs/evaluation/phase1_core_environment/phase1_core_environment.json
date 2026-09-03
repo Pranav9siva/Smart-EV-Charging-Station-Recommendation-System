@@ -1,0 +1,74 @@
+{
+  "phase": "PHASE_1_CORE_SIMULATION_STABILIZATION",
+  "output_dir": "D:\\Smart_EV_Station_Recommandadtion_System\\runs\\evaluation\\phase1_core_environment",
+  "scenarios": [
+    {
+      "name": "tiny_1ev_2stations",
+      "fleet_size": 1,
+      "station_count": 2,
+      "tracked": 1,
+      "seed": 101,
+      "steps_ran": 646,
+      "checks": {
+        "battery_low_detected": false,
+        "recommendation_selected": false,
+        "rerouted_to_station": false,
+        "arrived_at_station": false,
+        "charging_started": false,
+        "charging_progress": false,
+        "charging_completed": false,
+        "resumed_route": false,
+        "soc_increased": false
+      },
+      "evidence": {
+        "first_charging_started": null,
+        "first_charging_completed": null,
+        "first_resumed_route": null,
+        "unique_vehicles_with_charging_or_queue": [],
+        "charging_or_queue_vehicle_count": 0,
+        "low_soc_targets": [
+          "ev_1"
+        ],
+        "soc_before_charging": null,
+        "soc_after_charging": null,
+        "soc_increased": false
+      },
+      "passed": false
+    },
+    {
+      "name": "medium_10ev_20stations",
+      "fleet_size": 10,
+      "station_count": 20,
+      "tracked": 10,
+      "seed": 202,
+      "steps_ran": 669,
+      "checks": {
+        "battery_low_detected": false,
+        "recommendation_selected": false,
+        "rerouted_to_station": false,
+        "arrived_at_station": false,
+        "charging_started": false,
+        "charging_progress": false,
+        "charging_completed": false,
+        "resumed_route": false,
+        "multiple_independent_charging_or_queue": false
+      },
+      "evidence": {
+        "first_charging_started": null,
+        "first_charging_completed": null,
+        "first_resumed_route": null,
+        "unique_vehicles_with_charging_or_queue": [],
+        "charging_or_queue_vehicle_count": 0,
+        "low_soc_targets": [
+          "ev_1",
+          "ev_2",
+          "ev_3",
+          "ev_4",
+          "ev_5"
+        ]
+      },
+      "passed": false
+    }
+  ],
+  "complete_ev_lifecycle_passed": false
+}

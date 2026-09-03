@@ -1,0 +1,59 @@
+Report generated: 08/06/2026 00:47:36
+
+
+DriveLetter   : D
+Size          : 5241827328
+SizeRemaining : 3646619648
+
+
+
+.venv	1144528303
+notebooks	
+sumo	
+data	
+src	7190
+.github	607
+Documentation	131555
+tests	855
+notebooks	
+--- Top files ---
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_core.1.dll	78281744
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_avx512.1.dll	58468368
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_intel_thread.1.dll	54702096
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_pgi_thread.1.dll	53484560
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_avx.1.dll	45634576
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_mc3.1.dll	44276752
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_avx2.1.dll	43432464
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_mc.1.dll	42946064
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_def.1.dll	39061520
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\numpy.libs\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll	38168576
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_tbb_thread.1.dll	31441936
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_sequential.1.dll	25593360
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_rt.1.dll	20475408
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_vml_avx.1.dll	16532496
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_vml_mc.1.dll	15631376
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_vml_avx2.1.dll	15548944
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_vml_mc3.1.dll	15371280
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_vml_mc2.1.dll	15349264
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_vml_avx512.1.dll	14653456
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_vml_def.1.dll	8945168
+D:\Smart_EV_Station_Recommandadtion_System\disk_files.txt	8082518
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_vml_cmpt.1.dll	8012304
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\PIL\_avif.cp312-win_amd64.pyd	7893504
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_scalapack_ilp64.1.dll	7733776
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\mkl_scalapack_lp64.1.dll	7687696
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\debugpy\_vendored\pydevd\pydevd_attach_to_process\inject_dll_x86.pdb	5902336
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\debugpy\_vendored\pydevd\pydevd_attach_to_process\inject_dll_amd64.pdb	5779456
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Library\bin\libiomp5md.pdb	4329472
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\plotly\package_data\plotly.min.js	3632287
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\widgetsnbextension\static\extension.js.map	3607562
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\numpy\core\_multiarray_umath.cp312-win_amd64.pyd	2842624
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\PIL\_imaging.cp312-win_amd64.pyd	2632704
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\winpty\winpty-agent.exe	2627338
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_cython.c	2592543
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\winpty\winpty.dll	2509089
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\plotly-5.22.0.dist-info\RECORD	2485382
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\psycopg2\_psycopg.cp312-win_amd64.pyd	2418688
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\numpy\core\_simd.cp312-win_amd64.pyd	2236928
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\PIL\_imagingft.cp312-win_amd64.pyd	2174976
+D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\debugpy\_vendored\pydevd\_pydevd_sys_monitoring\_pydevd_sys_monitoring_cython.c	1975934

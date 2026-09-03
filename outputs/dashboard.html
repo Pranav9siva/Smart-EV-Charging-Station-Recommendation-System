@@ -1,0 +1,604 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EV DIGITAL TWIN</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07111d; --panel:#101b2b; --panel-2:#16253a; --line:#22364f; --accent:#3dd9c7; --accent-2:#6ea8ff; --warn:#ffb84d; --text:#e5f0ff; --muted:#8ea8c3; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:linear-gradient(135deg, var(--bg), #0d1b29); color:var(--text); font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+    .shell { max-width: 1500px; margin:0 auto; padding:24px; display:flex; flex-direction:column; gap:20px; }
+    .title { font-size: clamp(1.6rem, 2.4vw, 2.3rem); font-weight:700; letter-spacing:0.2em; margin:0; text-transform:uppercase; }
+    .subtle { color:var(--muted); margin-top:4px; font-size:0.95rem; }
+    .grid { display:grid; gap:20px; }
+    .top-grid { grid-template-columns: 2fr 1fr; }
+    .mid-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .bottom-grid { grid-template-columns: 1fr 1fr; }
+    .panel { background:rgba(16,27,43,0.95); border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:0 12px 30px rgba(0,0,0,0.25); }
+    .panel h2 { font-size:1rem; margin:0 0 10px; color:var(--accent); text-transform:uppercase; letter-spacing:0.12em; }
+    .metrics { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:12px; }
+    .metric { background:var(--panel-2); border:1px solid var(--line); border-radius:12px; padding:12px; }
+    .metric .label { font-size:0.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.12em; }
+    .metric .value { font-size:1.1rem; font-weight:600; margin-top:6px; }
+    .network { position:relative; min-height:320px; }
+    svg { width:100%; height:100%; min-height:280px; }
+    .legend { display:flex; gap:12px; font-size:0.82rem; color:var(--muted); margin-top:8px; }
+    .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; }
+    button { border:none; border-radius:999px; padding:10px 14px; background:var(--accent-2); color:white; font-weight:600; cursor:pointer; }
+    .button-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .pill { background:var(--panel-2); padding:8px 10px; border-radius:999px; border:1px solid var(--line); color:var(--muted); font-size:0.9rem; }
+    .station-card { display:grid; gap:8px; }
+    .station-card .big { font-size:1.6rem; font-weight:700; }
+    .value-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+    .value-list .item { background:var(--panel-2); border-radius:12px; padding:10px; border:1px solid var(--line); }
+    .value-list .item .label { color:var(--muted); font-size:0.73rem; text-transform:uppercase; }
+    .value-list .item .value { margin-top:4px; font-weight:600; }
+    .chart { height:220px; }
+    .bar-row { display:flex; align-items:flex-end; gap:10px; height:160px; margin-top:10px; }
+    .bar { flex:1; background:linear-gradient(180deg, var(--accent-2), var(--accent)); border-radius:8px 8px 2px 2px; min-height:6px; position:relative; }
+    .bar span { position:absolute; bottom:-24px; width:100%; text-align:center; color:var(--muted); font-size:0.75rem; }
+    .small { color:var(--muted); font-size:0.9rem; }
+    @media (max-width: 1000px) { .top-grid, .mid-grid, .bottom-grid { grid-template-columns:1fr !important; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="panel">
+      <h1 class="title">EV DIGITAL TWIN</h1>
+      <div class="subtle">EV Charging Research Dashboard • Live telemetry from the current simulation run • updated directly from dashboard_state.json</div>
+    </div>
+
+    <div class="grid top-grid" style="display:grid; grid-template-columns:2fr 1fr;">
+      <section class="panel network">
+        <h2>Bengaluru Network</h2>
+        <svg id="network-svg" viewBox="0 0 680 380" role="img" aria-label="Network view"></svg>
+        <div class="legend">
+          <span><span class="dot" style="background:#6ea8ff"></span>Station</span>
+          <span><span class="dot" style="background:#3dd9c7"></span>Tracked EV</span>
+          <span><span class="dot" style="background:#ffb84d"></span>Selected Station</span>
+          <span><span class="dot" style="background:#7fd3ff"></span>Other EV</span>
+        </div>
+      </section>
+      <section class="panel">
+        <h2>Simulation</h2>
+        <div class="button-row">
+          <button data-action="play">▶ Play</button>
+          <button data-action="pause">⏸ Pause</button>
+          <button data-action="reset">↻ Reset</button>
+          <label class="pill" style="display:inline-flex;align-items:center;gap:6px;">
+            Speed
+            <select id="speed-select" style="background:transparent;color:inherit;border:none;outline:none;">
+              <option value="0.5">0.5x</option>
+              <option value="1.0" selected>1.0x</option>
+              <option value="2.0">2.0x</option>
+              <option value="5.0">5.0x</option>
+            </select>
+          </label>
+        </div>
+        <div class="value-list" style="margin-top:14px;">
+          <div class="item"><div class="label">Speed</div><div class="value" id="sim-speed">N/A</div></div>
+          <div class="item"><div class="label">Time</div><div class="value" id="sim-time">N/A</div></div>
+          <div class="item"><div class="label">Vehicles</div><div class="value" id="sim-vehicles">N/A</div></div>
+          <div class="item"><div class="label">EVs</div><div class="value" id="sim-evs">N/A</div></div>
+          <div class="item"><div class="label">Congestion</div><div class="value" id="sim-congestion">N/A</div></div>
+          <div class="item"><div class="label">Step</div><div class="value" id="sim-step">N/A</div></div>
+          <div class="item"><div class="label">Connection</div><div class="value" id="sim-connection">LIVE</div></div>
+          <div class="item"><div class="label">Status</div><div class="value" id="sim-status">RUNNING</div></div>
+          <div class="item"><div class="label">Recommendations</div><div class="value" id="stat-recs">0</div></div>
+          <div class="item"><div class="label">Charging Started</div><div class="value" id="stat-charging-started">0</div></div>
+          <div class="item"><div class="label">Charging Done</div><div class="value" id="stat-charging-done">0</div></div>
+          <div class="item"><div class="label">Queue Events</div><div class="value" id="stat-queue-events">0</div></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="grid mid-grid" style="display:grid; grid-template-columns:1fr 1fr 1fr;">
+      <section class="panel">
+        <h2>Live KPIs</h2>
+        <div class="metrics">
+          <div class="metric"><div class="label">Avg Speed</div><div class="value" id="kpi-speed">N/A</div></div>
+          <div class="metric"><div class="label">Traffic</div><div class="value" id="kpi-traffic">N/A</div></div>
+          <div class="metric"><div class="label">Avg Wait</div><div class="value" id="kpi-wait">N/A</div></div>
+          <div class="metric"><div class="label">Energy</div><div class="value" id="kpi-energy">N/A</div></div>
+        </div>
+      </section>
+      <section class="panel station-card">
+        <h2>EV Station</h2>
+        <div class="big" id="station-name">N/A</div>
+        <div class="small" id="station-id">N/A</div>
+        <div class="value-list">
+          <div class="item"><div class="label">Ports</div><div class="value" id="station-ports">0/0</div></div>
+          <div class="item"><div class="label">Queue</div><div class="value" id="station-queue">N/A</div></div>
+          <div class="item"><div class="label">Price</div><div class="value" id="station-price">N/A</div></div>
+          <div class="item"><div class="label">Wait</div><div class="value" id="station-wait">N/A</div></div>
+          <div class="item"><div class="label">Load</div><div class="value" id="station-load">N/A</div></div>
+          <div class="item"><div class="label">Utilization</div><div class="value" id="station-util">N/A</div></div>
+        </div>
+      </section>
+      <section class="panel">
+        <h2>PPO Decision</h2>
+        <div class="value-list">
+          <div class="item"><div class="label">EV</div><div class="value" id="ppo-vehicle">N/A</div></div>
+          <div class="item"><div class="label">Action</div><div class="value" id="ppo-action">N/A</div></div>
+          <div class="item"><div class="label">Station</div><div class="value" id="ppo-station">N/A</div></div>
+          <div class="item"><div class="label">Reward</div><div class="value" id="ppo-reward">N/A</div></div>
+          <div class="item"><div class="label">Battery</div><div class="value" id="ppo-battery">N/A</div></div>
+          <div class="item"><div class="label">Reason</div><div class="value" id="ppo-reason">N/A</div></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="grid bottom-grid" style="display:grid; grid-template-columns:1fr 1fr;">
+      <section class="panel">
+        <h2>PPO Reward Trend</h2>
+        <div class="chart">
+          <svg id="reward-chart" viewBox="0 0 340 180" aria-label="Reward trend"></svg>
+        </div>
+      </section>
+      <section class="panel">
+        <h2>Station Utilization</h2>
+        <div class="small" id="station-counts">Real OSM: 0 · Registered: 0 · Active: 0</div>
+        <div id="util-bars" class="bar-row"></div>
+      </section>
+    </div>
+  </div>
+  <script>
+    function fmt(value, fallback = 'N/A') {
+      if (value === null || value === undefined || value === '') return fallback;
+      if (typeof value === 'number') {
+        if (!Number.isFinite(value)) return fallback;
+        return value.toLocaleString(undefined, { maximumFractionDigits: 2 });
+      }
+      return String(value);
+    }
+    function toNumber(value) {
+      if (value === null || value === undefined || value === '') return null;
+      const parsed = Number(value);
+      return Number.isFinite(parsed) ? parsed : null;
+    }
+    function normalizeCoordinate(value, min, max, padding, size) {
+      const numeric = toNumber(value);
+      if (numeric === null) return padding + (size / 2);
+      const range = max - min;
+      if (!Number.isFinite(range) || range <= 0) return padding + (size / 2);
+      return padding + ((numeric - min) / range) * size;
+    }
+    let stationElementCache = new Map();
+    let vehicleElementCache = new Map();
+    let connectionPathCache = new Map();
+
+    function createSvgElement(tag, attrs = {}) {
+      const element = document.createElementNS('http://www.w3.org/2000/svg', tag);
+      Object.entries(attrs).forEach(([key, value]) => element.setAttribute(key, value));
+      return element;
+    }
+
+    function getStationPosition(station) {
+      const stationX = toNumber(station.x);
+      const stationY = toNumber(station.y);
+      if (stationX !== null && stationY !== null) {
+        return { x: stationX, y: stationY };
+      }
+      const lon = toNumber(station.lon);
+      const lat = toNumber(station.lat);
+      if (lon !== null && lat !== null) {
+        return { x: lon, y: lat };
+      }
+      return null;
+    }
+
+    function getVehiclePosition(vehicle) {
+      const vehicleX = toNumber(vehicle.x);
+      const vehicleY = toNumber(vehicle.y);
+      if (vehicleX !== null && vehicleY !== null) {
+        return { x: vehicleX, y: vehicleY };
+      }
+      const currentPosition = vehicle.current_position || {};
+      const currentX = toNumber(currentPosition.x ?? currentPosition.lon);
+      const currentY = toNumber(currentPosition.y ?? currentPosition.lat);
+      if (currentX !== null && currentY !== null) {
+        return { x: currentX, y: currentY };
+      }
+      return null;
+    }
+
+    function renderNetwork(state) {
+      const svg = document.getElementById('network-svg');
+      const width = 680;
+      const height = 360;
+      const padding = 40;
+
+      svg.innerHTML = '';
+      const background = createSvgElement('rect', { x: '0', y: '0', width: String(width), height: String(height), fill: '#0e1725', rx: '16' });
+      const layerGroup = createSvgElement('g', { id: 'network-layer' });
+      const connectionLayer = createSvgElement('g', { id: 'connection-layer' });
+      const stationLayer = createSvgElement('g', { id: 'station-layer' });
+      const vehicleLayer = createSvgElement('g', { id: 'vehicle-layer' });
+      layerGroup.appendChild(connectionLayer);
+      layerGroup.appendChild(stationLayer);
+      layerGroup.appendChild(vehicleLayer);
+      svg.appendChild(background);
+      svg.appendChild(layerGroup);
+
+      const stations = Array.isArray(state.station_details) ? state.station_details : (Array.isArray(state.stations) ? state.stations : []);
+      const vehicles = Array.isArray(state.vehicles) ? state.vehicles : [];
+      const tracked = state.tracked_ev || {};
+      const trackedVehicleId = tracked.id || tracked.vehicle_id || null;
+      const selectedStationId = (state.ppo_decision && (state.ppo_decision.selected_station || state.ppo_decision.station)) || (state.ppo && (state.ppo.selected_station || state.ppo.station_id)) || (state.station && state.station.id) || null;
+
+      const stationNodes = stations.map((station) => {
+        const position = getStationPosition(station);
+        return {
+          station,
+          position,
+          id: String(station.id || station.station_id || 'station'),
+        };
+      }).filter((node) => node.position !== null);
+
+      const vehicleNodes = vehicles.map((vehicle) => {
+        const position = getVehiclePosition(vehicle);
+        return {
+          vehicle,
+          position,
+          id: String(vehicle.id || vehicle.vehicle_id || 'vehicle'),
+        };
+      }).filter((node) => node.position !== null);
+
+      const allX = stationNodes.map((node) => node.position.x).concat(vehicleNodes.map((node) => node.position.x));
+      const allY = stationNodes.map((node) => node.position.y).concat(vehicleNodes.map((node) => node.position.y));
+      const xMin = Math.min(...allX, 0);
+      const xMax = Math.max(...allX, 1);
+      const yMin = Math.min(...allY, 0);
+      const yMax = Math.max(...allY, 1);
+
+      const normalizedStations = stationNodes.map((node) => ({
+        ...node,
+        x: normalizeCoordinate(node.position.x, xMin, xMax, padding, width - (padding * 2)),
+        y: normalizeCoordinate(node.position.y, yMin, yMax, padding, height - (padding * 2)),
+      }));
+      const normalizedVehicles = vehicleNodes.map((node) => ({
+        ...node,
+        x: normalizeCoordinate(node.position.x, xMin, xMax, padding, width - (padding * 2)),
+        y: normalizeCoordinate(node.position.y, yMin, yMax, padding, height - (padding * 2)),
+      }));
+
+      const stationLookup = new Map(normalizedStations.map((node) => [String(node.station.id || node.station.station_id || node.id), node]));
+      const activeStationIds = new Set(stationLookup.keys());
+      const activeVehicleIds = new Set(normalizedVehicles.map((node) => node.id));
+      const activeConnectionKeys = new Set();
+
+      for (const [key, element] of Array.from(stationElementCache.entries())) {
+        if (!activeStationIds.has(key)) {
+          element.remove();
+          stationElementCache.delete(key);
+        }
+      }
+      for (const [key, element] of Array.from(vehicleElementCache.entries())) {
+        if (!activeVehicleIds.has(key)) {
+          element.remove();
+          vehicleElementCache.delete(key);
+        }
+      }
+      for (const [key, element] of Array.from(connectionPathCache.entries())) {
+        if (!activeConnectionKeys.has(key)) {
+          element.remove();
+          connectionPathCache.delete(key);
+        }
+      }
+
+      normalizedStations.forEach((node) => {
+        const stationId = String(node.station.id || node.station.station_id || node.id);
+        let group = stationElementCache.get(stationId);
+        if (!group) {
+          group = createSvgElement('g', { 'data-station-id': stationId });
+          stationLayer.appendChild(group);
+          stationElementCache.set(stationId, group);
+        }
+        group.innerHTML = '';
+        const isSelected = stationId === String(selectedStationId || '');
+        const circle = createSvgElement('circle', {
+          cx: String(node.x),
+          cy: String(node.y),
+          r: isSelected ? '14' : '10',
+          fill: isSelected ? '#ffb84d' : '#6ea8ff',
+          stroke: '#e5f0ff',
+          'stroke-width': '2',
+        });
+        group.appendChild(circle);
+        const label = createSvgElement('text', {
+          x: String(node.x + 14),
+          y: String(node.y - 12),
+          fill: '#e5f0ff',
+          'font-size': '12',
+        });
+        label.textContent = stationId;
+        group.appendChild(label);
+      });
+
+      normalizedVehicles.forEach((node) => {
+        const vehicleId = node.id;
+        let group = vehicleElementCache.get(vehicleId);
+        if (!group) {
+          group = createSvgElement('g', { 'data-vehicle-id': vehicleId });
+          vehicleLayer.appendChild(group);
+          vehicleElementCache.set(vehicleId, group);
+        }
+        group.innerHTML = '';
+        const isTracked = vehicleId === String(trackedVehicleId || '');
+        const isSelected = Boolean(node.vehicle.recommended_station && selectedStationId && String(node.vehicle.recommended_station) === String(selectedStationId));
+        const marker = createSvgElement('circle', {
+          cx: String(node.x),
+          cy: String(node.y),
+          r: isTracked ? '8' : '6',
+          fill: isTracked ? '#3dd9c7' : '#7fd3ff',
+          stroke: isTracked ? '#d8fffb' : '#e8f7ff',
+          'stroke-width': isTracked ? '2.5' : '1.5',
+          opacity: '0.95',
+        });
+        group.appendChild(marker);
+        if (isTracked) {
+          const halo = createSvgElement('circle', {
+            cx: String(node.x),
+            cy: String(node.y),
+            r: '12',
+            fill: 'none',
+            stroke: '#3dd9c7',
+            'stroke-width': '1.5',
+            'stroke-dasharray': '4 3',
+            opacity: '0.85',
+          });
+          group.appendChild(halo);
+        }
+        const label = createSvgElement('text', {
+          x: String(node.x + 10),
+          y: String(node.y - 10),
+          fill: '#8ea8c3',
+          'font-size': '11',
+        });
+        label.textContent = vehicleId;
+        group.appendChild(label);
+        if (selectedStationId && isTracked) {
+          const targetNode = stationLookup.get(String(selectedStationId));
+          if (targetNode) {
+            const connectionKey = `${vehicleId}:${selectedStationId}`;
+            let path = connectionPathCache.get(connectionKey);
+            if (!path) {
+              path = createSvgElement('line', {
+                'data-connection-key': connectionKey,
+                stroke: '#ffb84d',
+                'stroke-width': '2',
+                'stroke-dasharray': '5 4',
+                opacity: '0.9',
+              });
+              connectionLayer.appendChild(path);
+              connectionPathCache.set(connectionKey, path);
+            }
+            path.setAttribute('x1', String(node.x));
+            path.setAttribute('y1', String(node.y));
+            path.setAttribute('x2', String(targetNode.x));
+            path.setAttribute('y2', String(targetNode.y));
+            activeConnectionKeys.add(connectionKey);
+          }
+        }
+      });
+
+      for (const [key, element] of Array.from(connectionPathCache.entries())) {
+        if (!activeConnectionKeys.has(key)) {
+          element.remove();
+          connectionPathCache.delete(key);
+        }
+      }
+    }
+    function renderRewardChart(state) {
+      const svg = document.getElementById('reward-chart');
+      const rewardSeries = Array.isArray(state.charts && state.charts.reward_series) ? state.charts.reward_series : [];
+      const rewards = rewardSeries.map((value) => toNumber(value.reward)).filter((value) => value !== null);
+      svg.innerHTML = '';
+      const width = 340;
+      const height = 180;
+      const bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      bg.setAttribute('x', '0');
+      bg.setAttribute('y', '0');
+      bg.setAttribute('width', width);
+      bg.setAttribute('height', height);
+      bg.setAttribute('fill', '#0e1725');
+      bg.setAttribute('rx', '12');
+      svg.appendChild(bg);
+      if (!rewards.length) {
+        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        text.setAttribute('x', width / 2);
+        text.setAttribute('y', height / 2);
+        text.setAttribute('text-anchor', 'middle');
+        text.setAttribute('fill', '#8ea8c3');
+        text.textContent = 'Waiting for PPO decisions';
+        svg.appendChild(text);
+        return;
+      }
+      const maxVal = Math.max(...rewards.map(v => Math.abs(v))) || 1;
+      const points = rewards.map((value, index) => {
+        const x = 24 + (index / Math.max(1, rewards.length - 1)) * (width - 48);
+        const y = 150 - (value / maxVal) * 110;
+        return `${x},${y}`;
+      }).join(' ');
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+      path.setAttribute('points', points);
+      path.setAttribute('fill', 'none');
+      path.setAttribute('stroke', '#3dd9c7');
+      path.setAttribute('stroke-width', '3');
+      svg.appendChild(path);
+    }
+    function renderUtilBars(state) {
+      const container = document.getElementById('util-bars');
+      const stations = Array.isArray(state.charts && state.charts.station_series) ? state.charts.station_series : [];
+      container.innerHTML = '';
+      if (!stations.length) {
+        container.innerHTML = '<div class="small">No station telemetry yet</div>';
+        return;
+      }
+      stations.slice(0, 8).forEach((station) => {
+        const totalPorts = toNumber(station.total_ports) || 0;
+        const availablePorts = toNumber(station.available_ports) || 0;
+        const occupied = Math.max(0, totalPorts - availablePorts);
+        const utilization = totalPorts ? occupied / totalPorts : toNumber(station.utilization) || 0;
+        const bar = document.createElement('div');
+        bar.style.flex = '1';
+        bar.style.display = 'flex';
+        bar.style.flexDirection = 'column';
+        bar.style.alignItems = 'center';
+        bar.innerHTML = `<div class="bar" style="height:${Math.max(10, utilization * 100)}px; width:100%;"></div><span>${fmt(station.id || station.name || 'station')}</span>`;
+        container.appendChild(bar);
+      });
+    }
+    function normalizeSimulationStatus(simulation) {
+      const raw = String(simulation && simulation.simulation_status ? simulation.simulation_status : simulation && simulation.status ? simulation.status : '').toUpperCase();
+      if (raw === 'PLAY' || raw === 'RUNNING' || raw === 'LIVE') return 'RUNNING';
+      if (raw === 'PAUSED' || raw === 'PAUSE' || raw === 'STOPPED') return 'PAUSED';
+    if (raw === 'COMPLETED' || raw === 'FINISHED' || raw === 'DONE') return 'COMPLETED';
+      if (raw === 'ERROR' || raw === 'FAILED') return 'ERROR';
+      return simulation && simulation.running === false ? 'PAUSED' : 'RUNNING';
+    }
+    function normalizeConnectionStatus(simulation) {
+      const raw = String(simulation && simulation.connection_status ? simulation.connection_status : '').toUpperCase();
+      return raw === 'DISCONNECTED' ? 'DISCONNECTED' : 'LIVE';
+    }
+    function updateControlButtons(simulation) {
+      const speedSelect = document.getElementById('speed-select');
+      const controls = ['play', 'pause', 'reset'];
+      const normalizedStatus = String(simulation && (simulation.status || simulation.simulation_status || 'play') || 'play').toLowerCase();
+      controls.forEach((action) => {
+        const button = document.querySelector(`button[data-action="${action}"]`);
+        if (!button) return;
+        if (action === 'play') {
+          button.textContent = normalizedStatus === 'play' || normalizedStatus === 'running' ? '▶ Running' : '▶ Play';
+        } else if (action === 'pause') {
+          button.textContent = normalizedStatus === 'paused' ? '⏸ Paused' : '⏸ Pause';
+        } else {
+          button.textContent = '↻ Reset';
+        }
+      });
+      if (speedSelect && simulation && simulation.speed !== undefined) {
+        speedSelect.value = String(simulation.speed);
+      }
+    }
+    async function sendControl(action, payload = {}) {
+      try {
+        const response = await fetch('/control', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action, ...payload }),
+        });
+        if (!response.ok) {
+          throw new Error(`Control request failed (${response.status})`);
+        }
+        return await response.json();
+      } catch (error) {
+        console.error(error);
+        return null;
+      }
+    }
+    function updateUI(state) {
+      const simulation = state.simulation || {};
+      const traffic = state.traffic || {};
+      const kpis = state.kpis || {};
+      const stations = Array.isArray(state.stations_summary) ? state.stations_summary : (Array.isArray(state.stations) ? state.stations : []);
+      const selectedStation = stations.find((station) => (station.id || station.station_id) === (state.station && state.station.id ? state.station.id : null)) || stations[0] || {};
+      const tracked = state.tracked_ev || {};
+      const ppoDecision = state.ppo_decision || state.ppo || {};
+      document.getElementById('sim-speed').textContent = fmt(simulation.speed || kpis.avg_speed || traffic.average_speed || 'N/A');
+      document.getElementById('sim-time').textContent = fmt(simulation.sim_time || simulation.time || 'N/A');
+      document.getElementById('sim-vehicles').textContent = fmt(simulation.fleet_size || simulation.ev_count || state.tracked_ids?.length || 'N/A');
+      document.getElementById('sim-evs').textContent = fmt(simulation.ev_count || 'N/A');
+      document.getElementById('sim-congestion').textContent = fmt(simulation.congestion || traffic.congestion_percent || 'N/A');
+      document.getElementById('sim-step').textContent = fmt(simulation.step || 'N/A');
+      document.getElementById('sim-connection').textContent = fmt(normalizeConnectionStatus(simulation));
+      document.getElementById('sim-status').textContent = fmt(normalizeSimulationStatus(simulation));
+      document.getElementById('stat-recs').textContent = fmt(kpis.recommendations ?? 0);
+      document.getElementById('stat-charging-started').textContent = fmt(kpis.charging_started ?? 0);
+      document.getElementById('stat-charging-done').textContent = fmt(kpis.charging_completed ?? 0);
+      document.getElementById('stat-queue-events').textContent = fmt(kpis.queue_events ?? 0);
+      updateControlButtons(simulation);
+      document.getElementById('kpi-speed').textContent = fmt(kpis.avg_speed || traffic.average_speed || 'N/A');
+      document.getElementById('kpi-traffic').textContent = fmt(traffic.traffic_density || traffic.congestion_percent || 'N/A');
+      document.getElementById('kpi-wait').textContent = fmt(kpis.avg_wait_min || 'N/A');
+      document.getElementById('kpi-energy').textContent = fmt(kpis.energy_consumed_kwh || state.network && state.network.total_energy || 'N/A');
+      document.getElementById('station-name').textContent = fmt((state.station && state.station.name) || selectedStation.name || selectedStation.station_id || 'N/A');
+      document.getElementById('station-id').textContent = fmt((state.station && state.station.id) || selectedStation.station_id || selectedStation.id || 'N/A');
+      document.getElementById('station-ports').textContent = `${fmt((state.station && state.station.ports_available) || selectedStation.ports_available || selectedStation.available_ports || 0)}/${fmt((state.station && state.station.ports_total) || selectedStation.ports_total || selectedStation.total_ports || 0)}`;
+      document.getElementById('station-queue').textContent = fmt((state.station && state.station.queue) || selectedStation.queue || 'N/A');
+      document.getElementById('station-price').textContent = fmt((state.station && state.station.price) || selectedStation.price || selectedStation.price_per_kwh || 'N/A');
+      document.getElementById('station-wait').textContent = fmt((state.station && state.station.wait_minutes) || selectedStation.wait_minutes || selectedStation.waiting_time_min || 'N/A');
+      document.getElementById('station-load').textContent = fmt((state.station && state.station.load_kw) || selectedStation.load_kw || selectedStation.grid_load_kw || 'N/A');
+    document.getElementById('station-util').textContent = fmt((state.station && state.station.utilization) || selectedStation.utilization || 'N/A');
+    const stationStatistics = state.station_statistics || {};
+    document.getElementById('station-counts').textContent = `Real OSM: ${stationStatistics.real_osm ?? 0} · Registered: ${stationStatistics.registered ?? 0} · Active: ${stationStatistics.active ?? 0}`;
+      document.getElementById('ppo-vehicle').textContent = fmt(ppoDecision.ev_id || ppoDecision.vehicle_id || 'N/A');
+      document.getElementById('ppo-action').textContent = fmt(ppoDecision.action || 'N/A');
+      document.getElementById('ppo-station').textContent = fmt(ppoDecision.selected_station || ppoDecision.station_id || 'N/A');
+      document.getElementById('ppo-reward').textContent = fmt(ppoDecision.reward || 'N/A');
+      document.getElementById('ppo-battery').textContent = fmt(ppoDecision.battery || 'N/A');
+      document.getElementById('ppo-reason').textContent = fmt(ppoDecision.reason || 'N/A');
+      document.getElementById('sim-speed').textContent = fmt(simulation.speed || kpis.avg_speed || traffic.average_speed || 'N/A');
+      document.getElementById('sim-time').textContent = fmt(simulation.sim_time || simulation.time || 'N/A');
+      const trackedId = tracked.id || tracked.vehicle_id || 'N/A';
+      if (trackedId !== 'N/A') {
+        document.getElementById('station-name').textContent = fmt((state.station && state.station.name) || selectedStation.name || selectedStation.station_id || 'N/A');
+      }
+      renderNetwork(state);
+      renderRewardChart(state);
+      renderUtilBars(state);
+    }
+    let lastSuccessfulRefresh = 0;
+    async function refresh() {
+      try {
+        const response = await fetch('dashboard_state.json?_=' + Date.now());
+        if (!response.ok) {
+          document.getElementById('sim-connection').textContent = 'DISCONNECTED';
+          return;
+        }
+        const state = await response.json();
+        lastSuccessfulRefresh = Date.now();
+        updateUI(state);
+            if (normalizeConnectionStatus(state.simulation) !== 'DISCONNECTED') {
+                document.getElementById('sim-connection').textContent = 'LIVE';
+            }
+      } catch (error) {
+        document.getElementById('sim-connection').textContent = 'DISCONNECTED';
+        console.error(error);
+      }
+    }
+    document.querySelectorAll('button[data-action]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const action = button.getAttribute('data-action');
+        if (action === 'play') {
+          await sendControl('play');
+        } else if (action === 'pause') {
+          await sendControl('pause');
+        } else if (action === 'reset') {
+          await sendControl('reset');
+        }
+        await refresh();
+      });
+    });
+    const speedSelect = document.getElementById('speed-select');
+    if (speedSelect) {
+      speedSelect.addEventListener('change', async (event) => {
+        const value = Number(event.target.value);
+        if (!Number.isFinite(value)) {
+          return;
+        }
+        await sendControl('set_speed', { speed: value });
+        await refresh();
+      });
+    }
+    setInterval(() => {
+      if (lastSuccessfulRefresh && Date.now() - lastSuccessfulRefresh > 3000) {
+        document.getElementById('sim-connection').textContent = 'DISCONNECTED';
+      }
+    }, 1000);
+    setInterval(refresh, 1000);
+    refresh();
+  </script>
+</body>
+</html>

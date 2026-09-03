@@ -1,0 +1,58 @@
+# HGAT-CMAPPO Research Configuration
+
+model:
+  name: "HGAT-CMAPPO"
+  node_feature_dims:
+    ev: 9
+    station: 10
+    road: 4
+    grid: 4
+  embedding_dim: 64
+  attention_heads: 4
+  num_graph_layers: 2
+  actor_hidden_dims: [128, 128]
+  critic_hidden_dims: [256, 256]
+
+training:
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  entropy_coef: 0.01
+  value_loss_coef: 0.5
+  actor_lr: 0.0003
+  critic_lr: 0.001
+  lagrangian_lr: 0.01
+  batch_size: 64
+  ppo_epochs: 10
+  rollout_steps: 128
+  candidate_count: 8
+  random_seed: 42
+
+constraints:
+  safe_soc_threshold: 0.05
+  port_capacity_threshold: 0.10
+  queue_limit_threshold: 0.10
+  detour_distance_threshold: 0.10
+  grid_overload_threshold: 0.05
+  initial_lambda: 0.1
+
+curriculum:
+  stages:
+    - stage: 1
+      num_evs: 10
+      episodes: 20
+    - stage: 2
+      num_evs: 50
+      episodes: 20
+    - stage: 3
+      num_evs: 100
+      episodes: 15
+    - stage: 4
+      num_evs: 250
+      episodes: 10
+    - stage: 5
+      num_evs: 500
+      episodes: 10
+    - stage: 6
+      num_evs: 1000
+      episodes: 5

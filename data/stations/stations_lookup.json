@@ -1,0 +1,62 @@
+{
+  "cs_real_1": {
+    "station_id": "cs_real_1",
+    "name": "Ather Charging Grid",
+    "num_ports": 8,
+    "power_kw": 22.0,
+    "lane": "-36054475#0_0",
+    "start_pos": 0.1,
+    "distance_km": 2.0,
+    "travel_time_min": 5.0
+  },
+  "cs_real_4": {
+    "station_id": "cs_real_4",
+    "name": "OSM Charging Station",
+    "num_ports": 1,
+    "power_kw": 22.0,
+    "lane": "-1091234763_0",
+    "start_pos": 0.1,
+    "distance_km": 2.0,
+    "travel_time_min": 5.0
+  },
+  "cs_real_5": {
+    "station_id": "cs_real_5",
+    "name": "OSM Charging Station",
+    "num_ports": 1,
+    "power_kw": 22.0,
+    "lane": "-105201129#1_0",
+    "start_pos": 16.7,
+    "distance_km": 2.0,
+    "travel_time_min": 5.0
+  },
+  "cs_real_6": {
+    "station_id": "cs_real_6",
+    "name": "OSM Charging Station",
+    "num_ports": 1,
+    "power_kw": 22.0,
+    "lane": "-105201129#1_0",
+    "start_pos": 16.7,
+    "distance_km": 2.0,
+    "travel_time_min": 5.0
+  },
+  "cs_real_8": {
+    "station_id": "cs_real_8",
+    "name": "inGO",
+    "num_ports": 1,
+    "power_kw": 22.0,
+    "lane": "-1086656991#0_0",
+    "start_pos": 0.1,
+    "distance_km": 2.0,
+    "travel_time_min": 5.0
+  },
+  "cs_real_9": {
+    "station_id": "cs_real_9",
+    "name": "OSM Charging Station",
+    "num_ports": 1,
+    "power_kw": 22.0,
+    "lane": "-1103080110_0",
+    "start_pos": 2.7,
+    "distance_km": 2.0,
+    "travel_time_min": 5.0
+  }
+}

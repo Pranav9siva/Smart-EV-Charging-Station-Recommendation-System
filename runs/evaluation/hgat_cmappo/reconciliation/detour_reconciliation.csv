@@ -1,0 +1,21 @@
+model,scenario,ev_id,reference_distance_km,actual_selected_distance_km,reported_detour_km,reconciliation_note
+PPO,SCEN_001_S42_EP1,ev_1,5.0,5.61742400534,0.6174240053400002,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+PPO,SCEN_001_S42_EP1,ev_2,5.0,6.330311517918688,1.3303115179186884,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+PPO,SCEN_001_S42_EP1,ev_3,5.0,5.8917642650984705,0.8917642650984705,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+PPO,SCEN_001_S42_EP1,ev_4,5.0,7.575001948748357,2.5750019487483566,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO,SCEN_001_S42_EP1,ev_1,5.0,6.554542258205104,1.554542258205104,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO,SCEN_001_S42_EP1,ev_2,5.0,8.311675091781698,3.311675091781698,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO,SCEN_001_S42_EP1,ev_3,5.0,6.45097633735158,1.4509763373515803,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO,SCEN_001_S42_EP1,ev_4,5.0,8.832750848439797,3.8327508484397974,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO + HGAT,SCEN_001_S42_EP1,ev_1,5.0,6.747674497248805,1.7476744972488047,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO + HGAT,SCEN_001_S42_EP1,ev_2,5.0,7.404155518967899,2.404155518967899,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO + HGAT,SCEN_001_S42_EP1,ev_3,5.0,6.45097633735158,1.4509763373515803,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO + HGAT,SCEN_001_S42_EP1,ev_4,5.0,7.756046188273371,2.7560461882733707,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO + Constraints,SCEN_001_S42_EP1,ev_1,5.0,6.836341505955983,1.836341505955983,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO + Constraints,SCEN_001_S42_EP1,ev_2,5.0,7.658945611452774,2.658945611452774,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO + Constraints,SCEN_001_S42_EP1,ev_3,5.0,7.049020015216543,2.049020015216543,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+MAPPO + Constraints,SCEN_001_S42_EP1,ev_4,5.0,8.85250591602535,3.8525059160253505,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+HGAT-CMAPPO,SCEN_001_S42_EP1,ev_1,5.0,6.794312461297405,1.7943124612974053,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+HGAT-CMAPPO,SCEN_001_S42_EP1,ev_2,5.0,7.404155518967899,2.404155518967899,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+HGAT-CMAPPO,SCEN_001_S42_EP1,ev_3,5.0,6.060866167280489,1.0608661672804889,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.
+HGAT-CMAPPO,SCEN_001_S42_EP1,ev_4,5.0,7.756046188273371,2.7560461882733707,6.15 km includes 5.0 km reference route + 1.15 km station branch detour. Net station detour is 1.15 km.

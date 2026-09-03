@@ -1,0 +1,11 @@
+<configuration>
+  <input>
+    <net-file value="network.net.xml"/>
+    <route-files value="evs.rou.xml"/>
+    <additional-files value="stations.add.xml"/>
+  </input>
+  <time>
+    <begin value="0"/>
+    <end value="7200"/>
+  </time>
+</configuration>

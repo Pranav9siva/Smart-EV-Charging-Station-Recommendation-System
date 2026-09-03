@@ -1,0 +1,6 @@
+model,mean_constraint_violations,predicate_log_derived,constraint_effectiveness
+PPO,4450.00,YES,MODERATE
+MAPPO,1107.93,YES,MODERATE
+MAPPO + HGAT,1049.32,YES,MODERATE
+MAPPO + Constraints,1045.42,YES,MODERATE
+HGAT-CMAPPO,1046.46,YES,MODERATE

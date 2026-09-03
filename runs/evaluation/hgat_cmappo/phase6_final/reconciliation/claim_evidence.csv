@@ -1,0 +1,4 @@
+claim,evidence,verdict
+HGAT-CMAPPO 98.5% Success Rate,Reconstructed from 450 episode rows (COMBINED_STRESS at 1000 EV produced 92.5% success vs 100% in normal scenarios),OBSERVATIONAL_SUPPORTED
+Primary Failure Point: COMBINED_STRESS 1000 EV,Lowest measured success rate (92.5%) and highest violation count across all 90 scenarios,DATA_VERIFIED
+HGAT prevents queue bottlenecks,MAPPO detour (1.70 km) vs MAPPO+HGAT detour (1.38 km) shows observational spatial load spreading,OBSERVATIONAL_SUPPORTED

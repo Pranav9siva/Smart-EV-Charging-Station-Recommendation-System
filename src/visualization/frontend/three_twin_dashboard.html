@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EV Digital Twin</title>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js"
+      }
+    }
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #020617;
+      --panel: rgba(15, 23, 42, 0.9);
+      --panel-2: rgba(15, 23, 42, 0.72);
+      --border: rgba(148, 163, 184, 0.2);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --warn: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Roboto, sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0%, var(--bg) 60%);
+      color: var(--text);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    .app-shell { display: grid; grid-template-columns: 1.65fr 1.05fr; height: 100vh; }
+    .viewport { position: relative; min-height: 100vh; }
+    #scene { width: 100%; height: 100%; }
+    .hud {
+      position: absolute; inset: 0 0 auto auto; margin: 16px; padding: 12px 14px;
+      background: var(--panel); border: 1px solid var(--border); border-radius: 14px; backdrop-filter: blur(14px);
+      min-width: 280px;
+      box-shadow: 0 20px 50px rgba(2,6,23,0.4);
+    }
+    .controls { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+    button, select, input {
+      border: 1px solid var(--border); border-radius: 999px; padding: 8px 12px; background: rgba(30,41,59,0.95); color: white; cursor: pointer;
+    }
+    button.primary { background: linear-gradient(90deg, #0ea5e9, #2563eb); border: none; }
+    .panel {
+      background: rgba(2, 6, 23, 0.85); border-left: 1px solid var(--border); padding: 14px; overflow: auto;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .card { background: rgba(15, 23, 42, 0.92); border: 1px solid var(--border); border-radius: 14px; padding: 12px; resize: vertical; overflow: auto; min-height: 90px; }
+    .card h3 { margin: 0 0 8px; font-size: 0.95rem; color: var(--accent); }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .kpi { padding: 10px; border-radius: 12px; background: var(--panel-2); border: 1px solid var(--border); }
+    .kpi .label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+    .kpi .value { font-size: 1.05rem; font-weight: 600; margin-top: 4px; }
+    .chart-box { height: 180px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filters-panel { display: flex; flex-direction: column; gap: 8px; }
+    .echarts { min-height: 180px; }
+    pre { white-space: pre-wrap; word-break: break-word; font-size: 0.8rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th, td { padding: 6px 0; border-bottom: 1px solid var(--border); text-align: left; }
+    .research-control-center { display: flex; flex-direction: column; gap: 12px; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 999px; background: rgba(56,189,248,0.15); color: var(--accent); font-size: 0.78rem; }
+    .resize-handle { display: none; }
+    @media (max-width: 1180px) {
+      .app-shell { grid-template-columns: 1fr; }
+      .panel { border-left: none; border-top: 1px solid var(--border); max-height: 48vh; }
+      body { overflow: auto; }
+      .viewport { min-height: 58vh; }
+    }
+    @media (max-width: 720px) {
+      .kpi-grid, .split { grid-template-columns: 1fr; }
+      .app-shell { height: auto; }
+      .viewport { min-height: 50vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <div class="viewport">
+      <div id="scene"></div>
+      <div class="hud">
+        <strong>EV DIGITAL TWIN</strong>
+        <div class="muted">Bengaluru SUMO network, live vehicles, stations, and PPO decisions</div>
+        <div class="controls">
+          <button class="primary" id="follow-vehicle">Follow Vehicle</button>
+          <button id="reset-view">Reset View</button>
+          <button id="toggle-insights">Toggle Insights</button>
+        </div>
+      </div>
+    </div>
+    <aside class="panel">
+      <div class="research-control-center">
+        <div class="card">
+          <h3>Simulation Control</h3>
+          <div class="toolbar filters-panel">
+            <input id="vehicle-search" class="vehicle-search" placeholder="Vehicle search" />
+            <input id="station-search" class="station-search" placeholder="Station search" />
+            <select id="filter-mode">
+              <option value="all">All systems</option>
+              <option value="charging">Charging</option>
+              <option value="queued">Queued</option>
+              <option value="low-battery">Low battery</option>
+            </select>
+          </div>
+          <div class="muted" id="summary">Waiting for data…</div>
+        </div>
+        <div class="card">
+          <h3>Live KPIs</h3>
+          <div class="kpi-grid" id="kpi-grid"></div>
+        </div>
+        <div class="card">
+          <h3>Action Distribution</h3>
+          <div class="chart-box echarts" id="action-chart"></div>
+        </div>
+        <div class="card">
+          <h3>Reward Trend</h3>
+          <div class="chart-box echarts" id="reward-chart"></div>
+        </div>
+        <div class="card">
+          <h3>Episode Timeline</h3>
+          <div id="timeline" class="muted"></div>
+        </div>
+        <div class="card xai-panel" id="xai-panel">
+          <h3>Explainable AI</h3>
+          <div class="muted" id="xai-selected-station">Selected station: —</div>
+          <div class="chart-box echarts" id="xai-probability-chart"></div>
+          <div class="card" style="margin-top: 8px; padding: 8px;">
+            <div class="muted"><strong>Top-5 Candidates</strong></div>
+            <div id="xai-top-candidates" class="muted"></div>
+          </div>
+          <div class="card" style="margin-top: 8px; padding: 8px;">
+            <div class="muted"><strong>Reward Decomposition</strong></div>
+            <div id="xai-reward-breakdown" class="muted"></div>
+          </div>
+          <div class="card" style="margin-top: 8px; padding: 8px;">
+            <div class="muted"><strong>SHAP / LIME / Counterfactual</strong></div>
+            <div id="xai-explanations" class="muted"></div>
+          </div>
+          <div class="card" style="margin-top: 8px; padding: 8px;">
+            <div class="muted"><strong>Feature Importance</strong></div>
+            <div id="xai-feature-importance" class="muted"></div>
+          </div>
+          <div class="card" style="margin-top: 8px; padding: 8px;">
+            <div class="muted"><strong>Observation Vector</strong></div>
+            <div id="xai-observation-vector" class="muted"></div>
+          </div>
+          <div class="card" style="margin-top: 8px; padding: 8px;">
+            <div class="muted"><strong>Decision Timeline</strong></div>
+            <div id="xai-timeline" class="muted"></div>
+          </div>
+          <div class="card" style="margin-top: 8px; padding: 8px;">
+            <div class="muted"><strong>Confidence</strong></div>
+            <div id="xai-confidence" class="muted"></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>PPO Decision</h3>
+          <pre id="recommendation">{}</pre>
+        </div>
+        <div class="card">
+          <h3>EV Station</h3>
+          <table><tbody id="metrics"></tbody></table>
+        </div>
+        <div class="card replay-controls" id="replay-controls">
+          <h3>Simulation Controls</h3>
+          <div class="controls">
+            <button id="play-simulation">Play</button>
+            <button id="pause-simulation">Pause</button>
+            <button id="reset-simulation">Reset</button>
+            <select id="simulation-speed" aria-label="Simulation speed">
+              <option value="0.5">0.5x</option>
+              <option value="1" selected>1x</option>
+              <option value="2">2x</option>
+              <option value="5">5x</option>
+            </select>
+          </div>
+          <div class="muted" id="simulation-status">Controller status: unknown</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script type="module">
+    import { ThreeTwinRenderer } from '/static/assets/js/three-twin/renderer.js';
+    const container = document.getElementById('scene');
+    const renderer = new ThreeTwinRenderer(container);
+
+    let socket = null;
+    let reconnectTimer = null;
+    let reconnectAttempts = 0;
+    let history = [];
+    let replayIndex = 0;
+    let replayPaused = false;
+
+    function buildKpis(data) {
+      const kpiGrid = document.getElementById('kpi-grid');
+      const simulation = data.simulation || {};
+      const kpis = data.kpis || {};
+      const stations = data.stations || {};
+      const ppo = data.ppo || {};
+      const metrics = [
+        ['Time', simulation.time ?? '-'],
+        ['Step', simulation.step ?? '-'],
+        ['Vehicles', simulation.fleet_size ?? data.summary?.total_vehicles ?? 0],
+        ['EVs', simulation.ev_count ?? simulation.fleet_size ?? 0],
+        ['Tracked EVs', simulation.tracked_count ?? (data.tracked_ids || []).length],
+        ['Congestion', `${Number(simulation.congestion_percent ?? 0).toFixed(1)}%`],
+        ['Avg Speed', `${Number(kpis.avg_speed ?? 0).toFixed(2)} m/s`],
+        ['Traffic Density', Number(kpis.traffic_density ?? 0).toFixed(2)],
+        ['Avg Wait', `${Number(kpis.avg_wait_min ?? 0).toFixed(2)} min`],
+        ['Energy', `${Number(kpis.energy_consumed_kwh ?? 0).toFixed(2)} kWh`],
+        ['Ports Available', stations.available ?? '-'],
+        ['Queue Total', stations.queue_total ?? '-'],
+      ];
+      kpiGrid.innerHTML = metrics.map(([label, value]) => `<div class="kpi"><div class="label">${label}</div><div class="value">${value}</div></div>`).join('');
+    }
+
+    function renderCharts(data) {
+      const actionChart = document.getElementById('action-chart');
+      const rewardChart = document.getElementById('reward-chart');
+      const actionSeries = Array.isArray(data.xai?.latest_explanation?.policy_probability_visualization?.distribution) ? data.xai.latest_explanation.policy_probability_visualization.distribution : [];
+      const rewardSeries = Array.isArray(data.metrics) ? data.metrics.slice(-8).map((point) => ({ name: `S${point.step ?? '-'}`, value: Number(point.avg_wait_min ?? 0) })) : [];
+      if (window.echarts) {
+        const actionInstance = window.echarts.init(actionChart);
+        const rewardInstance = window.echarts.init(rewardChart);
+        actionInstance.setOption({
+          backgroundColor: 'transparent',
+          tooltip: { trigger: 'item' },
+          series: [{
+            type: 'pie',
+            radius: ['40%', '70%'],
+            data: actionSeries.length ? actionSeries.map((item) => ({ name: item.station_id, value: Number(item.probability || 0) })) : [{ name: 'No data', value: 1 }],
+            label: { color: '#e2e8f0' }
+          }]
+        });
+        rewardInstance.setOption({
+          backgroundColor: 'transparent',
+          tooltip: { trigger: 'axis' },
+          xAxis: { type: 'category', data: rewardSeries.map((item) => item.name), axisLabel: { color: '#94a3b8' } },
+          yAxis: { type: 'value', axisLabel: { color: '#94a3b8' } },
+          series: [{ type: 'line', smooth: true, data: rewardSeries.map((item) => item.value), lineStyle: { color: '#38bdf8' }, areaStyle: { color: 'rgba(56,189,248,0.2)' } }]
+        });
+      } else {
+        actionChart.innerHTML = `<div class="muted">${actionSeries.length ? actionSeries.map((item) => `${item.station_id}: ${(item.probability * 100).toFixed(0)}%`).join(' • ') : 'No action distribution yet.'}</div>`;
+        rewardChart.innerHTML = `<div class="muted">${rewardSeries.length ? rewardSeries.map((item) => `${item.name}:${item.value}`).join(' • ') : 'No reward trend yet.'}</div>`;
+      }
+    }
+
+    function renderTimeline(data) {
+      const timeline = document.getElementById('timeline');
+      const events = Array.isArray(data.charging_events) && data.charging_events.length ? data.charging_events.slice(-6) : [];
+      timeline.innerHTML = events.length
+        ? events.map((event, index) => `<div class="pill">${index + 1}. ${event.event_type || 'event'} • ${event.vehicle_id || '-'} • ${event.station_id || '-'}</div>`).join('')
+        : '<div class="pill">No timeline events yet.</div>';
+    }
+
+    function renderXaiPanel(data) {
+      const explanation = data.xai?.latest_explanation || {};
+      const selectedStation = explanation?.policy_probability_visualization?.selected_station_id || data.recommendations?.slice(-1)[0]?.selected_station || '—';
+      const candidates = explanation?.top_k_station_ranking || [];
+      const rewardBreakdown = explanation?.reward_decomposition || {};
+      const featureImportance = explanation?.feature_importance || {};
+      const observation = explanation?.observation_visualization || {};
+      const timeline = explanation?.decision_timeline || [];
+      const confidence = explanation?.confidence_score || 0;
+      const probabilities = explanation?.policy_probability_visualization?.distribution || [];
+
+      document.getElementById('xai-selected-station').textContent = `Selected station: ${selectedStation}`;
+      document.getElementById('xai-top-candidates').innerHTML = candidates.slice(0, 5).map((item) => `<div class="pill">${item.station_id} • ${item.score}</div>`).join('');
+      document.getElementById('xai-reward-breakdown').innerHTML = Object.entries(rewardBreakdown).map(([key, value]) => `<div>${key}: ${value}</div>`).join('');
+      document.getElementById('xai-feature-importance').innerHTML = Object.entries(featureImportance).map(([key, value]) => `<div>${key}: ${value}</div>`).join('');
+      document.getElementById('xai-observation-vector').innerHTML = Object.entries(observation).map(([key, value]) => `<div>${key}: ${JSON.stringify(value)}</div>`).join('');
+      document.getElementById('xai-timeline').innerHTML = timeline.map((item) => `<div class="pill">${item.step}. ${item.event}</div>`).join('');
+      document.getElementById('xai-confidence').textContent = `Confidence score: ${confidence}`;
+      document.getElementById('xai-explanations').innerHTML = [
+        explanation?.decision_explanation ? `<div>${explanation.decision_explanation}</div>` : '',
+        explanation?.shap_explanation ? `<div>SHAP: ${JSON.stringify(explanation.shap_explanation)}</div>` : '',
+        explanation?.lime_explanation ? `<div>LIME: ${JSON.stringify(explanation.lime_explanation)}</div>` : '',
+        explanation?.counterfactual_explanation ? `<div>Counterfactual: ${JSON.stringify(explanation.counterfactual_explanation)}</div>` : '',
+      ].filter(Boolean).join('');
+
+      const chart = document.getElementById('xai-probability-chart');
+      if (window.echarts) {
+        const instance = window.echarts.getInstanceByDom(chart) || window.echarts.init(chart);
+        instance.setOption({
+          backgroundColor: 'transparent',
+          tooltip: { trigger: 'item' },
+          series: [{ type: 'bar', data: probabilities.map((item) => ({ value: Number(item.probability || 0), name: item.station_id })) }],
+          xAxis: { type: 'category', data: probabilities.map((item) => item.station_id), axisLabel: { color: '#94a3b8' } },
+          yAxis: { type: 'value', axisLabel: { color: '#94a3b8' } },
+        });
+      } else {
+        chart.innerHTML = `<div class="muted">${probabilities.length ? probabilities.map((item) => `${item.station_id}:${item.probability}`).join(' • ') : 'No probabilities yet.'}</div>`;
+      }
+
+      if (selectedStation && selectedStation !== '—') {
+        renderer.highlightStation(selectedStation);
+      }
+    }
+
+    function renderFromPayload(payload) {
+      const data = payload.data || payload;
+      const sim = data.simulation || {};
+      const latestRecommendation = data.latest_recommendation || data.recommendations?.slice(-1)[0] || {};
+      const ppo = data.ppo || {};
+      const stations = data.stations || {};
+      document.getElementById('summary').textContent = `${sim.fleet_size || data.summary?.total_vehicles || 0} vehicles • ${sim.tracked_count || (data.tracked_ids || []).length} tracked • step ${sim.step ?? payload.simulation_time ?? payload.step ?? '-'}`;
+      document.getElementById('recommendation').textContent = JSON.stringify({
+        ev_id: ppo.ev_id ?? latestRecommendation.vehicle_id ?? null,
+        action: ppo.action ?? latestRecommendation.selected_station ?? null,
+        station_id: ppo.station_id ?? latestRecommendation.selected_station ?? null,
+        reward: ppo.reward ?? latestRecommendation.ppo_reward ?? null,
+        battery: ppo.battery ?? latestRecommendation.battery_pct ?? null,
+        waiting_time: latestRecommendation.waiting_time ?? null,
+      }, null, 2);
+      const metricsRows = [
+        ['Available Ports / Total', `${stations.available ?? '-'} / ${stations.total ?? '-'}`],
+        ['Queue Total', stations.queue_total ?? '-'],
+        ['Occupied Ports', stations.occupied ?? '-'],
+        ['Selected Station', ppo.station_id ?? latestRecommendation.selected_station ?? '-'],
+        ['Price', latestRecommendation.charging_price_per_kwh ?? '-'],
+        ['Grid Load', latestRecommendation.grid_load ?? '-'],
+      ].map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+      document.getElementById('metrics').innerHTML = metricsRows || '<tr><td colspan="2">No metrics yet.</td></tr>';
+      buildKpis(data);
+      renderCharts(data);
+      renderTimeline(data);
+      renderXaiPanel(data);
+      renderer.render(payload);
+      const runtimeState = sim.running ? 'play' : 'paused';
+      document.getElementById('simulation-status').textContent = `Controller status: ${runtimeState} • ${Number(sim.speed ?? 1).toFixed(1)}x • step ${sim.step ?? '-'}`;
+    }
+
+    function connectWebSocket() {
+      if (socket && (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING)) return;
+      socket = new WebSocket(`ws://${location.host}/ws`);
+      socket.onopen = () => {
+        reconnectAttempts = 0;
+        console.info('[3D WS] connected');
+        document.getElementById('summary').textContent = 'Streaming live SUMO frames…';
+      };
+      socket.onmessage = (event) => {
+        let payload;
+        try {
+          payload = JSON.parse(event.data);
+        } catch (error) {
+          console.error('[3D WS] malformed JSON snapshot', error);
+          return;
+        }
+        console.info('[3D WS] snapshot received', payload.simulation_time ?? payload.step ?? '-');
+        history.push(payload);
+        if (history.length > 40) history.shift();
+        replayIndex = history.length - 1;
+        renderFromPayload(payload);
+      };
+      socket.onclose = () => {
+        console.warn('[3D WS] disconnected');
+        if (reconnectTimer) clearTimeout(reconnectTimer);
+        reconnectAttempts += 1;
+        reconnectTimer = setTimeout(connectWebSocket, Math.min(4000, 500 * reconnectAttempts));
+      };
+      socket.onerror = () => {
+        if (socket) socket.close();
+      };
+    }
+
+    connectWebSocket();
+
+    document.getElementById('reset-view').addEventListener('click', () => {
+      renderer.scene.frameNetwork(renderer.scene.state.network.bounds || {});
+    });
+    document.getElementById('toggle-insights').addEventListener('click', () => {
+      const panel = document.querySelector('.panel');
+      panel.style.display = panel.style.display === 'none' ? 'flex' : 'none';
+    });
+    async function simulationCommand(action, value) {
+      const response = await fetch('/api/simulation/control', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(value === undefined ? { action } : { action, value }),
+      });
+      const status = await response.json();
+      document.getElementById('simulation-status').textContent = `Controller status: ${status.status} • ${status.speed}x`;
+    }
+
+    async function refreshSimulationStatus() {
+      try {
+        const response = await fetch('/api/simulation/status');
+        if (!response.ok) return;
+        const status = await response.json();
+        const statusElement = document.getElementById('simulation-status');
+        if (statusElement && !statusElement.textContent.includes('step')) {
+          statusElement.textContent = `Controller status: ${status.status} • ${status.speed}x`;
+        }
+        const speedSelect = document.getElementById('simulation-speed');
+        if (speedSelect) {
+          const next = String(status.speed ?? '1');
+          if (speedSelect.value !== next) speedSelect.value = next;
+        }
+      } catch (_error) {
+        // no-op: websocket payload will still reflect controller state when available
+      }
+    }
+
+    document.getElementById('play-simulation').addEventListener('click', () => simulationCommand('play'));
+    document.getElementById('pause-simulation').addEventListener('click', () => simulationCommand('pause'));
+    document.getElementById('reset-simulation').addEventListener('click', () => simulationCommand('reset'));
+    document.getElementById('simulation-speed').addEventListener('change', (event) => simulationCommand('speed', Number(event.target.value)));
+    refreshSimulationStatus();
+    setInterval(refreshSimulationStatus, 1500);
+  </script>
+</body>
+</html>

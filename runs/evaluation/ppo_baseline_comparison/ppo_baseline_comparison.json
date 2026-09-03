@@ -1,0 +1,273 @@
+{
+  "evaluation": "ppo_baseline_comparison",
+  "schema_version": 1,
+  "conditions": {
+    "episodes": 2,
+    "steps": 120,
+    "fleet_size": 10,
+    "tracked": 10,
+    "seed_base": 5200
+  },
+  "policies": [
+    "ppo",
+    "nearest",
+    "cheapest",
+    "minimum_wait"
+  ],
+  "aggregates": {
+    "ppo": {
+      "reward": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "charging_cost": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "waiting_time_min": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "travel_distance_km": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "successful_charging": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      }
+    },
+    "nearest": {
+      "reward": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "charging_cost": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "waiting_time_min": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "travel_distance_km": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "successful_charging": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      }
+    },
+    "cheapest": {
+      "reward": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "charging_cost": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "waiting_time_min": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "travel_distance_km": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "successful_charging": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      }
+    },
+    "minimum_wait": {
+      "reward": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "charging_cost": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "waiting_time_min": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "travel_distance_km": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "successful_charging": {
+        "average": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      }
+    }
+  },
+  "episodes": [
+    {
+      "policy": "ppo",
+      "episode": 1,
+      "seed": 5200,
+      "steps_requested": 120,
+      "steps_completed": 0,
+      "recommendations": 0,
+      "reward": 0.0,
+      "charging_cost": 0.0,
+      "waiting_time_min": 0.0,
+      "travel_distance_km": 0.0,
+      "successful_charging": 0,
+      "charging_started": 0,
+      "charging_completed": 0,
+      "runtime_seconds": 0.0,
+      "status": "ERROR",
+      "error": "TimeoutError('TraCI startup timed out after 45.0s on port 54903. Last connect error=TraCIException(\"Connection \\'default\\' is already active.\"). Fallback error=TraCIException(\"Connection \\'default\\' is already active.\").\\nCommand: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--error-log\\', \\'outputs\\\\\\\\sumo_startup_stderr.log\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\', \\'--seed\\', \\'5200\\', \\'--remote-port\\', \\'54903\\']\\nFallback command: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\']\\nSUMO stderr log: outputs\\\\sumo_startup_stderr.log.\\n')"
+    },
+    {
+      "policy": "ppo",
+      "episode": 2,
+      "seed": 5201,
+      "steps_requested": 120,
+      "steps_completed": 0,
+      "recommendations": 0,
+      "reward": 0.0,
+      "charging_cost": 0.0,
+      "waiting_time_min": 0.0,
+      "travel_distance_km": 0.0,
+      "successful_charging": 0,
+      "charging_started": 0,
+      "charging_completed": 0,
+      "runtime_seconds": 0.0,
+      "status": "ERROR",
+      "error": "TimeoutError('TraCI startup timed out after 45.0s on port 60337. Last connect error=TraCIException(\"Connection \\'default\\' is already active.\"). Fallback error=TraCIException(\"Connection \\'default\\' is already active.\").\\nCommand: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--error-log\\', \\'outputs\\\\\\\\sumo_startup_stderr.log\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\', \\'--seed\\', \\'5201\\', \\'--remote-port\\', \\'60337\\']\\nFallback command: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\']\\nSUMO stderr log: outputs\\\\sumo_startup_stderr.log.\\n')"
+    },
+    {
+      "policy": "nearest",
+      "episode": 1,
+      "seed": 5200,
+      "steps_requested": 120,
+      "steps_completed": 0,
+      "recommendations": 0,
+      "reward": 0.0,
+      "charging_cost": 0.0,
+      "waiting_time_min": 0.0,
+      "travel_distance_km": 0.0,
+      "successful_charging": 0,
+      "charging_started": 0,
+      "charging_completed": 0,
+      "runtime_seconds": 0.0,
+      "status": "ERROR",
+      "error": "TimeoutError('TraCI startup timed out after 45.0s on port 63484. Last connect error=TraCIException(\"Connection \\'default\\' is already active.\"). Fallback error=TraCIException(\"Connection \\'default\\' is already active.\").\\nCommand: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--error-log\\', \\'outputs\\\\\\\\sumo_startup_stderr.log\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\', \\'--seed\\', \\'5200\\', \\'--remote-port\\', \\'63484\\']\\nFallback command: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\']\\nSUMO stderr log: outputs\\\\sumo_startup_stderr.log.\\n')"
+    },
+    {
+      "policy": "nearest",
+      "episode": 2,
+      "seed": 5201,
+      "steps_requested": 120,
+      "steps_completed": 0,
+      "recommendations": 0,
+      "reward": 0.0,
+      "charging_cost": 0.0,
+      "waiting_time_min": 0.0,
+      "travel_distance_km": 0.0,
+      "successful_charging": 0,
+      "charging_started": 0,
+      "charging_completed": 0,
+      "runtime_seconds": 0.0,
+      "status": "ERROR",
+      "error": "TimeoutError('TraCI startup timed out after 45.0s on port 65095. Last connect error=TraCIException(\"Connection \\'default\\' is already active.\"). Fallback error=TraCIException(\"Connection \\'default\\' is already active.\").\\nCommand: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--error-log\\', \\'outputs\\\\\\\\sumo_startup_stderr.log\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\', \\'--seed\\', \\'5201\\', \\'--remote-port\\', \\'65095\\']\\nFallback command: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\']\\nSUMO stderr log: outputs\\\\sumo_startup_stderr.log.\\n')"
+    },
+    {
+      "policy": "cheapest",
+      "episode": 1,
+      "seed": 5200,
+      "steps_requested": 120,
+      "steps_completed": 0,
+      "recommendations": 0,
+      "reward": 0.0,
+      "charging_cost": 0.0,
+      "waiting_time_min": 0.0,
+      "travel_distance_km": 0.0,
+      "successful_charging": 0,
+      "charging_started": 0,
+      "charging_completed": 0,
+      "runtime_seconds": 0.0,
+      "status": "ERROR",
+      "error": "TimeoutError('TraCI startup timed out after 45.0s on port 50517. Last connect error=TraCIException(\"Connection \\'default\\' is already active.\"). Fallback error=TraCIException(\"Connection \\'default\\' is already active.\").\\nCommand: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--error-log\\', \\'outputs\\\\\\\\sumo_startup_stderr.log\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\', \\'--seed\\', \\'5200\\', \\'--remote-port\\', \\'50517\\']\\nFallback command: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\']\\nSUMO stderr log: outputs\\\\sumo_startup_stderr.log.\\n')"
+    },
+    {
+      "policy": "cheapest",
+      "episode": 2,
+      "seed": 5201,
+      "steps_requested": 120,
+      "steps_completed": 0,
+      "recommendations": 0,
+      "reward": 0.0,
+      "charging_cost": 0.0,
+      "waiting_time_min": 0.0,
+      "travel_distance_km": 0.0,
+      "successful_charging": 0,
+      "charging_started": 0,
+      "charging_completed": 0,
+      "runtime_seconds": 0.0,
+      "status": "ERROR",
+      "error": "TimeoutError('TraCI startup timed out after 45.0s on port 64815. Last connect error=TraCIException(\"Connection \\'default\\' is already active.\"). Fallback error=TraCIException(\"Connection \\'default\\' is already active.\").\\nCommand: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--error-log\\', \\'outputs\\\\\\\\sumo_startup_stderr.log\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\', \\'--seed\\', \\'5201\\', \\'--remote-port\\', \\'64815\\']\\nFallback command: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\']\\nSUMO stderr log: outputs\\\\sumo_startup_stderr.log.\\n')"
+    },
+    {
+      "policy": "minimum_wait",
+      "episode": 1,
+      "seed": 5200,
+      "steps_requested": 120,
+      "steps_completed": 0,
+      "recommendations": 0,
+      "reward": 0.0,
+      "charging_cost": 0.0,
+      "waiting_time_min": 0.0,
+      "travel_distance_km": 0.0,
+      "successful_charging": 0,
+      "charging_started": 0,
+      "charging_completed": 0,
+      "runtime_seconds": 0.0,
+      "status": "ERROR",
+      "error": "TimeoutError('TraCI startup timed out after 45.0s on port 56238. Last connect error=TraCIException(\"Connection \\'default\\' is already active.\"). Fallback error=TraCIException(\"Connection \\'default\\' is already active.\").\\nCommand: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--error-log\\', \\'outputs\\\\\\\\sumo_startup_stderr.log\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\', \\'--seed\\', \\'5200\\', \\'--remote-port\\', \\'56238\\']\\nFallback command: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\']\\nSUMO stderr log: outputs\\\\sumo_startup_stderr.log.\\n')"
+    },
+    {
+      "policy": "minimum_wait",
+      "episode": 2,
+      "seed": 5201,
+      "steps_requested": 120,
+      "steps_completed": 0,
+      "recommendations": 0,
+      "reward": 0.0,
+      "charging_cost": 0.0,
+      "waiting_time_min": 0.0,
+      "travel_distance_km": 0.0,
+      "successful_charging": 0,
+      "charging_started": 0,
+      "charging_completed": 0,
+      "runtime_seconds": 0.0,
+      "status": "ERROR",
+      "error": "TimeoutError('TraCI startup timed out after 45.0s on port 51274. Last connect error=TraCIException(\"Connection \\'default\\' is already active.\"). Fallback error=TraCIException(\"Connection \\'default\\' is already active.\").\\nCommand: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--error-log\\', \\'outputs\\\\\\\\sumo_startup_stderr.log\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\', \\'--seed\\', \\'5201\\', \\'--remote-port\\', \\'51274\\']\\nFallback command: [\\'C:\\\\\\\\Program Files (x86)\\\\\\\\Eclipse\\\\\\\\Sumo\\\\\\\\bin\\\\\\\\sumo.exe\\', \\'-c\\', \\'D:\\\\\\\\Smart_EV_Station_Recommandadtion_System\\\\\\\\simulations\\\\\\\\bangalore\\\\\\\\sim.sumocfg\\', \\'--no-step-log\\', \\'true\\', \\'--verbose\\', \\'false\\', \\'--time-to-teleport\\', \\'-1\\']\\nSUMO stderr log: outputs\\\\sumo_startup_stderr.log.\\n')"
+    }
+  ]
+}

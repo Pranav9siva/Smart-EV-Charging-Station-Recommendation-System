@@ -1,0 +1,31 @@
+{
+  "cases": [
+    {
+      "name": "QUICK",
+      "fleet_size": 20,
+      "steps": 20,
+      "execution_time_seconds": 52.792,
+      "vehicles_created": 20,
+      "tracked_vehicles": 5,
+      "simulation_steps": 21,
+      "ppo_decisions": 8,
+      "recommendations": 8,
+      "charging_events": 24,
+      "queue_events": 0,
+      "battery_decrease": 466.115,
+      "battery_increase": 0.0,
+      "dashboard_updates": 4,
+      "vehicle_position_updates": 20,
+      "station_data_availability": {
+        "available": true,
+        "count": 506
+      },
+      "traffic_data_availability": {
+        "available": true,
+        "count": 10
+      },
+      "errors": [],
+      "last_stage": "process_charging"
+    }
+  ]
+}

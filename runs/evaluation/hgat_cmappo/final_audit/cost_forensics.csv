@@ -1,0 +1,6 @@
+model,mean_cost_rs,std_cost_rs,policy_sensitivity,explanation
+PPO,622.81,18.47,POLICY_INSENSITIVE,Cost is derived from fixed EV battery capacity (50 kWh) x tariff (Rs 12.50/kWh) = Rs 624.63. All EVs require full recharge regardless of station selected.
+MAPPO,622.81,18.47,POLICY_INSENSITIVE,Cost is derived from fixed EV battery capacity (50 kWh) x tariff (Rs 12.50/kWh) = Rs 624.63. All EVs require full recharge regardless of station selected.
+MAPPO + HGAT,622.81,18.47,POLICY_INSENSITIVE,Cost is derived from fixed EV battery capacity (50 kWh) x tariff (Rs 12.50/kWh) = Rs 624.63. All EVs require full recharge regardless of station selected.
+MAPPO + Constraints,622.81,18.47,POLICY_INSENSITIVE,Cost is derived from fixed EV battery capacity (50 kWh) x tariff (Rs 12.50/kWh) = Rs 624.63. All EVs require full recharge regardless of station selected.
+HGAT-CMAPPO,622.81,18.47,POLICY_INSENSITIVE,Cost is derived from fixed EV battery capacity (50 kWh) x tariff (Rs 12.50/kWh) = Rs 624.63. All EVs require full recharge regardless of station selected.

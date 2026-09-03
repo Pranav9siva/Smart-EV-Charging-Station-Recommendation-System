@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Bengaluru EV Network Map</title>
+<style>
+body{margin:0;background:#04101a;display:flex;flex-direction:column;align-items:center;
+     justify-content:center;min-height:100vh;font-family:Segoe UI,sans-serif;gap:12px;}
+h1{color:#3dd9c7;font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;margin:14px 0 4px;}
+.container{background:#0e1825;border:1px solid #22364f;border-radius:18px;padding:14px;
+           box-shadow:0 12px 40px rgba(0,0,0,.7);}
+.footer{color:#6ea8ff;font-size:.80rem;text-align:center;max-width:940px;margin-bottom:12px;line-height:1.7;}
+</style></head>
+<body>
+<h1>Smart EV Station Recommendation System — Bengaluru Live Simulation Results</h1>
+<div class="container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 580" width="940" height="580"><rect x="0" y="0" width="940" height="580" fill="#09131e" rx="18"/><rect x="0" y="0" width="940" height="34" fill="#0c1829" rx="0"/>
+<text x="16" y="22" fill="#3dd9c7" font-size="12" font-family="monospace" font-weight="bold">BENGALURU ROAD NETWORK  |  10 TRACKED EVs  |  4 REAL OSM CHARGING STATIONS  |  7200 SUMO STEPS</text>
+<text x="924" y="22" fill="#6ea8ff" font-size="11" font-family="monospace" text-anchor="end">7 CHARGING STARTED  |  5 COMPLETED  |  1 QUEUED</text>
+<line x1="175" y1="58" x2="175" y2="522" stroke="#172538" stroke-width="1"/>
+<line x1="293" y1="58" x2="293" y2="522" stroke="#172538" stroke-width="1"/>
+<line x1="411" y1="58" x2="411" y2="522" stroke="#172538" stroke-width="1"/>
+<line x1="528" y1="58" x2="528" y2="522" stroke="#172538" stroke-width="1"/>
+<line x1="646" y1="58" x2="646" y2="522" stroke="#172538" stroke-width="1"/>
+<line x1="764" y1="58" x2="764" y2="522" stroke="#172538" stroke-width="1"/>
+<line x1="58" y1="150" x2="882" y2="150" stroke="#172538" stroke-width="1"/>
+<line x1="58" y1="243" x2="882" y2="243" stroke="#172538" stroke-width="1"/>
+<line x1="58" y1="336" x2="882" y2="336" stroke="#172538" stroke-width="1"/>
+<line x1="58" y1="429" x2="882" y2="429" stroke="#172538" stroke-width="1"/>
+<line x1="58.0" y1="107.6" x2="578.4" y2="381.9" stroke="#3dd9c7" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.5"/>
+<line x1="447.1" y1="154.0" x2="659.1" y2="247.9" stroke="#3dd9c7" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.5"/>
+<line x1="332.7" y1="464.1" x2="659.1" y2="247.9" stroke="#ff6600" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.5"/>
+<line x1="492.9" y1="266.0" x2="592.8" y2="245.3" stroke="#ffcc00" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.5"/>
+<line x1="195.3" y1="522.0" x2="505.2" y2="373.9" stroke="#3dd9c7" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.5"/>
+<line x1="582.2" y1="377.4" x2="659.1" y2="247.9" stroke="#3dd9c7" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.5"/>
+<line x1="882.0" y1="234.0" x2="592.8" y2="245.3" stroke="#ffcc00" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.5"/>
+<line x1="103.8" y1="330.0" x2="505.2" y2="373.9" stroke="#3dd9c7" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.5"/>
+<line x1="561.6" y1="58.0" x2="578.4" y2="381.9" stroke="#3dd9c7" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.5"/>
+<line x1="790.4" y1="410.0" x2="578.4" y2="381.9" stroke="#3dd9c7" stroke-width="1.4" stroke-dasharray="6 4" opacity="0.5"/>
+<circle cx="592.8" cy="245.3" r="24" fill="none" stroke="#ffb84d" stroke-width="2" stroke-dasharray="4 3" opacity="0.4"/>
+<circle cx="592.8" cy="245.3" r="16" fill="#ffb84d" stroke="#fffbe6" stroke-width="2.5"/>
+<text x="592.8" y="250.3" fill="#1a1200" font-size="13" font-family="monospace" font-weight="bold" text-anchor="middle">P</text>
+<text x="612.8" y="232.3" fill="#ffb84d" font-size="11" font-family="Segoe UI,sans-serif" font-weight="600">OSM Charging Station</text>
+<text x="612.8" y="244.3" fill="#aac4de" font-size="9.5" font-family="monospace">Unknown | 1/1 ports | INR 16.0/kWh</text>
+<circle cx="659.1" cy="247.9" r="24" fill="none" stroke="#ff8c42" stroke-width="2" stroke-dasharray="4 3" opacity="0.4"/>
+<circle cx="659.1" cy="247.9" r="16" fill="#ff8c42" stroke="#fffbe6" stroke-width="2.5"/>
+<text x="659.1" y="252.9" fill="#1a1200" font-size="13" font-family="monospace" font-weight="bold" text-anchor="middle">P</text>
+<text x="679.1" y="234.9" fill="#ff8c42" font-size="11" font-family="Segoe UI,sans-serif" font-weight="600">Ather Charging Grid</text>
+<text x="679.1" y="246.9" fill="#aac4de" font-size="9.5" font-family="monospace">Ather Energy | 7/8 ports | INR 15.0/kWh</text>
+<circle cx="578.4" cy="381.9" r="24" fill="none" stroke="#ffd166" stroke-width="2" stroke-dasharray="4 3" opacity="0.4"/>
+<circle cx="578.4" cy="381.9" r="16" fill="#ffd166" stroke="#fffbe6" stroke-width="2.5"/>
+<text x="578.4" y="386.9" fill="#1a1200" font-size="13" font-family="monospace" font-weight="bold" text-anchor="middle">P</text>
+<text x="598.4" y="368.9" fill="#ffd166" font-size="11" font-family="Segoe UI,sans-serif" font-weight="600">Ola Hyper Charger</text>
+<text x="598.4" y="380.9" fill="#aac4de" font-size="9.5" font-family="monospace">ChargePoint | 1/2 ports | INR 12.0/kWh</text>
+<circle cx="505.2" cy="373.9" r="24" fill="none" stroke="#f4a261" stroke-width="2" stroke-dasharray="4 3" opacity="0.4"/>
+<circle cx="505.2" cy="373.9" r="16" fill="#f4a261" stroke="#fffbe6" stroke-width="2.5"/>
+<text x="505.2" y="378.9" fill="#1a1200" font-size="13" font-family="monospace" font-weight="bold" text-anchor="middle">P</text>
+<text x="525.2" y="360.9" fill="#f4a261" font-size="11" font-family="Segoe UI,sans-serif" font-weight="600">OSM Charging Station</text>
+<text x="525.2" y="372.9" fill="#aac4de" font-size="9.5" font-family="monospace">Unknown | 1/1 ports | INR 16.0/kWh</text>
+<circle cx="60.0" cy="109.6" r="10" fill="#000" opacity="0.3"/>
+<circle cx="58.0" cy="107.6" r="15" fill="none" stroke="#3dd9c7" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.75"/>
+<circle cx="58.0" cy="107.6" r="10" fill="#3dd9c7" stroke="#d8fffb" stroke-width="2.5"/>
+<rect x="50.0" y="119.6" width="16" height="3" fill="#182840" rx="1.5"/>
+<rect x="50.0" y="119.6" width="12" height="3" fill="#3dd9c7" rx="1.5"/>
+<text x="72.0" y="97.6" fill="#e8f4ff" font-size="11" font-family="monospace" font-weight="bold">ev_2  77.8%</text>
+<text x="72.0" y="107.59999999999826" fill="#aac4de" font-size="9.5" font-family="Segoe UI,sans-serif">Tata Tigor EV  (26.0 kWh)</text>
+<text x="72.0" y="117.6" fill="#3dd9c7" font-size="9" font-family="monospace">RESUMING TRIP</text>
+<text x="72.0" y="127.6" fill="#6ea8ff" font-size="9" font-family="monospace">Jalahalli • 15.57km • INR7</text>
+<circle cx="449.1" cy="156.0" r="10" fill="#000" opacity="0.3"/>
+<circle cx="447.1" cy="154.0" r="15" fill="none" stroke="#3dd9c7" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.75"/>
+<circle cx="447.1" cy="154.0" r="10" fill="#3dd9c7" stroke="#d8fffb" stroke-width="2.5"/>
+<rect x="439.1" y="166.0" width="16" height="3" fill="#182840" rx="1.5"/>
+<rect x="439.1" y="166.0" width="12" height="3" fill="#3dd9c7" rx="1.5"/>
+<text x="461.1" y="144.0" fill="#e8f4ff" font-size="11" font-family="monospace" font-weight="bold">ev_8  76.8%</text>
+<text x="461.1" y="153.99999999999824" fill="#aac4de" font-size="9.5" font-family="Segoe UI,sans-serif">Tata Punch EV  (35.0 kWh)</text>
+<text x="461.1" y="164.0" fill="#3dd9c7" font-size="9" font-family="monospace">RESUMING TRIP</text>
+<text x="461.1" y="174.0" fill="#6ea8ff" font-size="9" font-family="monospace">Yelahanka • 5.98km • INR18</text>
+<circle cx="334.7" cy="466.1" r="10" fill="#000" opacity="0.3"/>
+<circle cx="332.7" cy="464.1" r="15" fill="none" stroke="#ffd700" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.75"/>
+<circle cx="332.7" cy="464.1" r="10" fill="#ff6600" stroke="#d8fffb" stroke-width="2.5"/>
+<rect x="324.7" y="476.1" width="16" height="3" fill="#182840" rx="1.5"/>
+<rect x="324.7" y="476.1" width="1" height="3" fill="#ff6600" rx="1.5"/>
+<text x="346.7" y="454.1" fill="#e8f4ff" font-size="11" font-family="monospace" font-weight="bold">ev_3  8.3%</text>
+<text x="346.7" y="464.0800000000041" fill="#aac4de" font-size="9.5" font-family="Segoe UI,sans-serif">MG ZS EV  (50.3 kWh)</text>
+<text x="346.7" y="474.1" fill="#ffd700" font-size="9" font-family="monospace">ROUTING TO STATION</text>
+<text x="346.7" y="484.1" fill="#6ea8ff" font-size="9" font-family="monospace">Banashankari • 10.78km • INR601</text>
+<circle cx="494.9" cy="268.0" r="10" fill="#000" opacity="0.3"/>
+<circle cx="492.9" cy="266.0" r="15" fill="none" stroke="#ffd700" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.75"/>
+<circle cx="492.9" cy="266.0" r="10" fill="#ffcc00" stroke="#d8fffb" stroke-width="2.5"/>
+<rect x="484.9" y="278.0" width="16" height="3" fill="#182840" rx="1.5"/>
+<rect x="484.9" y="278.0" width="1" height="3" fill="#ffcc00" rx="1.5"/>
+<text x="506.9" y="256.0" fill="#e8f4ff" font-size="11" font-family="monospace" font-weight="bold">ev_10  11.4%</text>
+<text x="506.9" y="265.99999999999903" fill="#aac4de" font-size="9.5" font-family="Segoe UI,sans-serif">Hyundai Ioniq 5  (72.6 kWh)</text>
+<text x="506.9" y="276.0" fill="#ffd700" font-size="9" font-family="monospace">ROUTING TO STATION</text>
+<text x="506.9" y="286.0" fill="#6ea8ff" font-size="9" font-family="monospace">Indiranagar • 2.47km • INR885</text>
+<circle cx="197.3" cy="524.0" r="10" fill="#000" opacity="0.3"/>
+<circle cx="195.3" cy="522.0" r="15" fill="none" stroke="#3dd9c7" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.75"/>
+<circle cx="195.3" cy="522.0" r="10" fill="#3dd9c7" stroke="#d8fffb" stroke-width="2.5"/>
+<rect x="187.3" y="534.0" width="16" height="3" fill="#182840" rx="1.5"/>
+<rect x="187.3" y="534.0" width="11" height="3" fill="#3dd9c7" rx="1.5"/>
+<text x="209.3" y="512.0" fill="#e8f4ff" font-size="11" font-family="monospace" font-weight="bold">ev_6  73.7%</text>
+<text x="209.3" y="522.0" fill="#aac4de" font-size="9.5" font-family="Segoe UI,sans-serif">BYD Atto 3  (60.5 kWh)</text>
+<text x="209.3" y="532.0" fill="#3dd9c7" font-size="9" font-family="monospace">RESUMING TRIP</text>
+<text x="209.3" y="542.0" fill="#6ea8ff" font-size="9" font-family="monospace">Kengeri • 8.96km • INR67</text>
+<circle cx="584.2" cy="379.4" r="10" fill="#000" opacity="0.3"/>
+<circle cx="582.2" cy="377.4" r="15" fill="none" stroke="#00e5a0" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.75"/>
+<circle cx="582.2" cy="377.4" r="10" fill="#3dd9c7" stroke="#d8fffb" stroke-width="2.5"/>
+<rect x="574.2" y="389.4" width="16" height="3" fill="#182840" rx="1.5"/>
+<rect x="574.2" y="389.4" width="8" height="3" fill="#3dd9c7" rx="1.5"/>
+<text x="596.2" y="367.4" fill="#e8f4ff" font-size="11" font-family="monospace" font-weight="bold">ev_1  54.0%</text>
+<text x="596.2" y="377.36000000000126" fill="#aac4de" font-size="9.5" font-family="Segoe UI,sans-serif">Tata Nexon EV  (40.5 kWh)</text>
+<text x="596.2" y="387.4" fill="#00e5a0" font-size="9" font-family="monospace">CHARGING</text>
+<text x="596.2" y="397.4" fill="#6ea8ff" font-size="9" font-family="monospace">HSR Layout • 4.85km • INR175</text>
+<circle cx="884.0" cy="236.0" r="10" fill="#000" opacity="0.3"/>
+<circle cx="882.0" cy="234.0" r="15" fill="none" stroke="#ffd700" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.75"/>
+<circle cx="882.0" cy="234.0" r="10" fill="#ffcc00" stroke="#d8fffb" stroke-width="2.5"/>
+<rect x="874.0" y="246.0" width="16" height="3" fill="#182840" rx="1.5"/>
+<rect x="874.0" y="246.0" width="1" height="3" fill="#ffcc00" rx="1.5"/>
+<text x="896.0" y="224.0" fill="#e8f4ff" font-size="11" font-family="monospace" font-weight="bold">ev_4  11.3%</text>
+<text x="896.0" y="233.99999999999966" fill="#aac4de" font-size="9.5" font-family="Segoe UI,sans-serif">Mahindra XUV400  (39.4 kWh)</text>
+<text x="896.0" y="244.0" fill="#ffd700" font-size="9" font-family="monospace">ROUTING TO STATION</text>
+<text x="896.0" y="254.0" fill="#6ea8ff" font-size="9" font-family="monospace">Whitefield • 6.86km • INR481</text>
+<circle cx="105.8" cy="332.0" r="10" fill="#000" opacity="0.3"/>
+<circle cx="103.8" cy="330.0" r="15" fill="none" stroke="#3dd9c7" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.75"/>
+<circle cx="103.8" cy="330.0" r="10" fill="#3dd9c7" stroke="#d8fffb" stroke-width="2.5"/>
+<rect x="95.8" y="342.0" width="16" height="3" fill="#182840" rx="1.5"/>
+<rect x="95.8" y="342.0" width="12" height="3" fill="#3dd9c7" rx="1.5"/>
+<text x="117.8" y="320.0" fill="#e8f4ff" font-size="11" font-family="monospace" font-weight="bold">ev_7  77.6%</text>
+<text x="117.8" y="330.0000000000035" fill="#aac4de" font-size="9.5" font-family="Segoe UI,sans-serif">Tata Nexon EV  (30.2 kWh)</text>
+<text x="117.8" y="340.0" fill="#3dd9c7" font-size="9" font-family="monospace">RESUMING TRIP</text>
+<text x="117.8" y="350.0" fill="#6ea8ff" font-size="9" font-family="monospace">Rajajinagar • 9.62km • INR12</text>
+<circle cx="563.6" cy="60.0" r="10" fill="#000" opacity="0.3"/>
+<circle cx="561.6" cy="58.0" r="15" fill="none" stroke="#3dd9c7" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.75"/>
+<circle cx="561.6" cy="58.0" r="10" fill="#3dd9c7" stroke="#d8fffb" stroke-width="2.5"/>
+<rect x="553.6" y="70.0" width="16" height="3" fill="#182840" rx="1.5"/>
+<rect x="553.6" y="70.0" width="12" height="3" fill="#3dd9c7" rx="1.5"/>
+<text x="575.6" y="48.0" fill="#e8f4ff" font-size="11" font-family="monospace" font-weight="bold">ev_5  78.7%</text>
+<text x="575.6" y="58.0" fill="#aac4de" font-size="9.5" font-family="Segoe UI,sans-serif">Hyundai Kona Electric  (39.2 kWh)</text>
+<text x="575.6" y="68.0" fill="#3dd9c7" font-size="9" font-family="monospace">RESUMING TRIP</text>
+<text x="575.6" y="78.0" fill="#6ea8ff" font-size="9" font-family="monospace">Hebbal • 11.26km • INR7</text>
+<circle cx="792.4" cy="412.0" r="10" fill="#000" opacity="0.3"/>
+<circle cx="790.4" cy="410.0" r="15" fill="none" stroke="#ff8c00" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.75"/>
+<circle cx="790.4" cy="410.0" r="10" fill="#3dd9c7" stroke="#d8fffb" stroke-width="2.5"/>
+<rect x="782.4" y="422.0" width="16" height="3" fill="#182840" rx="1.5"/>
+<rect x="782.4" y="422.0" width="3" height="3" fill="#3dd9c7" rx="1.5"/>
+<text x="804.4" y="400.0" fill="#e8f4ff" font-size="11" font-family="monospace" font-weight="bold">ev_9  18.8%</text>
+<text x="804.4" y="409.9999999999992" fill="#aac4de" font-size="9.5" font-family="Segoe UI,sans-serif">Kia EV6 GT-Line  (77.4 kWh)</text>
+<text x="804.4" y="420.0" fill="#ff8c00" font-size="9" font-family="monospace">QUEUED</text>
+<text x="804.4" y="430.0" fill="#6ea8ff" font-size="9" font-family="monospace">Sarjapur • 5.12km • INR631</text>
+<circle cx="63" cy="552" r="5" fill="#00e5a0"/>
+<text x="71" y="557" fill="#8ea8c3" font-size="9" font-family="Segoe UI,sans-serif">CHARGING</text>
+<circle cx="188" cy="552" r="5" fill="#00e5a0"/>
+<text x="196" y="557" fill="#8ea8c3" font-size="9" font-family="Segoe UI,sans-serif">CHARGING COMPLETED</text>
+<circle cx="313" cy="552" r="5" fill="#3dd9c7"/>
+<text x="321" y="557" fill="#8ea8c3" font-size="9" font-family="Segoe UI,sans-serif">RESUMING TRIP</text>
+<circle cx="438" cy="552" r="5" fill="#ff8c00"/>
+<text x="446" y="557" fill="#8ea8c3" font-size="9" font-family="Segoe UI,sans-serif">QUEUED</text>
+<circle cx="563" cy="552" r="5" fill="#ffd700"/>
+<text x="571" y="557" fill="#8ea8c3" font-size="9" font-family="Segoe UI,sans-serif">ROUTING TO STATION</text>
+<circle cx="688" cy="552" r="5" fill="#ff4d4d"/>
+<text x="696" y="557" fill="#8ea8c3" font-size="9" font-family="Segoe UI,sans-serif">SEEKING CHARGER</text>
+<circle cx="813" cy="552" r="5" fill="#6ea8ff"/>
+<text x="821" y="557" fill="#8ea8c3" font-size="9" font-family="Segoe UI,sans-serif">TRAVELING</text></svg></div>
+<div class="footer">
+Station coords: OpenStreetMap (real GPS) &nbsp;|&nbsp;
+Prices: real Bengaluru 2025 (Ather=INR15, Ola=INR12, OSM/other=INR16) &nbsp;|&nbsp;
+Distance: Haversine GPS formula &nbsp;|&nbsp;
+Speed: 18 km/h avg (BBMP Bengaluru urban data) &nbsp;|&nbsp;
+Consumption: OEM Wh/km specs &nbsp;|&nbsp;
+Simulation: SUMO TraCI 7200 steps on real Bengaluru OSM network
+</div>
+</body></html>

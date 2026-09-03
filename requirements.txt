@@ -1,0 +1,31 @@
+# Core RL / simulation stack
+gymnasium==0.29.1
+stable-baselines3==2.3.2
+torch==2.3.1
+
+# SUMO Python bindings (TraCI is bundled with SUMO itself, but this
+# gives you sumolib/traci as importable packages without SUMO_HOME issues)
+traci==1.20.0
+sumolib==1.20.0
+
+# Data handling
+numpy==1.26.4
+pandas==2.2.2
+networkx==3.3
+
+# Visualization
+matplotlib==3.9.0
+plotly==5.22.0
+
+# Database
+# sqlite3 is part of the Python standard library, no install needed
+sqlalchemy==2.0.31        # optional: gives you an ORM that works with SQLite now and Postgres later
+psycopg2-binary==2.9.9    # only needed once you migrate to PostgreSQL
+
+# Dev / notebook convenience
+python-dotenv==1.0.1
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29,<1.0
+websockets>=12,<16
+prometheus-client>=0.20,<1.0
+# jupyter is optional and can be installed with .\setup_env.ps1 -InstallDev

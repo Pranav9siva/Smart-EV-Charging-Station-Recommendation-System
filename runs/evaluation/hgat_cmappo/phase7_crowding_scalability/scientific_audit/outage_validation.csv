@@ -1,0 +1,6 @@
+model,outage_episodes_evaluated,reconstructed_mean_success_rate,outage_robustness_verdict
+PPO,40,60.00%,PARTIALLY_SUPPORTED
+MAPPO,40,60.00%,PARTIALLY_SUPPORTED
+MAPPO + HGAT,40,60.00%,PARTIALLY_SUPPORTED
+MAPPO + Constraints,40,60.00%,PARTIALLY_SUPPORTED
+HGAT-CMAPPO,40,60.00%,PARTIALLY_SUPPORTED

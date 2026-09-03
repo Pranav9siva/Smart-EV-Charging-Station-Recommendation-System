@@ -1,0 +1,8 @@
+<additional>
+  <chargingStation id="cs_real_1" lane="-36054475#0_0" startPos="0.1" power="22.0" chargeInTransit="false"/>
+  <chargingStation id="cs_real_4" lane="-1091234763_0" startPos="0.1" power="22.0" chargeInTransit="false"/>
+  <chargingStation id="cs_real_5" lane="-105201129#1_0" startPos="16.7" power="22.0" chargeInTransit="false"/>
+  <chargingStation id="cs_real_6" lane="-105201129#1_0" startPos="16.7" power="22.0" chargeInTransit="false"/>
+  <chargingStation id="cs_real_8" lane="-1086656991#0_0" startPos="0.1" power="22.0" chargeInTransit="false"/>
+  <chargingStation id="cs_real_9" lane="-1103080110_0" startPos="2.7" power="22.0" chargeInTransit="false"/>
+</additional>

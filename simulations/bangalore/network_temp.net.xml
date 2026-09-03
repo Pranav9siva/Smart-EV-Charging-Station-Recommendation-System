@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-08-06T14:17:35.739333+05:30 by Eclipse SUMO netconvert 1.27.1
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="d:\Smart_EV_Station_Recommandadtion_System\simulations\bangalore\nodes_temp.xml"/>
+        <edge-files value="d:\Smart_EV_Station_Recommandadtion_System\simulations\bangalore\edges_temp.xml"/>
+    </input>
+
+    <output>
+        <output-file value="d:\Smart_EV_Station_Recommandadtion_System\simulations\bangalore\network_temp.net.xml"/>
+    </output>
+
+</netconvertConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,-5000.00" convBoundary="0.00,0.00,11000.00,0.00" origBoundary="0.00,5000.00,11000.00,5000.00" projParameter="!"/>
+
+    <edge id=":J1_0" function="internal">
+        <lane id=":J1_0_0" index="0" speed="13.89" length="0.10" shape="3000.00,-1.60 3000.00,-1.60"/>
+    </edge>
+    <edge id=":J2_0" function="internal">
+        <lane id=":J2_0_0" index="0" speed="13.89" length="0.10" shape="6000.00,-1.60 6000.00,-1.60"/>
+    </edge>
+    <edge id=":J3_0" function="internal">
+        <lane id=":J3_0_0" index="0" speed="13.89" length="0.10" shape="8500.00,-1.60 8500.00,-1.60"/>
+    </edge>
+
+    <edge id="edge0" from="J0" to="J1" priority="-1" length="3000.00">
+        <lane id="edge0_0" index="0" speed="13.89" length="3000.00" shape="0.00,-1.60 3000.00,-1.60"/>
+    </edge>
+    <edge id="edge1" from="J1" to="J2" priority="-1" length="3000.00">
+        <lane id="edge1_0" index="0" speed="13.89" length="3000.00" shape="3000.00,-1.60 6000.00,-1.60"/>
+    </edge>
+    <edge id="edge2" from="J2" to="J3" priority="-1" length="2500.00">
+        <lane id="edge2_0" index="0" speed="13.89" length="2500.00" shape="6000.00,-1.60 8500.00,-1.60"/>
+    </edge>
+    <edge id="edge3" from="J3" to="J4" priority="-1" length="2500.00">
+        <lane id="edge3_0" index="0" speed="13.89" length="2500.00" shape="8500.00,-1.60 11000.00,-1.60"/>
+    </edge>
+
+    <junction id="J0" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00 0.00,-3.20"/>
+    <junction id="J1" type="priority" x="3000.00" y="0.00" incLanes="edge0_0" intLanes=":J1_0_0" shape="3000.00,0.00 3000.00,-3.20 3000.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="J2" type="priority" x="6000.00" y="0.00" incLanes="edge1_0" intLanes=":J2_0_0" shape="6000.00,0.00 6000.00,-3.20 6000.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="J3" type="priority" x="8500.00" y="0.00" incLanes="edge2_0" intLanes=":J3_0_0" shape="8500.00,0.00 8500.00,-3.20 8500.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="J4" type="dead_end" x="11000.00" y="0.00" incLanes="edge3_0" intLanes="" shape="11000.00,-3.20 11000.00,0.00"/>
+
+    <connection from="edge0" to="edge1" fromLane="0" toLane="0" via=":J1_0_0" dir="s" state="M"/>
+    <connection from="edge1" to="edge2" fromLane="0" toLane="0" via=":J2_0_0" dir="s" state="M"/>
+    <connection from="edge2" to="edge3" fromLane="0" toLane="0" via=":J3_0_0" dir="s" state="M"/>
+
+    <connection from=":J1_0" to="edge1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J2_0" to="edge2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J3_0" to="edge3" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

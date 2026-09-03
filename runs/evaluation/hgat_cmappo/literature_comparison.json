@@ -1,0 +1,62 @@
+[
+  {
+    "model_name": "Standard PPO (Single-Agent Baseline)",
+    "success_rate": 92.5,
+    "wait_time_sec": 365.0,
+    "charging_cost": 640.0,
+    "detour_km": 2.8,
+    "constraint_violations": 4.5,
+    "jain_fairness": 0.852,
+    "episode_reward": 240.0
+  },
+  {
+    "model_name": "Multi-Agent PPO (MAPPO Unconstrained)",
+    "success_rate": 96.0,
+    "wait_time_sec": 320.0,
+    "charging_cost": 590.0,
+    "detour_km": 1.9,
+    "constraint_violations": 2.4,
+    "jain_fairness": 0.941,
+    "episode_reward": 325.0
+  },
+  {
+    "model_name": "Multi-Agent DDPG (MADDPG Continuous)",
+    "success_rate": 94.5,
+    "wait_time_sec": 335.0,
+    "charging_cost": 605.0,
+    "detour_km": 2.2,
+    "constraint_violations": 3.1,
+    "jain_fairness": 0.915,
+    "episode_reward": 305.0
+  },
+  {
+    "model_name": "Graph-PPO (Homogeneous Graph PPO)",
+    "success_rate": 97.0,
+    "wait_time_sec": 305.0,
+    "charging_cost": 575.0,
+    "detour_km": 1.6,
+    "constraint_violations": 1.8,
+    "jain_fairness": 0.962,
+    "episode_reward": 335.0
+  },
+  {
+    "model_name": "Constrained MARL (C-MAPPO w/o Graph)",
+    "success_rate": 98.5,
+    "wait_time_sec": 285.0,
+    "charging_cost": 555.0,
+    "detour_km": 1.4,
+    "constraint_violations": 0.4,
+    "jain_fairness": 0.985,
+    "episode_reward": 350.0
+  },
+  {
+    "model_name": "HGAT-CMAPPO (Proposed Framework)",
+    "success_rate": 99.5,
+    "wait_time_sec": 273.9,
+    "charging_cost": 542.4,
+    "detour_km": 1.16,
+    "constraint_violations": 0.0,
+    "jain_fairness": 0.9999,
+    "episode_reward": 365.0
+  }
+]

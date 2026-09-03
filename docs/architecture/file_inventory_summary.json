@@ -1,0 +1,16 @@
+{
+  "total_files": 58012,
+  "by_classification": {
+    "E. DATA": 19,
+    "B. CONFIGURATION": 14,
+    "J. CACHE": 57695,
+    "I. TEMPORARY": 43,
+    "G. DOCUMENTATION": 16,
+    "L. OLD VERSION": 18,
+    "H. GENERATED OUTPUT": 36,
+    "D. TRAINED MODEL": 11,
+    "A. CORE SOURCE": 108,
+    "C. SIMULATION ASSET": 24,
+    "F. TEST": 28
+  }
+}

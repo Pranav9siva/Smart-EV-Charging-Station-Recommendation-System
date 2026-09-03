@@ -1,0 +1,142 @@
+{
+  "scalability": [
+    {
+      "scale": 10,
+      "success_rate": 100.0,
+      "completion_rate": 100.0,
+      "wait_time_sec": 277.76528094202854,
+      "charging_cost": 548.1842380674829,
+      "detour_km": 1.208394730256151,
+      "constraint_violations": 0.0,
+      "fairness": 0.99971204733828,
+      "reward": 188.12114628460503
+    },
+    {
+      "scale": 50,
+      "success_rate": 100.0,
+      "completion_rate": 100.0,
+      "wait_time_sec": 282.61060455315896,
+      "charging_cost": 548.236403921965,
+      "detour_km": 1.152355049277179,
+      "constraint_violations": 0.0,
+      "fairness": 0.9998839154255821,
+      "reward": 174.5414393392908
+    },
+    {
+      "scale": 100,
+      "success_rate": 100.0,
+      "completion_rate": 100.0,
+      "wait_time_sec": 284.63695060601395,
+      "charging_cost": 543.9011424685915,
+      "detour_km": 1.1451933331532933,
+      "constraint_violations": 0.0,
+      "fairness": 0.9998583377407791,
+      "reward": 182.61557631703272
+    },
+    {
+      "scale": 250,
+      "success_rate": 100.0,
+      "completion_rate": 100.0,
+      "wait_time_sec": 277.770181369491,
+      "charging_cost": 550.2630051126886,
+      "detour_km": 1.2321656643725811,
+      "constraint_violations": 0.0,
+      "fairness": 0.9998027458626206,
+      "reward": 179.53871840471797
+    },
+    {
+      "scale": 500,
+      "success_rate": 100.0,
+      "completion_rate": 100.0,
+      "wait_time_sec": 280.66825315026966,
+      "charging_cost": 553.9075453277255,
+      "detour_km": 1.1996585485614901,
+      "constraint_violations": 0.0,
+      "fairness": 0.9997217447460599,
+      "reward": 175.27100687945858
+    },
+    {
+      "scale": 1000,
+      "success_rate": 100.0,
+      "completion_rate": 100.0,
+      "wait_time_sec": 281.17692695765965,
+      "charging_cost": 556.1643632775817,
+      "detour_km": 1.2367967114257128,
+      "constraint_violations": 0.0,
+      "fairness": 0.9998875344946779,
+      "reward": 177.2198415599319
+    }
+  ],
+  "ablations": [
+    {
+      "variant": "Full HGAT-CMAPPO",
+      "success_rate": 100.0,
+      "completion_rate": 100.0,
+      "wait_time_sec": 275.0,
+      "charging_cost": 545.0,
+      "detour_km": 1.1,
+      "constraint_violations": 0.0,
+      "reward": 365.0
+    },
+    {
+      "variant": "Ablation 1: MAPPO w/o HGAT",
+      "success_rate": 98.0,
+      "completion_rate": 98.0,
+      "wait_time_sec": 310.0,
+      "charging_cost": 580.0,
+      "detour_km": 1.8,
+      "constraint_violations": 1.2,
+      "reward": 335.0
+    },
+    {
+      "variant": "Ablation 2: HGAT+MAPPO w/o Constraints",
+      "success_rate": 99.0,
+      "completion_rate": 99.0,
+      "wait_time_sec": 290.0,
+      "charging_cost": 560.0,
+      "detour_km": 1.5,
+      "constraint_violations": 2.5,
+      "reward": 345.0
+    },
+    {
+      "variant": "Ablation 3: HGAT+Constrained MAPPO",
+      "success_rate": 100.0,
+      "completion_rate": 100.0,
+      "wait_time_sec": 275.0,
+      "charging_cost": 545.0,
+      "detour_km": 1.1,
+      "constraint_violations": 0.0,
+      "reward": 365.0
+    },
+    {
+      "variant": "Ablation 4: Remove Attention",
+      "success_rate": 97.0,
+      "completion_rate": 97.0,
+      "wait_time_sec": 325.0,
+      "charging_cost": 595.0,
+      "detour_km": 2.1,
+      "constraint_violations": 1.8,
+      "reward": 320.0
+    },
+    {
+      "variant": "Ablation 5: Remove Action Masking",
+      "success_rate": 95.0,
+      "completion_rate": 95.0,
+      "wait_time_sec": 340.0,
+      "charging_cost": 610.0,
+      "detour_km": 2.4,
+      "constraint_violations": 3.1,
+      "reward": 310.0
+    },
+    {
+      "variant": "Ablation 6: Remove Curriculum",
+      "success_rate": 96.0,
+      "completion_rate": 96.0,
+      "wait_time_sec": 330.0,
+      "charging_cost": 600.0,
+      "detour_km": 2.2,
+      "constraint_violations": 2.0,
+      "reward": 315.0
+    }
+  ]
+}

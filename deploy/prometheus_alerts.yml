@@ -1,0 +1,43 @@
+groups:
+  - name: ev-alerts
+    rules:
+      - alert: HighCPU
+        expr: cpu_usage > 80
+        for: 2m
+        labels:
+          severity: warning
+      - alert: HighMemory
+        expr: memory_usage > 80
+        for: 2m
+        labels:
+          severity: warning
+      - alert: QueueOverflow
+        expr: charging_queue_length > 20
+        for: 2m
+        labels:
+          severity: warning
+      - alert: ChargingFailure
+        expr: rejected_charging > 0
+        for: 1m
+        labels:
+          severity: warning
+      - alert: StationOffline
+        expr: station_utilization_percent < 0
+        for: 5m
+        labels:
+          severity: warning
+      - alert: WebSocketDisconnect
+        expr: websocket_connections < 0
+        for: 1m
+        labels:
+          severity: warning
+      - alert: SimulationCrash
+        expr: simulation_running == 0
+        for: 1m
+        labels:
+          severity: critical
+      - alert: RLInferenceTimeout
+        expr: policy_inference_latency > 5
+        for: 2m
+        labels:
+          severity: warning

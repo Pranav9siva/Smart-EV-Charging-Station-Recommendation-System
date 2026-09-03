@@ -1,0 +1,6 @@
+model,calculated_wait,reported_wait,wait_match,calculated_cost,reported_cost,cost_match,calculated_detour,reported_detour,detour_match
+PPO,300.0,300.0,PASS,621.45,621.45,PASS,0.96,0.96,PASS
+MAPPO,300.0,300.0,PASS,621.45,621.45,PASS,1.54,1.54,PASS
+MAPPO + HGAT,300.0,300.0,PASS,621.45,621.45,PASS,1.53,1.53,PASS
+MAPPO + Constraints,300.0,300.0,PASS,621.45,621.45,PASS,1.53,1.53,PASS
+HGAT-CMAPPO,300.0,300.0,PASS,621.45,621.45,PASS,1.54,1.54,PASS

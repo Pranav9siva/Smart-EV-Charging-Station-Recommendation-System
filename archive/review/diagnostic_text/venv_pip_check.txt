@@ -1,0 +1,1 @@
+pip 25.0.1 from D:\Smart_EV_Station_Recommandadtion_System\.venv\Lib\site-packages\pip (python 3.12)

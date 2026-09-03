@@ -1,0 +1,90 @@
+{
+  "PHASE3D_STATUS": "PASS",
+  "FLEET_SIZE": 500,
+  "TRACKED_COUNT": 10,
+  "REAL_STATION_COUNT": 39,
+  "runtime_seconds": 5.72,
+  "RECOMMENDATIONS": 500,
+  "RECOMMENDATION_RATE_PCT": 100.0,
+  "PLACEHOLDER_RECOMMENDATIONS": 0,
+  "UNIQUE_STATIONS_SELECTED": 39,
+  "SHARED_CONTENTION": true,
+  "CHARGING_STARTED": 74,
+  "CHARGING_COMPLETED": 37,
+  "QUEUE_EVENTS": 426,
+  "PORT_RELEASE_EVENTS": 37,
+  "EV_RESUME_EVENTS": 37,
+  "RESERVATION_FAILURES": 0,
+  "CHARGING_SUCCESS_RATE_PCT": 14.8,
+  "MAX_OCCUPIED_PORTS_AT_ONE_STATION": 10,
+  "OCCUPIED_STATIONS": 11,
+  "sample_recommendations": [
+    {
+      "ev_id": "ev3d_0",
+      "station_id": "osm_9202909866",
+      "distance_km": 1.9626491892601605,
+      "battery": 12.2
+    },
+    {
+      "ev_id": "ev3d_1",
+      "station_id": "osm_13277046524",
+      "distance_km": 4.603736899213036,
+      "battery": 10.6
+    },
+    {
+      "ev_id": "ev3d_2",
+      "station_id": "osm_11286212936",
+      "distance_km": 12.597066247662019,
+      "battery": 5.7
+    },
+    {
+      "ev_id": "ev3d_3",
+      "station_id": "osm_13277046525",
+      "distance_km": 17.279238225591865,
+      "battery": 5.7
+    },
+    {
+      "ev_id": "ev3d_4",
+      "station_id": "osm_12519643346",
+      "distance_km": 11.316782372852881,
+      "battery": 18.5
+    },
+    {
+      "ev_id": "ev3d_5",
+      "station_id": "osm_12169023077",
+      "distance_km": 11.755039731774371,
+      "battery": 16.8
+    },
+    {
+      "ev_id": "ev3d_6",
+      "station_id": "osm_12016136802",
+      "distance_km": 10.703700720963244,
+      "battery": 18.7
+    },
+    {
+      "ev_id": "ev3d_7",
+      "station_id": "osm_12100028686",
+      "distance_km": 6.670540518725218,
+      "battery": 8.7
+    },
+    {
+      "ev_id": "ev3d_8",
+      "station_id": "osm_11283405698",
+      "distance_km": 19.68545815536848,
+      "battery": 19.5
+    },
+    {
+      "ev_id": "ev3d_9",
+      "station_id": "osm_9527967749",
+      "distance_km": 12.530302928222397,
+      "battery": 9.2
+    }
+  ],
+  "notes": [
+    "500 EVs processed in 5.72s using real Bengaluru station DB.",
+    "39 unique real stations selected (diversity confirmed).",
+    "0 placeholder recommendations (target: 0).",
+    "14.8% charging success rate.",
+    "Max occupied ports at single station: 10."
+  ]
+}

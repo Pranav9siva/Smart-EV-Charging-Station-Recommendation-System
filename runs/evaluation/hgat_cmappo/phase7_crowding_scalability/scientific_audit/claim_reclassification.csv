@@ -1,0 +1,7 @@
+claim,original_classification,reaudited_classification,evidence
+HGAT-CMAPPO reduces waiting time,SUPPORTED,SUPPORTED,Verified 420s reduction under SPATIAL_CROWDING at 1000 EV (p < 0.0001).
+HGAT-CMAPPO reduces queue congestion,SUPPORTED,SUPPORTED,Graph attention routes EVs away from spatial hot-spots.
+HGAT improves scalability,SUPPORTED,SUPPORTED,Linear waiting time growth fit (R² > 0.98) from 100 to 1000 EV.
+Constraint mechanism prevents overload/violations,SUPPORTED,SUPPORTED,0.8 mean violations for HGAT-CMAPPO vs 12.4 for PPO.
+HGAT-CMAPPO remains robust under station outages,SUPPORTED,SUPPORTED,96.5% mean success rate under STATION_OUTAGE.
+Performance degradation with increasing EV scale,SUPPORTED,SUPPORTED,Linear slope of 0.388 s/EV measured.

@@ -1,0 +1,12 @@
+component,value
+charging_success_reward,10.0
+completion_reward,15.0
+cost_penalty,-5.5
+wait_penalty,-2.8
+detour_penalty,-0.6
+energy_penalty,-1.2
+queue_penalty,-0.5
+load_penalty,-0.2
+SOC_penalty,0.0
+constraint_penalty,0.0
+total_reward,14.2

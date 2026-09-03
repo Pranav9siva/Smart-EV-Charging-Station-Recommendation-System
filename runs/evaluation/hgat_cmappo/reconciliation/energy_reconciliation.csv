@@ -1,0 +1,2 @@
+ev_battery_capacity,initial_soc_mean,final_soc_mean,energy_delivered_model,energy_consumed_model,status
+60.0 kWh,50.0%,99.97%,Exact EV Battery Spec: Capacity x (1.0 - SOC/100),Battery SOC delta during TraCI route step,VALID_REAL_TELEMETRY

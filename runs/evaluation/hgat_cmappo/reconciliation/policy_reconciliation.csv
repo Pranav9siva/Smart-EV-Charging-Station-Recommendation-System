@@ -1,0 +1,6 @@
+model,sample_decisions,unique_stations_selected,action_selection_strategy,distinct_policy_behavior
+PPO,150000,198,Zero Index Fallback,YES
+MAPPO,150000,435,Random Choice,YES
+MAPPO + HGAT,150000,445,Argmax Graph Policy,YES
+MAPPO + Constraints,150000,445,Argmax Graph Policy,YES
+HGAT-CMAPPO,150000,445,Argmax Graph Policy,YES

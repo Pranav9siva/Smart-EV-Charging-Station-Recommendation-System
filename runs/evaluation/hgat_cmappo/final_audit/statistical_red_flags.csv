@@ -1,0 +1,2 @@
+category,observation,impact,severity
+Zero Variance in 100-EV Baseline,Waiting time in 100-EV normal baseline is fixed at 300.0 s across seeds due to uncrowded candidate averages.,Explaned by simulator step setup; diverges under spatial crowding and higher EV scales.,LOW_EXPLAINED

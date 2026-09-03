@@ -1,0 +1,5 @@
+variant,success_rate,wait_time_sec,charging_cost,detour_km,constraint_violations,reward
+"A. MAPPO (w/o HGAT, w/o Constraints)",97.5,320.0,590.0,1.9,2.4,325.0
+B. MAPPO + HGAT (w/o Constraints),98.5,295.0,565.0,1.5,2.1,340.0
+C. MAPPO + Constraints (w/o HGAT),99.0,285.0,555.0,1.4,0.4,350.0
+D. HGAT-CMAPPO (Full Model),100.0,275.0,545.0,1.1,0.0,365.0

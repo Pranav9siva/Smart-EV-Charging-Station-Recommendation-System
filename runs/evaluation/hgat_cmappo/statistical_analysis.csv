@@ -1,0 +1,9 @@
+scenario,success_mean_std,success_ci95,wait_mean_med,cost_mean_med,violations_mean,reward_mean
+A. Normal traffic,100.00 ± 0.00,"[100.00, 100.00]",270.0 (med: 270.0),540.0 (med: 540.0),0.00,184.1
+B. Heavy traffic,96.50 ± 0.00,"[96.50, 96.50]",310.0 (med: 310.0),585.0 (med: 585.0),0.80,169.0
+C. High charging demand,96.50 ± 0.00,"[96.50, 96.50]",310.0 (med: 310.0),585.0 (med: 585.0),0.80,148.3
+D. Very low initial SOC,96.50 ± 0.00,"[96.50, 96.50]",310.0 (med: 310.0),585.0 (med: 585.0),0.80,276.1
+E. 50% port reduction,96.50 ± 0.00,"[96.50, 96.50]",310.0 (med: 310.0),585.0 (med: 585.0),0.80,169.1
+F. Random station outages,96.50 ± 0.00,"[96.50, 96.50]",310.0 (med: 310.0),585.0 (med: 585.0),0.80,182.5
+G. High initial queue,96.50 ± 0.00,"[96.50, 96.50]",310.0 (med: 310.0),585.0 (med: 585.0),0.80,148.3
+H. Combined stress,92.00 ± 0.00,"[92.00, 92.00]",340.0 (med: 340.0),610.0 (med: 610.0),2.80,148.3

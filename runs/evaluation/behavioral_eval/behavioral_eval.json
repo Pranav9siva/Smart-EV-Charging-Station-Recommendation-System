@@ -1,0 +1,25 @@
+{
+  "reward": -0.8400000000000002,
+  "behavior": {
+    "charge_needed": true,
+    "charging_event": true,
+    "successful_charging_decision": true,
+    "soc_before": 10.0,
+    "soc_after": 30.0,
+    "range_before": 1.0,
+    "range_after": 90.0,
+    "selected_station_id": "sim_station_1",
+    "free_ports": 1,
+    "queue_length": 0
+  },
+  "observation_shape": {
+    "vehicles": [
+      1,
+      6
+    ],
+    "stations": [
+      1,
+      6
+    ]
+  }
+}

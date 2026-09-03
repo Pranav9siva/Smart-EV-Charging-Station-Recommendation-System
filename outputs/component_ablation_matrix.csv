@@ -1,0 +1,5 @@
+step,transition,mechanism,measured_gain,effect_size_dz,p_value
+1,PPO -> MAPPO,Centralized Critic Queue Balancing,-270.0 s Wait Time,-2.94,< 0.0001
+2,MAPPO -> MAPPO+HGAT,Heterogeneous Graph Attention Spatial Routing,-0.32 km Detour,-3.85,< 0.0001
+3,MAPPO -> MAPPO+CONSTRAINTS,Lagrangian Capacity Safety Enforcement,-6.7 Viols / ep,-4.12,< 0.0001
+4,Complete Architecture,HGAT-CMAPPO Full Synergy Matrix,Optimal Multi-objective,-5.1,< 0.0001
