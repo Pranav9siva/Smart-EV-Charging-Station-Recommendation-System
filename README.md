@@ -147,9 +147,9 @@ The experimental benchmarks were conducted on a real-world urban road network do
 
 ## Experimental Phases & Audit Evidence
 
-- **Phase 6 — Accounting & Reconciliation**: 450 simulation episodes validating exact state-event accounting across SUMO events, charging starts, and queue logs.
-- **Phase 7 — Crowding & Demand Scaling**: 500 simulation episodes evaluating policy degradation under high demand (up to 1,000 EVs) and spatial station outages.
-- **Phase 8 — Component Ablation**: 500 simulation episodes isolating individual performance contributions of coordination, graph attention, and constraint enforcers.
+- **Phase 6  Accounting & Reconciliation**: 450 simulation episodes validating exact state-event accounting across SUMO events, charging starts, and queue logs.
+- **Phase 7  Crowding & Demand Scaling**: 500 simulation episodes evaluating policy degradation under high demand (up to 1,000 EVs) and spatial station outages.
+- **Phase 8  Component Ablation**: 500 simulation episodes isolating individual performance contributions of coordination, graph attention, and constraint enforcers.
 - **Final Audit & Freeze**: Frozen statistical evidence package containing claim registers and publication-ready tables.
 
 ---
